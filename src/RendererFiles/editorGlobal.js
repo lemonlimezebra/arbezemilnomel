@@ -9804,4 +9804,8 @@ I'm worried that someone who had been following the code for a long time and car
 But I don't wanna put anything else on my youtube channel I had it up for a smidge cause I felt bad.
 Hopefully that smidge was long enough for anyone who wanted to find the code to find it
 
+The history is gone but the code isn't.
+
+Those days are gone but I'm not
+
 */
