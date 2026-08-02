@@ -9706,4 +9706,12 @@ I just need to finish this code for me
 
 I think another month or two and I'll be done
 
+==========
+
+I keep seeing people imply that I should stop or give up.
+
+They don't understand that I'm nearly done.
+
+And then once I'm done I can do anything I want, but have gained all this knowledge.
+
 */
