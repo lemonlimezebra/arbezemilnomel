@@ -9678,4 +9678,10 @@ I saw it just now
 
 "yada yada is that all you ever thought of me that I've been nothing but trouble all this time"
 
+Look look look at this video
+
+https://www.youtube.com/watch?v=obZNkXsToZU
+
+It sky rocketed from 1 dislike to 7 do you see what I'm saying I wanna break down and cry
+
 */
