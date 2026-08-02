@@ -4982,7 +4982,16 @@ function EDITOR_render_do_IndentMore() {
                 let linePos = EDITOR_getLineBoundaryPositions(lineI);
 
                 // Draw the line to reflect the edit, if it is being currently shown on screen.
-                let beltIndexLine = EDITOR_indexLineTo_beltIndexLine(lineI);
+                // TODO: Use NEXT if the lines are one after another?
+                
+                // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                let beltIndexLine = (lineI + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                if (beltIndexLine >= ArrayFrom_textElement_children_length || beltIndexLine < 0) beltIndexLine = -1;
+                else beltIndexLine = (beltIndexLine + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                 if (beltIndexLine >= 0) {
                         let div = cached_EDITOR_textElement.children[beltIndexLine];
                         let span;
@@ -5252,7 +5261,16 @@ function EDITOR_render_do_IndentLess() {
                 /////////////////////// P_2
 
                 // Draw the line to reflect the edit, if it is being currently shown on screen.
-                let beltIndexLine = EDITOR_indexLineTo_beltIndexLine(lineI);
+                // TODO: Use NEXT if the lines are one after another?
+
+                // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                let beltIndexLine = (lineI + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                if (beltIndexLine >= ArrayFrom_textElement_children_length || beltIndexLine < 0) beltIndexLine = -1;
+                else beltIndexLine = (beltIndexLine + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                 if (beltIndexLine >= 0) {
                         let div = cached_EDITOR_textElement.children[beltIndexLine];
                         let span = div.children[0];
