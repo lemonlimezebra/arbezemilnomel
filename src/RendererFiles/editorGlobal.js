@@ -9694,5 +9694,12 @@ and I just constantly cannot escape the anxiety
 I think that is true I can't give a logical explanation because it never was logical to start with
 I think I've always understood that
 
+I was the one that deleted the account.
+So all of the work I did is gone.
+
+And I just finished now deleting all the old work off my own file system
+and clearing the recycling bin.
+
+All that is gone
 
 */
