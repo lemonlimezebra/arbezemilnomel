@@ -600,6 +600,16 @@ class TreeViewComponent {
 /*
 If I do this for the tree view. Then I'd be done for the night
 and then tomorrow I can do batching for both indentMore and indentLess
+
+I feel horrible.
+Not about having deleted the account.
+Ultimately what I care about is making an IDE.
+But when I'm done with this I don't want a normal job.
+I don't know if I want anything.
+I feel depressed.
+I feel like there should be an option
+for people who want to be around for the sake of their family.
+To mark themselves as a "pet".
 */
 
     /**
