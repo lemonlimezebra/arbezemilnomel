@@ -622,6 +622,10 @@ they're gonna go byuy a gbiugu house and a big pgargentnwe garden
 fucking keyboard is pissing me off
 
 asdfhgh
+
+fuck tghem the thought of not making anymore progress to spite them comes to my mind
+I hate them for what they did
+It shows nobody gives a shit abouyt me
 */
 
     /**
