@@ -597,6 +597,11 @@ class TreeViewComponent {
         return indexItem;
     }
 
+/*
+If I do this for the tree view. Then I'd be done for the night
+and then tomorrow I can do batching for both indentMore and indentLess
+*/
+
     /**
      * TODO: It should be >= ?
      * 
