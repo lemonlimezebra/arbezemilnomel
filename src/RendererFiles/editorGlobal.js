@@ -7149,7 +7149,16 @@ function EDITOR_render_do_Delete() {
                                 }
 
                                 // Merge the lines if both are visible.
-                                let beltIndexLine_next = EDITOR_indexLineTo_beltIndexLine(cursor.indexLine + 1);
+                                // TODO: Use NEXT here (... + 1)
+
+                                // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                                // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                                // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                                // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                                let beltIndexLine_next = ((cursor.indexLine + 1) + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                                if (beltIndexLine_next >= ArrayFrom_textElement_children_length || beltIndexLine_next < 0) beltIndexLine_next = -1;
+                                else beltIndexLine_next = (beltIndexLine_next + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                                 if (beltIndexLine_next >= 0) {
                                     let keepingDiv = w_div;
                                     let removingDiv = cached_EDITOR_textElement.children[beltIndexLine_next];
@@ -7169,7 +7178,14 @@ function EDITOR_render_do_Delete() {
                                         keepingDiv.removeChild(keepingDiv.children[0]);
                                     }
 
-                                    let beltIndexLine_last = EDITOR_indexLineTo_beltIndexLine(get_EDITOR_virtualIndexLine() + get_EDITOR_virtualCount() - 1);
+                                    // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                                    // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                                    // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                                    // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                                    let beltIndexLine_last = ((get_EDITOR_virtualIndexLine() + get_EDITOR_virtualCount() - 1) + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                                    if (beltIndexLine_last >= ArrayFrom_textElement_children_length || beltIndexLine_last < 0) beltIndexLine_last = -1;
+                                    else beltIndexLine_last = (beltIndexLine_last + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                                     EDITOR_shiftLinesOfText_ToASmaller_IndexLine_byDistance(beltIndexLine_last, beltIndexLine_next, 1);
                                 }
                             }
@@ -7327,7 +7343,16 @@ function EDITOR_render_do_Backspace() {
                                 }
 
                                 // Merge the lines if both are visible.
-                                let beltIndexLine_next = EDITOR_indexLineTo_beltIndexLine(cursor.indexLine + 1);
+                                // TODO: Use NEXT here (... + 1)
+                                
+                                // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                                // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                                // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                                // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                                let beltIndexLine_next = ((cursor.indexLine + 1) + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                                if (beltIndexLine_next >= ArrayFrom_textElement_children_length || beltIndexLine_next < 0) beltIndexLine_next = -1;
+                                else beltIndexLine_next = (beltIndexLine_next + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                                 if (beltIndexLine_next >= 0) {
                                     let keepingDiv = w_div;
                                     let removingDiv = cached_EDITOR_textElement.children[beltIndexLine_next];
@@ -7347,7 +7372,14 @@ function EDITOR_render_do_Backspace() {
                                         keepingDiv.removeChild(keepingDiv.children[0]);
                                     }
 
-                                    let beltIndexLine_last = EDITOR_indexLineTo_beltIndexLine(get_EDITOR_virtualIndexLine() + get_EDITOR_virtualCount() - 1);
+                                    // TODO: This is an awkward explicit inlining of 'EDITOR_indexLineTo_beltIndexLine'...
+                                    // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                                    // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                                    // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                                    let beltIndexLine_last = ((get_EDITOR_virtualIndexLine() + get_EDITOR_virtualCount() - 1) + get_EDITOR_offsetLine()) - get_EDITOR_virtualIndexLine();
+                                    if (beltIndexLine_last >= ArrayFrom_textElement_children_length || beltIndexLine_last < 0) beltIndexLine_last = -1;
+                                    else beltIndexLine_last = (beltIndexLine_last + EDITOR_beltIndexZero) % get_EDITOR_virtualCount();
+
                                     EDITOR_shiftLinesOfText_ToASmaller_IndexLine_byDistance(beltIndexLine_last, beltIndexLine_next, 1);
                                 }
                             }
