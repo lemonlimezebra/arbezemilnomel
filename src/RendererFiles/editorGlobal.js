@@ -9729,4 +9729,6 @@ september 16
 
 It's like all of my past life any negativity if I do this then I'll somehow detatch from it all
 
+the butterfly leaves the cocoon
+
 */
