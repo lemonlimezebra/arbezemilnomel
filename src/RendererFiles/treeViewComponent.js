@@ -615,6 +615,8 @@ I need to make the IDE though.
 
 I fucking can't stand those people that disliked that video though.
 It literally was at 1 dislike then I deleted my account and it shot up to 7
+
+They're complete morons that don'nt understand anthiung
 */
 
     /**
