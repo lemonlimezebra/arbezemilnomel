@@ -9820,4 +9820,7 @@ I'd type it in print/cursive over and over
 
 like with a pencil or pen I mean
 
+I would write it I guess lol
+I tried to correct it like you misinterpreted it but I said type from the gecko
+
 */
