@@ -9818,4 +9818,6 @@ lemon lime zebra was a stim for me back in the day
 
 I'd type it in print/cursive over and over
 
+like with a pencil or pen I mean
+
 */
