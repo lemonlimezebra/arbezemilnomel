@@ -9689,4 +9689,10 @@ It happened just now I just anxiety all of the time
 I'm gonna try putting my youtube channel back to public and giving a link here but then I'm just aall over again
 and I just constantly cannot escape the anxiety
 
+"the more you mention it the more it probably shows up"
+
+I think that is true I can't give a logical explanation because it never was logical to start with
+I think I've always understood that
+
+
 */
