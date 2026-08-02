@@ -9667,4 +9667,7 @@ So I had to re-use this email.
 Thus the admins are probably gonna find me easily but it's okay.
 I don't mind it being public but I can clearly tell that there are a group of people  who wanna just mess with me and I had to lose their trace.
 
+anxiety anxiety anxiety constantly and it just gets worse and worse over time and I can tell more and more that people are looking at the code
+because of my youtube recommendations
+
 */
