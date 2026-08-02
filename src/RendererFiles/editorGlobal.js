@@ -9727,4 +9727,6 @@ in my mind I have it tied in part to me turning 28
 So it is like some weird coming of age / rebirth in my mind
 september 16
 
+It's like all of my past life any negativity if I do this then I'll somehow detatch from it all
+
 */
