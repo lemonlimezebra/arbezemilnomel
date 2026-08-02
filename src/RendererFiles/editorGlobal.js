@@ -9670,4 +9670,7 @@ I don't mind it being public but I can clearly tell that there are a group of pe
 anxiety anxiety anxiety constantly and it just gets worse and worse over time and I can tell more and more that people are looking at the code
 because of my youtube recommendations
 
+It isn't even a joke or paranoia anyone that writes code can probably come to the same conclusion cause we have an understanding of these things.
+I can blatantly see the patterns.
+
 */
