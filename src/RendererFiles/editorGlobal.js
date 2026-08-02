@@ -9660,4 +9660,6 @@ So you'd want to write logic to batch them today if possible.
 
 =============
 
+I see what they're doing in my youtube recommendations and it is extremely upsetting I'm just sick of it
+
 */
