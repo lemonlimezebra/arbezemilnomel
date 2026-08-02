@@ -9686,4 +9686,7 @@ It sky rocketed from 1 dislike to 7 do you see what I'm saying I wanna break dow
 
 It happened just now I just anxiety all of the time
 
+I'm gonna try putting my youtube channel back to public and giving a link here but then I'm just aall over again
+and I just constantly cannot escape the anxiety
+
 */
