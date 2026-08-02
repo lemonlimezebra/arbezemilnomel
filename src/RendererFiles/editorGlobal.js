@@ -9676,4 +9676,6 @@ I can blatantly see the patterns.
 I literally still RIGHT NOW feel like I'm having a panic attack when I see "Taylor Swift - I Knew You Were Trouble"
 I saw it just now
 
+"yada yada is that all you ever thought of me that I've been nothing but trouble all this time"
+
 */
