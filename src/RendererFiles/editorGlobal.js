@@ -9796,4 +9796,8 @@ I don't mind that I deleted things from one perspective.
 But I do feel like I did the wrong thing from another.
 And I'm not sure if those 6 dislikes actually happened or not.
 
+It's metaphorical because you gotta let go of the past.
+And take advantage of what you have in a positive way.
+The history is gone but I still have what I have in this moment and that is a meaningful message
+
 */
