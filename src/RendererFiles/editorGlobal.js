@@ -9789,4 +9789,7 @@ Cause I Stopped writing down the dislikes.
 
 I just "think" it went from 1 to 7 I think it did?
 
+It sucks that they're a 1 to 7 cause they somewhat look similar enough
+to where a sufficient amount of doubt is in my head
+
 */
