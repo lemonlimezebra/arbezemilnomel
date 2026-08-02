@@ -9714,4 +9714,11 @@ They don't understand that I'm nearly done.
 
 And then once I'm done I can do anything I want, but have gained all this knowledge.
 
+"you need to let this love go"
+"what do you want to do"
+"your move chief"
+
+I'm almost done...
+I'm gonna finish this then quit my part-time job and do something
+
 */
