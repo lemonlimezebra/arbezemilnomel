@@ -9723,4 +9723,8 @@ I'm gonna finish this then quit my part-time job and do something
 
 I gotta finish the code though it is something spiritual for me at this point
 
+in my mind I have it tied in part to me turning 28
+So it is like some weird coming of age / rebirth in my mind
+september 16
+
 */
