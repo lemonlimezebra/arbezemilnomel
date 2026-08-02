@@ -9721,4 +9721,6 @@ And then once I'm done I can do anything I want, but have gained all this knowle
 I'm almost done...
 I'm gonna finish this then quit my part-time job and do something
 
+I gotta finish the code though it is something spiritual for me at this point
+
 */
