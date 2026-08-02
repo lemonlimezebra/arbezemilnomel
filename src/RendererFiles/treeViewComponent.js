@@ -600,32 +600,6 @@ class TreeViewComponent {
 /*
 If I do this for the tree view. Then I'd be done for the night
 and then tomorrow I can do batching for both indentMore and indentLess
-
-I feel horrible.
-Not about having deleted the account.
-Ultimately what I care about is making an IDE.
-But when I'm done with this I don't want a normal job.
-I don't know if I want anything.
-I feel depressed.
-I feel like there should be an option
-for people who want to be around for the sake of their family.
-To mark themselves as a "pet".
-
-I need to make the IDE though.
-
-I fucking can't stand those people that disliked that video though.
-It literally was at 1 dislike then I deleted my account and it shot up to 7
-
-They're complete morons that don'nt understand anthiung
-
-they're gonna go byuy a gbiugu house and a big pgargentnwe garden
-fucking keyboard is pissing me off
-
-asdfhgh
-
-fuck tghem the thought of not making anymore progress to spite them comes to my mind
-I hate them for what they did
-It shows nobody gives a shit abouyt me
 */
 
     /**
