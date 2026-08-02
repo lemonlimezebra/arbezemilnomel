@@ -9783,78 +9783,10 @@ So you'd want to write logic to batch them today if possible.
 
 =============
 
-I see what they're doing in my youtube recommendations and it is extremely upsetting I'm just sick of it
+I'm trying to think whether this was all in my head or not.
 
-I literally can't make another gmail email because I've made too many.
-So I had to re-use this email.
-Thus the admins are probably gonna find me easily but it's okay.
-I don't mind it being public but I can clearly tell that there are a group of people  who wanna just mess with me and I had to lose their trace.
+Cause I Stopped writing down the dislikes.
 
-anxiety anxiety anxiety constantly and it just gets worse and worse over time and I can tell more and more that people are looking at the code
-because of my youtube recommendations
-
-It isn't even a joke or paranoia anyone that writes code can probably come to the same conclusion cause we have an understanding of these things.
-I can blatantly see the patterns.
-
-I literally still RIGHT NOW feel like I'm having a panic attack when I see "Taylor Swift - I Knew You Were Trouble"
-I saw it just now
-
-"yada yada is that all you ever thought of me that I've been nothing but trouble all this time"
-
-Look look look at this video
-
-https://www.youtube.com/watch?v=obZNkXsToZU
-
-It sky rocketed from 1 dislike to 7 do you see what I'm saying I wanna break down and cry
-
-It happened just now I just anxiety all of the time
-
-I'm gonna try putting my youtube channel back to public and giving a link here but then I'm just aall over again
-and I just constantly cannot escape the anxiety
-
-"the more you mention it the more it probably shows up"
-
-I think that is true I can't give a logical explanation because it never was logical to start with
-I think I've always understood that
-
-I was the one that deleted the account.
-So all of the work I did is gone.
-
-And I just finished now deleting all the old work off my own file system
-and clearing the recycling bin.
-
-All that is gone
-
-I just need to finish this code for me
-
-I think another month or two and I'll be done
-
-==========
-
-I keep seeing people imply that I should stop or give up.
-
-They don't understand that I'm nearly done.
-
-And then once I'm done I can do anything I want, but have gained all this knowledge.
-
-"you need to let this love go"
-"what do you want to do"
-"your move chief"
-
-I'm almost done...
-I'm gonna finish this then quit my part-time job and do something
-
-I gotta finish the code though it is something spiritual for me at this point
-
-in my mind I have it tied in part to me turning 28
-So it is like some weird coming of age / rebirth in my mind
-september 16
-
-It's like all of my past life any negativity if I do this then I'll somehow detatch from it all
-
-the butterfly leaves the cocoon
-
-part of that is me having been eating a lb of 98% fat free ground chicken everyday for I think months at this point.
-I'm 244 lbs but I think I recomp'd to being a bit leaner. I need to keep recomp'ing / losing weight.
+I just "think" it went from 1 to 7 I think it did?
 
 */
