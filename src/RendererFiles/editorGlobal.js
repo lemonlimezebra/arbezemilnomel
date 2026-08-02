@@ -9792,4 +9792,8 @@ I just "think" it went from 1 to 7 I think it did?
 It sucks that they're a 1 to 7 cause they somewhat look similar enough
 to where a sufficient amount of doubt is in my head
 
+I don't mind that I deleted things from one perspective.
+But I do feel like I did the wrong thing from another.
+And I'm not sure if those 6 dislikes actually happened or not.
+
 */
