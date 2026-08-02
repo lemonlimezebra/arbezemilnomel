@@ -376,7 +376,14 @@ class TreeViewComponent {
         let indexItem = Math.floor(rY / this.itemHeightNumber);
         indexItem = this.state_cursor_validateIndex(indexItem);
 
-        let beltIndexItem = this.indexItemTo_beltIndexItem(indexItem);
+        // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+        // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+        // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+        // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+        let beltIndexItem = ((indexItem)) - this.virtualIndex_ofScrollTop;
+        if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+        else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
         if (beltIndexItem < 0) {
             return;
         }
@@ -397,7 +404,14 @@ class TreeViewComponent {
         let indexItem = Math.floor(rY / this.itemHeightNumber);
         indexItem = this.state_cursor_validateIndex(indexItem);
 
-        let beltIndexItem = this.indexItemTo_beltIndexItem(indexItem);
+        // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+        // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+        // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+        // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+        let beltIndexItem = ((indexItem)) - this.virtualIndex_ofScrollTop;
+        if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+        else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
         if (beltIndexItem < 0) {
             return;
         }
@@ -409,7 +423,14 @@ class TreeViewComponent {
             // await this.director.tvd_expandCollapseIconWasClicked_async(divItem, index);
         }
         else {
-            let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+            // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+            // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+            // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+            // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+            let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+            if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+            else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
             if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
                 return this.director.tvd_ondblclick_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
             }
@@ -426,7 +447,15 @@ class TreeViewComponent {
                 Math.floor(rY / this.itemHeightNumber)));
 
             // TODO: you need to move this above the divItem assignment and do checks earlier... double check all other uses
-            let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+
+            // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+            // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+            // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+            // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+            let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+            if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+            else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
             if (beltIndexItem < 0) {
                 return;
             }
@@ -441,8 +470,15 @@ class TreeViewComponent {
 
             this.state_cursor_setIndex(this.state_cursor_validateIndex(
                 this.cursorIndex));
-            
-            let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+
+            // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+            // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+            // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+            // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+            let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+            if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+            else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
             if (beltIndexItem < 0) {
                 return;
             }
@@ -481,8 +517,17 @@ class TreeViewComponent {
                     event.preventDefault();
                     this.state_cursor_setIndex(this.state_cursor_validateIndex(
                         this.cursorIndex));
+
                     // TODO: 'ArrowRight' when the cursor is on a valid item but isn't part of the virtualization result.
-                    let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+
+                    // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+                    // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                    // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                    // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                    let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+                    if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+                    else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
                     if (beltIndexItem < 0) {
                         return;
                     }
@@ -496,7 +541,15 @@ class TreeViewComponent {
                     event.preventDefault();
                     this.state_cursor_setIndex(this.state_cursor_validateIndex(
                         this.cursorIndex));
-                    let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+                    
+                    // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+                    // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                    // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                    // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                    let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+                    if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+                    else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
                     if (beltIndexItem < 0) {
                         return;
                     }
@@ -510,7 +563,15 @@ class TreeViewComponent {
                 event.preventDefault();
                 this.state_cursor_setIndex(this.state_cursor_validateIndex(
                     this.cursorIndex));
-                let beltIndexItem = this.indexItemTo_beltIndexItem(this.cursorIndex);
+                
+                // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
+                // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+                // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+                // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+                let beltIndexItem = ((this.cursorIndex)) - this.virtualIndex_ofScrollTop;
+                if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
+                else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
+
                 if (beltIndexItem < 0) {
                     return;
                 }
@@ -602,21 +663,6 @@ If I do this for the tree view. Then I'd be done for the night
 and then tomorrow I can do batching for both indentMore and indentLess
 
 */
-
-    /**
-     * TODO: It should be >= ?
-     * 
-     * @returns you capture the variable then check it for < 0 (or the opposite '>=') i.e. => if (indexLine_VirtualRelative < 0) { return bad_state; } else { return good_state; }
-     */
-    indexItemTo_beltIndexItem(indexItem) {
-        let virtualIndexItem = indexItem - this.virtualIndex_ofScrollTop;
-        return virtualIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length ||
-               virtualIndexItem < 0
-                   ? -1
-                   : ((virtualIndexItem = (virtualIndexItem + this.beltIndexZero)) >= this.virtualCount
-                       ? virtualIndexItem - this.virtualCount
-                       : virtualIndexItem);
-    }
 }
 
 const get_TreeViewNodeKind_None = () => 0;
