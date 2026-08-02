@@ -9662,4 +9662,9 @@ So you'd want to write logic to batch them today if possible.
 
 I see what they're doing in my youtube recommendations and it is extremely upsetting I'm just sick of it
 
+I literally can't make another gmail email because I've made too many.
+So I had to re-use this email.
+Thus the admins are probably gonna find me easily but it's okay.
+I don't mind it being public but I can clearly tell that there are a group of people  who wanna just mess with me and I had to lose their trace.
+
 */
