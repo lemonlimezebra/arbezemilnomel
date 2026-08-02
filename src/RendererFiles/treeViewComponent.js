@@ -612,6 +612,9 @@ for people who want to be around for the sake of their family.
 To mark themselves as a "pet".
 
 I need to make the IDE though.
+
+I fucking can't stand those people that disliked that video though.
+It literally was at 1 dislike then I deleted my account and it shot up to 7
 */
 
     /**
