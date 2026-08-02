@@ -310,7 +310,13 @@ This comment is from 'tvd_drawItem_BATCH', it was in my way
 
         this.pullData_array_count = 0;
 
-        let beltIndex_current = this.component.indexItemTo_beltIndexItem(this.scrollFetchData_virtualIndex);
+        // TODO: This is an awkward explicit inlining of 'this.component.indexItemTo_beltIndexItem'...
+        // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
+        // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
+        // for the calculation. So by storing the 'virtualIndex' in 'beltIndexLine' at the start I skip a variable declaration.
+        let beltIndex_current = ((this.scrollFetchData_virtualIndex)) - this.component.virtualIndex_ofScrollTop;
+        if (beltIndex_current >= this.component.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndex_current < 0) beltIndex_current = -1;
+        else beltIndex_current = (beltIndex_current + this.component.beltIndexZero) % this.component.virtualCount;
 
         for (let i = 0; i < itemListElement_childrenLength; i++) {
 
