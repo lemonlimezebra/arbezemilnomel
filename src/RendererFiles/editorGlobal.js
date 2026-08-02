@@ -9731,4 +9731,7 @@ It's like all of my past life any negativity if I do this then I'll somehow deta
 
 the butterfly leaves the cocoon
 
+part of that is me having been eating a lb of 98% fat free ground chicken everyday for I think months at this point.
+I'm 244 lbs but I think I recomp'd to being a bit leaner. I need to keep recomp'ing / losing weight.
+
 */
