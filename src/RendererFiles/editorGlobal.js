@@ -9673,4 +9673,7 @@ because of my youtube recommendations
 It isn't even a joke or paranoia anyone that writes code can probably come to the same conclusion cause we have an understanding of these things.
 I can blatantly see the patterns.
 
+I literally still RIGHT NOW feel like I'm having a panic attack when I see "Taylor Swift - I Knew You Were Trouble"
+I saw it just now
+
 */
