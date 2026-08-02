@@ -324,11 +324,7 @@ This comment is from 'tvd_drawItem_BATCH', it was in my way
                 this.pullData_array[this.pullData_array_count++] = ((indexBelt << this.KEY_BITS) | this.nodeList.getKey(indexItem));
             }
 
-            // NEXT() beltIndex_current
-            beltIndex_current++;
-            if (beltIndex_current >= itemListElement_childrenLength) {
-                beltIndex_current -= itemListElement_childrenLength;
-            }
+            beltIndex_current = (beltIndex_current + 1) % itemListElement_childrenLength;
         }
 
         this.arrayEntries = await window.myAPI.getFilesystemEntryById_ARRAY(this.pullData_array.subarray(0, this.pullData_array_count));
