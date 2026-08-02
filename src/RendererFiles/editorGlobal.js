@@ -9800,4 +9800,8 @@ It's metaphorical because you gotta let go of the past.
 And take advantage of what you have in a positive way.
 The history is gone but I still have what I have in this moment and that is a meaningful message
 
+I'm worried that someone who had been following the code for a long time and cared about it won't find this new repo.
+But I don't wanna put anything else on my youtube channel I had it up for a smidge cause I felt bad.
+Hopefully that smidge was long enough for anyone who wanted to find the code to find it
+
 */
