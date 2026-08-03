@@ -1660,13 +1660,29 @@ function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
  */
 function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
 
-    if (cursor.editLength > 1) {
-        let breakpoint = 2;
-    }
+    
 
     let ORIGINAL_incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     let incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     set_EDITOR_indent_ORIGINAL_indentBy(0);
+
+    let bytes = EDITOR_on_tab_bytes;
+    let bytesLength = 4;
+
+    if (cursor.editLength > 1) {
+        ORIGINAL_incrementBy *= cursor.editLength;
+        incrementBy *= cursor.editLength;
+
+        bytesLength *= cursor.editLength;
+        bytes = new Uint8Array(bytesLength);
+        let src_bytes = EDITOR_on_tab_bytes;
+        // TODO: typed array function usage
+        for (let i = 0; i < bytesLength; i += 4) {
+            for (let k = 0; k < 4; k++) {
+                bytes[i + k] = src_bytes[k];
+            }
+        }
+    }
 
     let startingIndex = get_EDITOR_indent_startingIndex();
     set_EDITOR_indent_startingIndex(0);
@@ -1677,7 +1693,7 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
         let linePos = EDITOR_getLineBoundaryPositions(lineI);
 
         // # Insert the text on the respective line.
-        EDITOR_textByteList.insertBytes(linePos.start, EDITOR_on_tab_bytes, 0 /*offset*/, 4 /*length*/);
+        EDITOR_textByteList.insertBytes(linePos.start, bytes, 0 /*offset*/, bytesLength /*length*/);
         
         // # Increment the entry in 'EDITOR_lineEndPositionList' for the respective line
         EDITOR_lineEndPositionList.data[lineI] += incrementBy;
@@ -1685,7 +1701,7 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
         // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert (4n) characters on every line.
         //     # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
         //     # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
-        incrementBy -= 4;
+        bytesLength -= 4;
     }
 
     // # Any line that is not part of the selected set of lines, and is at a greater indexLine, needs to have their line end position entry updated.
