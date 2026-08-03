@@ -10054,4 +10054,6 @@ I think I underestimated a bit on the first 2 so I over estimated the chicken an
 
 It makes sense why I'm uncontrollably eating another 4 cliff bars then
 
+I just gotta find something else to fill the remmaining calroies 1600 is a bit low
+
 */
