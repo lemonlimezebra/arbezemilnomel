@@ -10042,4 +10042,16 @@ but I feel horrible.
 I feel constipated and it is just a terrible feeling
 way too much fiber
 
+200 calories
+800 calories
+600 calories
+
+1600 calories total
+
+then I have another 4 so that is 2400 total
+
+I think I underestimated a bit on the first 2 so I over estimated the chicken and sriracha
+
+It makes sense why I'm uncontrollably eating another 4 cliff bars then
+
 */
