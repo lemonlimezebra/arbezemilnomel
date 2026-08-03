@@ -10086,4 +10086,12 @@ It makes sense why I'm uncontrollably eating another 4 cliff bars then
 
 I just gotta find something else to fill the remmaining calroies 1600 is a bit low
 
+I get recommended "Dreariness - Madness" constantly by youtube.
+Why this in particular?
+You saw the band Dreariness cause I mentioned it and then you flocked to this because you think
+me sitting here by myself everyday is "madness".
+It just isn't the case.
+I don't want help and I want minimal people to be aware of the repo.
+I have no desire to be a programmer.
+
 */
