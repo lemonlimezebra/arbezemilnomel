@@ -5349,7 +5349,6 @@ function EDITOR_render_do_IndentLess() {
 
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
-    let ORIGINAL_decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
 
     for (let cursorI = EDITOR_cursorList.length - 1; cursorI >= 0; cursorI--) {
         let cursor = EDITOR_cursorList[cursorI];
