@@ -1663,11 +1663,17 @@ function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
  */
 function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
 
-    
+    let startingIndex = get_EDITOR_indent_startingIndex();
+    set_EDITOR_indent_startingIndex(0);
+    let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine();
+    set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(0);
 
-    let ORIGINAL_incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
-    let incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
-    set_EDITOR_indent_ORIGINAL_indentBy(0);
+    let ORIGINAL_incrementBy = (startingIndex + 1 - SMALL_lineAndColumnIndices_indexLine) * 4;
+    let incrementBy = ORIGINAL_incrementBy;
+
+    //let ORIGINAL_incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
+    //let incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
+    //set_EDITOR_indent_ORIGINAL_indentBy(0);
 
     let bytes = EDITOR_on_tab_bytes;
     let bytesLength = 4;
@@ -1687,13 +1693,55 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
         }
     }
 
-    let startingIndex = get_EDITOR_indent_startingIndex();
-    set_EDITOR_indent_startingIndex(0);
-    let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine();
-    set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(0);
+    startingLinePos_end = EDITOR_indentLess_startingLinePos_end;
+    EDITOR_indentLess_startingLinePos_end = 0;
 
+    
+
+    ///////////
+    ///////////
+    ///////////
+    // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
+    // ...
+
+    // # Update the 'START POSITIONS specifically' of the tracked syntax list by the total count of text that will be inserted.
+    let trackedSyntaxReposition_i = EDITOR_trackedSyntaxReposition_find(startingLinePos_end + 1);
+    if (trackedSyntaxReposition_i === NaN || trackedSyntaxReposition_i === -1) {
+        trackedSyntaxReposition_i = EDITOR_trackedSyntaxList.count_abstract;
+    }
+    for (var i = trackedSyntaxReposition_i; i < EDITOR_trackedSyntaxList.count_abstract; i++) {
+        EDITOR_trackedSyntaxList.setStart(
+            i,
+            EDITOR_trackedSyntaxList.getStart(i) + ORIGINAL_incrementBy);
+    }
+    trackedSyntaxReposition_i--;
+
+    // # Descending indexLine loop:
+    //     # Insert the text on the respective line.
+    //     # Increment the entry in 'EDITOR_lineEndPositionList' for the respective line
+    //     # There's a second (relative to this entire function) modification to the start positions of the tracked syntax list
+    //     # Then, you immediately know the trackedSyntax that encompasses the insertion (if it exists), so you increment its length by the text inserted on that respective line.
+    //     # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert 4 characters on every line.
+    //         # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
+    //         # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
     for (var lineI = startingIndex; lineI >= SMALL_lineAndColumnIndices_indexLine; lineI--) {
         let linePos = EDITOR_getLineBoundaryPositions(lineI);
+
+        for (; trackedSyntaxReposition_i >= 0; trackedSyntaxReposition_i--) {
+            let start = EDITOR_trackedSyntaxList.getStart(trackedSyntaxReposition_i);
+            if (linePos.start <= start) {
+                // # There's a second (relative to this entire function) modification to the start positions of the tracked syntax list
+                EDITOR_trackedSyntaxList.setStart(trackedSyntaxReposition_i, start + incrementBy);
+            }
+            else {
+                break;
+            }
+        }
+        EDITOR_trackedSyntaxList.getElementAt(trackedSyntaxReposition_i);
+        if (linePos.start > get_EDITOR_pooledTrackedSyntax_start() && linePos.start < get_EDITOR_pooledTrackedSyntax_start() + get_EDITOR_pooledTrackedSyntax_length()) {
+            // # Then, you immediately know the trackedSyntax that encompasses the insertion (if it exists), so you increment its length by the text inserted on that respective line.
+            EDITOR_trackedSyntaxList.setLength(trackedSyntaxReposition_i, get_EDITOR_pooledTrackedSyntax_length() + 4);
+        }
 
         // # Insert the text on the respective line.
         EDITOR_textByteList.insertBytes(linePos.start, bytes, 0 /*offset*/, bytesLength /*length*/);
@@ -1701,11 +1749,14 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
         // # Increment the entry in 'EDITOR_lineEndPositionList' for the respective line
         EDITOR_lineEndPositionList.data[lineI] += incrementBy;
 
-        // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert (4n) characters on every line.
+        // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert 4 characters on every line.
         //     # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
         //     # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
         bytesLength -= 4;
     }
+    ///////////
+    ///////////
+    ///////////
 
     // # Any line that is not part of the selected set of lines, and is at a greater indexLine, needs to have their line end position entry updated.
     for (var lineI = startingIndex + 1; lineI < EDITOR_lineEndPositionList.count; lineI++) {
@@ -4347,9 +4398,10 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore() {
         return true;
     }
 
+    // TODO: '..._EDITOR_indent_ORIGINAL_indentBy()' is no longer in use
+
     // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
-    if (get_EDITOR_indent_ORIGINAL_indentBy() === ((startingIndex + 1 - SMALL_lineAndColumnIndices.indexLine) * 4) &&
-        get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine() === SMALL_lineAndColumnIndices.indexLine &&
+    if (get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine() === SMALL_lineAndColumnIndices.indexLine &&
         get_EDITOR_indent_startingIndex() === startingIndex) {
 
             return false;
@@ -5453,101 +5505,50 @@ function EDITOR_indentMore(cursor) {
         SMALL_pos = cursor.selectionEnd;
         LARGE_pos = cursor.selectionAnchor;
     }
-    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(SMALL_pos);
-    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(LARGE_pos);
+    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices_raw(SMALL_pos);
+    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices_raw(LARGE_pos);
 
     // # Determine the starting indexLine (the start is the large position, this confused me for a moment)
     let startingIndex = LARGE_lineAndColumnIndices.indexLine;
-    let startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+    let startingLinePos = EDITOR_getLineBoundaryPositions_raw(startingIndex);
     if (startingLinePos.start === LARGE_pos) {
         startingIndex -= 1;
         if (startingIndex >= 0) {
-            startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+            startingLinePos = EDITOR_getLineBoundaryPositions_raw(startingIndex);
         }
     }
     if (startingIndex < SMALL_lineAndColumnIndices.indexLine) {
         return;
     }
 
-    // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
-    let ORIGINAL_incrementBy = (startingIndex + 1 - SMALL_lineAndColumnIndices.indexLine) * 4;
-    set_EDITOR_indent_ORIGINAL_indentBy(ORIGINAL_incrementBy);
     set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
     set_EDITOR_indent_startingIndex(startingIndex);
-    let incrementBy = ORIGINAL_incrementBy;
 
-    // # Update the 'START POSITIONS specifically' of the tracked syntax list by the total count of text that will be inserted.
-    let trackedSyntaxReposition_i = EDITOR_trackedSyntaxReposition_find(startingLinePos.end + 1);
-    if (trackedSyntaxReposition_i === NaN || trackedSyntaxReposition_i === -1) {
-        trackedSyntaxReposition_i = EDITOR_trackedSyntaxList.count_abstract;
-    }
-    for (var i = trackedSyntaxReposition_i; i < EDITOR_trackedSyntaxList.count_abstract; i++) {
-        EDITOR_trackedSyntaxList.setStart(
-            i,
-            EDITOR_trackedSyntaxList.getStart(i) + ORIGINAL_incrementBy);
-    }
-    trackedSyntaxReposition_i--;
+    if (cursor.editLength === 0) {
+        EDITOR_indentLess_startingLinePos_end = startingLinePos.end;
+    } 
 
-    // TODO: Consider having this string available rather than making it everytime this function is invoked.
-    let EDITOR_on_tab_string = '';
-    for (let i = 0; i < EDITOR_on_tab_bytes.length; i++) {
-        EDITOR_on_tab_string += String.fromCharCode(EDITOR_on_tab_bytes[i]);
-    }
-
-    // # Descending indexLine loop:
-    //     # Insert the text on the respective line.
-    //     # Increment the entry in 'EDITOR_lineEndPositionList' for the respective line
-    //     # There's a second (relative to this entire function) modification to the start positions of the tracked syntax list
-    //     # Then, you immediately know the trackedSyntax that encompasses the insertion (if it exists), so you increment its length by the text inserted on that respective line.
-    //     # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert 4 characters on every line.
-    //         # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
-    //         # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
-    for (var lineI = startingIndex; lineI >= SMALL_lineAndColumnIndices.indexLine; lineI--) {
-        let linePos = EDITOR_getLineBoundaryPositions(lineI);
-
-        for (; trackedSyntaxReposition_i >= 0; trackedSyntaxReposition_i--) {
-            let start = EDITOR_trackedSyntaxList.getStart(trackedSyntaxReposition_i);
-            if (linePos.start <= start) {
-                // # There's a second (relative to this entire function) modification to the start positions of the tracked syntax list
-                EDITOR_trackedSyntaxList.setStart(trackedSyntaxReposition_i, start + incrementBy);
-            }
-            else {
-                break;
-            }
-        }
-        EDITOR_trackedSyntaxList.getElementAt(trackedSyntaxReposition_i);
-        if (linePos.start > get_EDITOR_pooledTrackedSyntax_start() && linePos.start < get_EDITOR_pooledTrackedSyntax_start() + get_EDITOR_pooledTrackedSyntax_length()) {
-            // # Then, you immediately know the trackedSyntax that encompasses the insertion (if it exists), so you increment its length by the text inserted on that respective line.
-            EDITOR_trackedSyntaxList.setLength(trackedSyntaxReposition_i, get_EDITOR_pooledTrackedSyntax_length() + 4);
-        }
-
-        // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert 4 characters on every line.
-        //     # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
-        //     # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
-        incrementBy -= 4;
-    }
-
-    // # Update the cursor's selection to reflect the inserted text
-    if (cursor.selectionAnchor < cursor.selectionEnd) {
-        cursor.selectionEnd += ORIGINAL_incrementBy;
-    }
-    else {
-        cursor.selectionAnchor += ORIGINAL_incrementBy;
-    }
+    //// # Update the cursor's selection to reflect the inserted text
+    //if (cursor.selectionAnchor < cursor.selectionEnd) {
+    //    cursor.selectionEnd += ORIGINAL_incrementBy;
+    //}
+    //else {
+    //    cursor.selectionAnchor += ORIGINAL_incrementBy;
+    //}
 
     // # Update the cursor's indexColumn to reflect the inserted text
     cursor.indexColumn += 4;
 
-    // # Update the cursor's selection to reflect the inserted text
-    let smallLinePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices.indexLine);
-    if (SMALL_pos > smallLinePos.start) {
-        if (cursor.selectionAnchor < cursor.selectionEnd) {
-            cursor.selectionAnchor += 4;
-        }
-        else {
-            cursor.selectionEnd += 4;
-        }
-    }
+    //// # Update the cursor's selection to reflect the inserted text
+    //let smallLinePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices.indexLine);
+    //if (SMALL_pos > smallLinePos.start) {
+    //    if (cursor.selectionAnchor < cursor.selectionEnd) {
+    //        cursor.selectionAnchor += 4;
+    //    }
+    //    else {
+    //        cursor.selectionEnd += 4;
+    //    }
+    //}
 
     cursor.editLength++;
     EDITOR_render_request(get_RenderKind_IndentMore());
