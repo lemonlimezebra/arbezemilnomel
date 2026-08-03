@@ -9863,4 +9863,7 @@ it just might not be today or tomorrow, but a long time from now and you just go
 I feel brain fog.
 I feel extremely uncomfortable I've been eating too much fiber.
 
+I've been having less caffeine than I usually do for a week maybe more I actually can't remember much
+I'm too focused on day by day just making progress than thinking about the past.
+
 */
