@@ -9827,4 +9827,13 @@ I watch this minute long sequence daily I love it
 
 https://youtu.be/wxPZenBdO0Q?si=Vo1IUp66z6UVEPO2&t=27
 
+> what was the name of the old microsoft website that had videos
+
+< The old Microsoft video-sharing website from the mid-2000s that competed with YouTube was called MSN Soapbox
+< ...
+
+> it had videos where the academics of the company I think PHDs were on camera just talking about things
+
+< You are thinking of Channel 9...
+
 */
