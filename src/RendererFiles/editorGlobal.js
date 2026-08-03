@@ -10102,9 +10102,13 @@ there is no show I deleted the previous account myself.
 Then I did it on my own filesystem.
 You cannot comprehend my point of view I've tried many times.
 
-" you can't break those cuffs" I Can't stand seeing this video recommended to me I know exactly why it is
+"you can't break those cuffs" I Can't stand seeing this video recommended to me I know exactly why it is
 
 cause you know something I never even clicked on the video.
 It just keeps showing up. You know whyt? Cause I quoted it one time.
+
+I have no desire to work.
+I have no desire to suceed I am just a waste of oxygen.
+I want to work a low skill job for the minimum amount of time necessary to get the health care issues off my ass and that's it.
 
 */
