@@ -10050,23 +10050,4 @@ TODO:
 - [ ] indentLess render logic 2 in rAF 1 cancel but need 2 draw only draw 1 though need fix
 
 ==============
-
-anxiety anxiety anxiety all I do all day is look at youtube
-and I constantly get these recommendations it completely messed with my head
-
-If I could spend the rest of my life in a mental hospital where I spent every waking hour
-coding I would in a heartbeat agree to that deal
-
-You have no idea how fucked my head is and how it has been this way all my life and I have no desire to change
-
-Admins probably have some of the descriptions I gave of how I cut myself.
-I can go into extreme detail about it if you want it essentially was one of the worst gore videos you have ever seen
-I was ready to die
-
-I held back at the very last moment and then drove myself while bleeding all over the car
-walked into the emergency room and awkwardly explained what I'd done
-entire time while driving there I was completely calm too blasted the og krsyrtal castles kept on loop I was so fucking happy
-
-I can't tell if I'm being baited by someone or not I'm getting the cuffs videos I'm getting the ... and I just I can't tell I'f I'm being baited or not and I'm just giving them what they want
-
 */
