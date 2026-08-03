@@ -1846,50 +1846,50 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
     // TODO: This at a glance seems to not account for when the cursor is small-position-ended and large-position-anchored...
     // ...this is moving the cursor actually, maybe it is fine? but maybe it is logic that could've been done during a loop but instead you made a new one to separately do this?
     // Also, this entire function is terribly written. You seemingly hacked something together; the code doesn't feel self explanatory. Furthermore there are both a lack of comments (given the confusing nature of how this is written), and dead comments.
-    if (cursor.indexLine !== SMALL_lineAndColumnIndices_indexLine) {
-        let linePos = EDITOR_getLineBoundaryPositions(cursor.indexLine);
-        let line = linePos;
-        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
-        let upperLimitIndexColumn;
-        if (lastValidIndexColumn > that_four) {
-            upperLimitIndexColumn = that_four;
-        }
-        else {
-            upperLimitIndexColumn = lastValidIndexColumn;
-        }
-        let seenSpace = false;
-        let count = 0;
-        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
-            let c = getCharacter(line.start + i);
-            switch (c) {
-                case ' ':
-                    seenSpace = true;
-                    count++;
-                    break;
-                case '\t':
-                    if (!seenSpace) {
-                        count+= 4;
-                    }
-                    break outer;
-                default:
-                    break outer;
-            }
-        }
-        //let c = EDITOR_getLineBoundaryPositions(cursor.indexLine);
-        // TODO: git blame the below todo and remind them to delete the dead code
-        // TODO: Delete this dead code / use better formatting
-        /*if (SMALL_pos > smallLinePos.start) {
-            if (cursor.selectionAnchor < cursor.selectionEnd) {
-                cursor.selectionAnchor -= count;
-            }
-            else {
-                cursor.selectionEnd -= count;
-            }
-        }*/
-        //if (cursor.indexLine === LARGE_lineAndColumnIndices.indexLine) {
-        //    cursor.indexColumn -= count;
-        //}
-    }
+    //if (cursor.indexLine !== SMALL_lineAndColumnIndices_indexLine) {
+    //    let linePos = EDITOR_getLineBoundaryPositions(cursor.indexLine);
+    //    let line = linePos;
+    //    let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
+    //    let upperLimitIndexColumn;
+    //    if (lastValidIndexColumn > that_four) {
+    //        upperLimitIndexColumn = that_four;
+    //    }
+    //    else {
+    //        upperLimitIndexColumn = lastValidIndexColumn;
+    //    }
+    //    let seenSpace = false;
+    //    let count = 0;
+    //    outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+    //        let c = getCharacter(line.start + i);
+    //        switch (c) {
+    //            case ' ':
+    //                seenSpace = true;
+    //                count++;
+    //                break;
+    //            case '\t':
+    //                if (!seenSpace) {
+    //                    count+= 4;
+    //                }
+    //                break outer;
+    //            default:
+    //                break outer;
+    //        }
+    //    }
+    //    //let c = EDITOR_getLineBoundaryPositions(cursor.indexLine);
+    //    // TODO: git blame the below todo and remind them to delete the dead code
+    //    // TODO: Delete this dead code / use better formatting
+    //    /*if (SMALL_pos > smallLinePos.start) {
+    //        if (cursor.selectionAnchor < cursor.selectionEnd) {
+    //            cursor.selectionAnchor -= count;
+    //        }
+    //        else {
+    //            cursor.selectionEnd -= count;
+    //        }
+    //    }*/
+    //    //if (cursor.indexLine === LARGE_lineAndColumnIndices.indexLine) {
+    //    //    cursor.indexColumn -= count;
+    //    //}
+    //}
 
     let trackedSyntaxReposition_i = EDITOR_trackedSyntaxReposition_find(EDITOR_indentLess_startingLinePos_end + 1);
     if (trackedSyntaxReposition_i === NaN || trackedSyntaxReposition_i === -1) {
@@ -1914,19 +1914,38 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
         else {
             upperLimitIndexColumn = lastValidIndexColumn;
         }
-        let seenSpace = false;
+
+        let seenSpaceCount = 0;
+        let rank = 0;
         outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+
+            if (rank >= largestRank) break outer; // "case '\t':" has this as well.
+
+            // if you walked the text without hitting the maximum rank it isn't an issue.
+            // rank is just a means of short circuiting any weird combinations of spaces and tabs.
+            // (TODO: maybe I should believe in tab stops.)
+
             let c = getCharacter(line.start + i);
             switch (c) {
                 case ' ':
-                    seenSpace = true;
+                    seenSpaceCount++;
                     innerRemoveCount++;
+                    if (seenSpaceCount % 4 === 0) {
+                        // avoid a number that could approach infinity because I don't understand how machines compute division/modulo
+                        // and I assume that it is easier to keep 'seenSpaceCount' at [0, 4] than compute division/modulo on very large numbers.
+                        seenSpaceCount = 0;
+                        rank++;
+                    }
                     break;
                 case '\t':
-                    if (!seenSpace) {
-                        innerRemoveCount += 4;
+                    if (seenSpaceCount > 0) {
+                        rank++;
+                        seenSpaceCount = 0;
                     }
-                    break outer;
+                    if (rank >= largestRank) break outer;
+                    innerRemoveCount += 4;
+                    rank++;
+                    break;
                 default:
                     break outer;
             }
