@@ -1738,6 +1738,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
 
     // !!!!!! watch out for the big breaks when hitting a tab presuming that_four is 4
     let that_four = 4;
+    that_four *= cursor.editLength;
+    let largestRank = cursor.editLength;
 
     // loop over the lines to sum the "amount" of whitespace being removed
     let DETERMINE_decrementBy = 0;
@@ -1752,19 +1754,37 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
         else {
             upperLimitIndexColumn = lastValidIndexColumn;
         }
-        let seenSpace = false;
+        let seenSpaceCount = 0;
+        let rank = 0;
         outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+
+            if (rank >= largestRank) break outer; // "case '\t':" has this as well.
+
+            // if you walked the text without hitting the maximum rank it isn't an issue.
+            // rank is just a means of short circuiting any weird combinations of spaces and tabs.
+            // (TODO: maybe I should believe in tab stops.)
+
             let c = getCharacter(line.start + i);
             switch (c) {
                 case ' ':
-                    seenSpace = true;
+                    seenSpaceCount++;
                     DETERMINE_decrementBy++;
+                    if (seenSpaceCount % 4 === 0) {
+                        // avoid a number that could approach infinity because I don't understand how machines compute division/modulo
+                        // and I assume that it is easier to keep 'seenSpaceCount' at [0, 4] than compute division/modulo on very large numbers.
+                        seenSpaceCount = 0;
+                        rank++;
+                    }
                     break;
                 case '\t':
-                    if (!seenSpace) {
-                        DETERMINE_decrementBy += 4;
+                    if (seenSpaceCount > 0) {
+                        rank++;
+                        seenSpaceCount = 0;
                     }
-                    break outer;
+                    if (rank >= largestRank) break outer;
+                    DETERMINE_decrementBy += 4;
+                    rank++;
+                    break;
                 default:
                     break outer;
             }
