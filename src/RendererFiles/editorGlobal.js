@@ -10086,34 +10086,5 @@ It makes sense why I'm uncontrollably eating another 4 cliff bars then
 
 I just gotta find something else to fill the remmaining calroies 1600 is a bit low
 
-I get recommended "Dreariness - Madness" constantly by youtube.
-Why this in particular?
-You saw the band Dreariness cause I mentioned it and then you flocked to this because you think
-me sitting here by myself everyday is "madness".
-It just isn't the case.
-I don't want help and I want minimal people to be aware of the repo.
-I have no desire to be a programmer.
-
-"The Show must Go On Moulin Rouge".
-
-These recommendations are because people watch them in relation to me I understand how the recommendations work.
-You think I'm falling apart and that the show must go on or whatever
-there is no show I deleted the previous account myself.
-Then I did it on my own filesystem.
-You cannot comprehend my point of view I've tried many times.
-
-"you can't break those cuffs" I Can't stand seeing this video recommended to me I know exactly why it is
-
-cause you know something I never even clicked on the video.
-It just keeps showing up. You know whyt? Cause I quoted it one time.
-
-I have no desire to work.
-I have no desire to suceed I am just a waste of oxygen.
-I want to work a low skill job for the minimum amount of time necessary to get the health care issues off my ass and that's it.
-even sitting here now I feel extremely depressed.
-I only aim to make an IDE because I'm an egotistical moron failure and feel like this is me showing everyone that I was right about everything
-Of all the loser behavior it is the loser-est
-I hate my self and one of my main motivations for living is so that I don't cause any mental stress to anyone who cares about me
-I am a bad person you can just leave
 
 */
