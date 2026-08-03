@@ -10051,40 +10051,4 @@ TODO:
 
 ==============
 
-and 'shift tab' no selection
-I wanna do 'base tab'
-
-I feel down. Similar to this morning. I just feel kinda down nothing too bad but I Feel down nevertheless
-
-I need to figure out what to eat.
-
-I am very anxious and I prefer to just eat minimal things
-
-I been eating:
-1 42g protein fairlife
-4 cliff bars
-1 lb of 98% fat free ground chicken with sriracha
-
-And then I try to not eat anything else
-    but I end up eating like 4 more of the cliff bars and then I'm not hungry by the end of the day
-but I feel horrible.
-
-I feel constipated and it is just a terrible feeling
-way too much fiber
-
-200 calories
-800 calories
-600 calories
-
-1600 calories total
-
-then I have another 4 so that is 2400 total
-
-I think I underestimated a bit on the first 2 so I over estimated the chicken and sriracha
-
-It makes sense why I'm uncontrollably eating another 4 cliff bars then
-
-I just gotta find something else to fill the remmaining calroies 1600 is a bit low
-
-
 */
