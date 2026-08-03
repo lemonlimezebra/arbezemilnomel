@@ -10026,4 +10026,20 @@ I wanna do 'base tab'
 
 I feel down. Similar to this morning. I just feel kinda down nothing too bad but I Feel down nevertheless
 
+I need to figure out what to eat.
+
+I am very anxious and I prefer to just eat minimal things
+
+I been eating:
+1 42g protein fairlife
+4 cliff bars
+1 lb of 98% fat free ground chicken with sriracha
+
+And then I try to not eat anything else
+    but I end up eating like 4 more of the cliff bars and then I'm not hungry by the end of the day
+but I feel horrible.
+
+I feel constipated and it is just a terrible feeling
+way too much fiber
+
 */
