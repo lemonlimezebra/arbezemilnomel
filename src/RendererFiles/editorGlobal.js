@@ -9892,4 +9892,10 @@ Feelings of pleasure help with throughput but they also lead to delusion.
 The days you don't feel good, like today, they feel like a grind. It is somewhat painful.
 But they're just as important as a high throughput somewhat delusional day.
 
+Don't confuse "pleasure" for "progress" mood is extremely capricious and you might be making
+more progress on a given day than you ever have in your life, that doesn't mean your mood will hit pleasurably.
+You just gotta endure any mood and stay consistent with the understanding that the various
+moods lead to varying perspectives and these varying perspectives lead to revelations.
+And that long term you will achieve that good mood that you're looking for.
+
 */
