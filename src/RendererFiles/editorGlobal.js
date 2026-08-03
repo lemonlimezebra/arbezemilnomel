@@ -9904,4 +9904,7 @@ No I don't. I feel like garbage right now actually lol.
 Especially when you think that I've been taking these things for more than 3 years my body is extremely used to it all
 and likely leans towards a homeostatic state with respect to the medications.
 
+One thing I will say in relation to the medications I take.
+Is that when I feel happy I feel "happier". But I actually baseline don't feel anything.
+
 */
