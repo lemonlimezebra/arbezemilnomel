@@ -10053,21 +10053,6 @@ like with a pencil or pen I mean
 I would write it I guess lol
 I tried to correct it like you misinterpreted it but I said type from the gecko
 
-I watch this minute long sequence daily I love it
-
-https://youtu.be/wxPZenBdO0Q?si=Vo1IUp66z6UVEPO2&t=27
-
-> what was the name of the old microsoft website that had videos
-
-< The old Microsoft video-sharing website from the mid-2000s that competed with YouTube was called MSN Soapbox
-< ...
-
-> it had videos where the academics of the company I think PHDs were on camera just talking about things
-
-< You are thinking of Channel 9...
-
-my dad is on channel 9 I wanna see if I can find it
-
 ==============
 
 
