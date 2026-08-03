@@ -9918,4 +9918,6 @@ But with indentMore and indentLess or any other somewhat abstract concept of a d
 You can use editLength to store the amount times you need to apply the "transformation".
 Long term probably don't do this... but...
 
+Then the editDisplacement is the amount of times the UI received the transformation.
+
 */
