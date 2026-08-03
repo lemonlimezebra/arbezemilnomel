@@ -10030,4 +10030,6 @@ if u wanna text me my number is 7323207071 I don't answer calls though
 I have a lot of free time
 I live in new jersey depending on where you are we could probably hang out
 
+it's actually downpouring right now I can't go out :(
+
 */
