@@ -5440,6 +5440,8 @@ function EDITOR_indentMore(cursor) {
     // I can't remember why this works but I remember that it does.
     // So I need to figure out why it works.
 
+    // all I gotta do is this one to move it all to the finalize other than modifying the UI I gotta go to the bathroom.
+
     // # Small and large selection positions
     let SMALL_pos;
     let LARGE_pos;
