@@ -10054,4 +10054,7 @@ TODO:
 anxiety anxiety anxiety all I do all day is look at youtube
 and I constantly get these recommendations it completely messed with my head
 
+If I could spend the rest of my life in a mental hospital where I spent every waking hour
+coding I would in a heartbeat agree to that deal
+
 */
