@@ -1785,6 +1785,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
                     DETERMINE_decrementBy += 4;
                     rank++;
                     break;
+                case '\0':
+                    break;
                 default:
                     break outer;
             }
@@ -1945,6 +1947,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
                     if (rank >= largestRank) break outer;
                     innerRemoveCount += 4;
                     rank++;
+                    break;
+                case '\0':
                     break;
                 default:
                     break outer;
