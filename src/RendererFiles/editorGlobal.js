@@ -4104,6 +4104,9 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore() {
         return true;
     }
     let cursor = EDITOR_cursorList[0];
+    if (cursor.editKind === get_EditKind_IndentLess()) {
+        return true;
+    }
     
     /////
     let SMALL_pos;
@@ -4147,7 +4150,7 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore() {
 /**
  * @returns {boolean} 'shouldFinalizeAllCursors'
  * 
- * TODO: This function never is "naturally" invoked because all tab keypresses start with a 'Tab' edit event and only convert to indentMore downstream
+ * TODO: This function never is "naturally" invoked because all tab keypresses start with a 'Tab' edit event and only convert to indentLess downstream
  * 
  */
 function EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess() {
@@ -4155,6 +4158,9 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess() {
         return true;
     }
     let cursor = EDITOR_cursorList[0];
+    if (cursor.editKind === get_EditKind_IndentMore()) {
+        return true;
+    }
     
     /////
     // selection positions
@@ -4168,16 +4174,16 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess() {
         SMALL_pos = cursor.selectionEnd;
         LARGE_pos = cursor.selectionAnchor;
     }
-    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(SMALL_pos);
-    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(LARGE_pos);
+    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices_raw(SMALL_pos);
+    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices_raw(LARGE_pos);
 
     // starting index
     let startingIndex = LARGE_lineAndColumnIndices.indexLine;
-    let startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+    let startingLinePos = EDITOR_getLineBoundaryPositions_raw(startingIndex);
     if (startingLinePos.start === LARGE_pos) {
         startingIndex -= 1;
         if (startingIndex >= 0) {
-            startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+            startingLinePos = EDITOR_getLineBoundaryPositions_raw(startingIndex);
         }
     }
     if (startingIndex < SMALL_lineAndColumnIndices.indexLine) {
