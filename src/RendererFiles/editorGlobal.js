@@ -10148,18 +10148,7 @@ But with indentMore and indentLess or any other somewhat abstract concept of a d
 You can use editLength to store the amount times you need to apply the "transformation".
 Long term probably don't do this... but...
 
-Then the editDisplacement is the amount of times the UI received the transformation.
 
-'when I feel happy I feel "happier"'
-Don't confuse pleasure for happiness I guess lol
-
-I'm almost done with this indentMore then I can take a break.
-I'll probably go for a walk.
-if u wanna text me my number is 7323207071 I don't answer calls though
-I have a lot of free time
-I live in new jersey depending on where you are we could probably hang out
-
-it's actually downpouring right now I can't go out :(
 
 TODO:
 - [ ] indentMore selection logic moves as you go
