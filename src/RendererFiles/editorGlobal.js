@@ -10057,4 +10057,6 @@ and I constantly get these recommendations it completely messed with my head
 If I could spend the rest of my life in a mental hospital where I spent every waking hour
 coding I would in a heartbeat agree to that deal
 
+You have no idea how fucked my head is and how it has been this way all my life and I have no desire to change
+
 */
