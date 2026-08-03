@@ -10114,5 +10114,6 @@ even sitting here now I feel extremely depressed.
 I only aim to make an IDE because I'm an egotistical moron failure and feel like this is me showing everyone that I was right about everything
 Of all the loser behavior it is the loser-est
 I hate my self and one of my main motivations for living is so that I don't cause any mental stress to anyone who cares about me
+I am a bad person you can just leave
 
 */
