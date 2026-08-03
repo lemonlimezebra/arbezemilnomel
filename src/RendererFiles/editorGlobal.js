@@ -10161,4 +10161,12 @@ I live in new jersey depending on where you are we could probably hang out
 
 it's actually downpouring right now I can't go out :(
 
+TODO:
+- [ ] indentMore selection logic moves as you go
+- [ ] indentMore render logic 2 in rAF 1 cancel but need 2 draw only draw 1 though need fix
+- [ ] indentLess selection logic moves as you go
+- [ ] indentLess render logic 2 in rAF 1 cancel but need 2 draw only draw 1 though need fix
+
+
+
 */
