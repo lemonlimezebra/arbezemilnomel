@@ -10064,5 +10064,6 @@ I can go into extreme detail about it if you want it essentially was one of the 
 I was ready to die
 
 I held back at the very last moment and then drove myself while bleeding all over the car
+walked into the emergency room and awkwardly explained what I'd done
 
 */
