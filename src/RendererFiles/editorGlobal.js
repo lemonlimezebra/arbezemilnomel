@@ -9873,4 +9873,8 @@ and then editDisplacement n count times you drew the edit
 
 but then how do you know the n count.
 
+the target isn't 4 it is 4 * n
+
+It actually all sounds very simple I just don't know given the current state where I should put all this data
+
 */
