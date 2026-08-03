@@ -9877,4 +9877,9 @@ the target isn't 4 it is 4 * n
 
 It actually all sounds very simple I just don't know given the current state where I should put all this data
 
+"How do you get 100% world completion in guild wars 2?"
+"How do you make an IDE?"
+
+These questions are equivalent. People just overthink thnings too much.
+
 */
