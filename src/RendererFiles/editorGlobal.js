@@ -10012,5 +10012,6 @@ I'm almost done with this indentMore then I can take a break.
 I'll probably go for a walk.
 if u wanna text me my number is 7323207071 I don't answer calls though
 I have a lot of free time
+I live in new jersey depending on where you are we could probably hang out
 
 */
