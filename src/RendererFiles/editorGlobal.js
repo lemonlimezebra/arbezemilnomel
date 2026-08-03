@@ -9882,4 +9882,10 @@ It actually all sounds very simple I just don't know given the current state whe
 
 These questions are equivalent. People just overthink thnings too much.
 
+Everyday you show up and you make a non-zero meaningful amount of progress.
+You then do this for some amount of time, and you'll eventually be done.
+If you wanna accelerate things you do more than just a minimal amount of non-zero progress.
+And usually it means you have days where do you more than minimal and days where you do minimal
+and they're all equally as important people just fail to understand this.
+
 */
