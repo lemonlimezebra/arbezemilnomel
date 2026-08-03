@@ -10065,5 +10065,6 @@ I was ready to die
 
 I held back at the very last moment and then drove myself while bleeding all over the car
 walked into the emergency room and awkwardly explained what I'd done
+entire time while driving there I was completely calm too blasted the og krsyrtal castles kept on loop I was so fucking happy
 
 */
