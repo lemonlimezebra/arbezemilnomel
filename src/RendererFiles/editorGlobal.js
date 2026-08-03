@@ -1647,10 +1647,15 @@ function EDITOR_finalizeEdit_Enter(cursor, indexLine_editOccurredOn) {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
-    EDITOR_textByteList.insertBytes(cursor.editPosition, EDITOR_on_tab_bytes, /*offset*/ 0, /*length*/ 4);
+
+    let that_four = 4;
+
+    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, that_four);
+
+    EDITOR_textByteList.insertBytes(cursor.editPosition, EDITOR_on_tab_bytes, /*offset*/ 0, /*length*/ that_four);
 
     for (var i = cursor.editIndexLine; i < EDITOR_lineEndPositionList.count; i++) {
-        EDITOR_lineEndPositionList.data[i] += 4;
+        EDITOR_lineEndPositionList.data[i] += that_four;
     }
 
     EDITOR_finalizeEdit_ClearEditState(cursor);
@@ -6490,13 +6495,8 @@ function EDITOR_render_do_TabKey() {
  */
 function EDITOR_tabKey(cursor) {
 
-    let indexPosition = EDITOR_getPositionIndex(cursor);
-
-    // TODO: Move this to the finalize logic (move the variable indexPosition inside next if when you do this cause only will be needed there)
-    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(indexPosition, 4);
-
     if (cursor.editLength === 0) {
-        cursor.editPosition = indexPosition;
+        cursor.editPosition = EDITOR_getPositionIndex(cursor);
         cursor.editIndexLine = cursor.indexLine;
         cursor.editIndexColumn = cursor.indexColumn;
     }
