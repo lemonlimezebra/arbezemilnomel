@@ -5360,6 +5360,12 @@ function EDITOR_render_do_IndentLess() {
     // I know what you're thinking but: I don't believe in tab-stops
     // I have many bad opinions so I assure you nobody will ever use my IDE even if I finish it and I'm completely okay with that.
     // That's why the ctrl arrow right logic works the way it does. I can't stand the way editors do it.
+    //
+    // "I assure you nobody will ever use my IDE even if I finish it".
+    //
+    // "Nobody?" How can you so confidently state that wouldn't you be somebody?
+    //
+    // I'm using VS Code right now are you kidding me.
 
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
