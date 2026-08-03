@@ -1649,11 +1649,24 @@ function EDITOR_finalizeEdit_Enter(cursor, indexLine_editOccurredOn) {
 function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
 
     let that_four = 4;
-    that_four *= cursor.editLength;
+
+    let bytes = EDITOR_on_tab_bytes;
+
+    if (cursor.editLength > 1) {
+        that_four *= cursor.editLength;
+        bytes = new Uint8Array(that_four);
+        let src_bytes = EDITOR_on_tab_bytes;
+        // TODO: typed array function usage
+        for (let i = 0; i < that_four; i += 4) {
+            for (let k = 0; k < 4; k++) {
+                bytes[i + k] = src_bytes[k];
+            }
+        }
+    }
 
     EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, that_four);
 
-    EDITOR_textByteList.insertBytes(cursor.editPosition, EDITOR_on_tab_bytes, /*offset*/ 0, /*length*/ that_four);
+    EDITOR_textByteList.insertBytes(cursor.editPosition, bytes, /*offset*/ 0, /*length*/ that_four);
 
     for (var i = cursor.editIndexLine; i < EDITOR_lineEndPositionList.count; i++) {
         EDITOR_lineEndPositionList.data[i] += that_four;
