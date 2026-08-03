@@ -9843,4 +9843,21 @@ my dad is on channel 9 I wanna see if I can find it
 - [ ] Batch IndentMore
 - [ ] Batch IndentLess
 
+All you have to do are these two tasks.
+
+You have until 9 PM to do them.
+
+It is 8:13 AM currently.
+
+You don't feel energized or focused.
+But that is ideal.
+Because you are extremely close to finishing the IDE.
+All you need to do is stay calm and not act erractic.
+Thus you calmly fininsh these two tasks by the end of the day.
+Then you sleep.
+Etc...
+You don't need to "feel" focused or energized, you can just discipline through it.
+And you know you want to discipline through it because long term you'll get a meaningful feeling,
+it just might not be today or tomorrow, but a long time from now and you just gotta stay disciplined.
+
 */
