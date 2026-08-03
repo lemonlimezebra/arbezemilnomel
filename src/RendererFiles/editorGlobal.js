@@ -10059,4 +10059,8 @@ coding I would in a heartbeat agree to that deal
 
 You have no idea how fucked my head is and how it has been this way all my life and I have no desire to change
 
+Admins probably have some of the descriptions I gave of how I cut myself.
+I can go into extreme detail about it if you want it essentially was one of the worst gore videos you have ever seen
+I was ready to die
+
 */
