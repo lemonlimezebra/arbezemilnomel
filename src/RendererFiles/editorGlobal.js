@@ -9836,4 +9836,6 @@ https://youtu.be/wxPZenBdO0Q?si=Vo1IUp66z6UVEPO2&t=27
 
 < You are thinking of Channel 9...
 
+my dad is on channel 9 I wanna see if I can find it
+
 */
