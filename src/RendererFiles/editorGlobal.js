@@ -5356,6 +5356,8 @@ function EDITOR_render_do_IndentLess() {
     // if your UI is wrong then modifying the UI won't accurately show the user the edit.
     // But the response to that is: make sure the UI is correct. Otherwise you're showing them an edit to the file
     // when you could give them a preview of the edited viewport and wait to finalize.
+    //
+    // I know what you're thinking but: I don't believe in tab-stops
 
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
