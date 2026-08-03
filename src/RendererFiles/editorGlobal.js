@@ -5520,6 +5520,9 @@ function EDITOR_indentLess(cursor) {
         return;
     }
 
+    set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
+    set_EDITOR_indent_startingIndex(startingIndex);
+
     // loop over the lines to sum the "amount" of whitespace being removed
     let DETERMINE_decrementBy = 0;
     for (var lineI = SMALL_lineAndColumnIndices.indexLine; lineI <= startingIndex; lineI++) {
@@ -5555,8 +5558,6 @@ function EDITOR_indentLess(cursor) {
     // Remember the total whitespace removed
     let ORIGINAL_decrementBy = DETERMINE_decrementBy;
     set_EDITOR_indent_ORIGINAL_indentBy(ORIGINAL_decrementBy);
-    set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
-    set_EDITOR_indent_startingIndex(startingIndex);
     let decrementBy = ORIGINAL_decrementBy;
 
     // TODO: use better formatting
@@ -5712,12 +5713,15 @@ function EDITOR_indentLess(cursor) {
         decrementBy -= innerRemoveCount;
     }
 
-    if (cursor.selectionAnchor < cursor.selectionEnd) {
-        cursor.selectionEnd -= ORIGINAL_decrementBy;
-    }
-    else {
-        cursor.selectionAnchor -= ORIGINAL_decrementBy;
-    }
+    // TODO: Some kind of "fake" selection somehow because you really only need to modify the top-left most selection and the bottom-right most selection.
+    // Then when you perhaps hit 'ctrl + c' to copy. You'd need to finalize the edit then and there so you copy the text correctly.
+    //
+    //if (cursor.selectionAnchor < cursor.selectionEnd) {
+    //    cursor.selectionEnd -= ORIGINAL_decrementBy;
+    //}
+    //else {
+    //    cursor.selectionAnchor -= ORIGINAL_decrementBy;
+    //}
 
     cursor.editLength++;
     EDITOR_render_request(get_RenderKind_IndentLess());
