@@ -10086,7 +10086,5 @@ It makes sense why I'm uncontrollably eating another 4 cliff bars then
 
 I just gotta find something else to fill the remmaining calroies 1600 is a bit low
 
-I need some sleep and to log out of github until tomorrow
-I feel horrible I think it is the fiber
 
 */
