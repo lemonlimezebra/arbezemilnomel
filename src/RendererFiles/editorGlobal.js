@@ -9912,6 +9912,6 @@ because I know I enjoy the feeling that will eventually come.
 You just need to detach the idea that this enjoyable feeling will always appear sometimes you achieve things and
 it just doesn't happen and it is okay you will long term find yourself where you want to be.
 
-
+editLength is n I'm trolling oof; well it isn't but it'd work
 
 */
