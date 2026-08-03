@@ -10011,10 +10011,7 @@ then you can re-use the originally calculated metadata per edit and then just ma
 It seems that neither duplicate or paste are batched at the moment
 So you'd want to write logic to batch them today if possible.
 
-=============
-
 ==============
-
 
 TODO:
 - [ ] indentMore selection logic moves as you go
@@ -10022,6 +10019,9 @@ TODO:
 - [ ] indentLess selection logic moves as you go
 - [ ] indentLess render logic 2 in rAF 1 cancel but need 2 draw only draw 1 though need fix
 
+==============
 
+and 'shift tab' no selection
+I wanna do 'base tab'
 
 */
