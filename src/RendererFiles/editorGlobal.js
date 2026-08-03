@@ -10112,5 +10112,5 @@ I have no desire to suceed I am just a waste of oxygen.
 I want to work a low skill job for the minimum amount of time necessary to get the health care issues off my ass and that's it.
 even sitting here now I feel extremely depressed.
 I only aim to make an IDE because I'm an egotistical moron failure and feel like this is me showing everyone that I was right about everything
-
+Of all the loser behavior it is the loser-est
 */
