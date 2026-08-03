@@ -9866,4 +9866,11 @@ I feel extremely uncomfortable I've been eating too much fiber.
 I've been having less caffeine than I usually do for a week maybe more I actually can't remember much
 I'm too focused on day by day just making progress than thinking about the past.
 
+I think the edit length and edit displacement are both 0.
+So you could use editLength to track the n count of times you applied the edit in finalize edit
+
+and then editDisplacement n count times you drew the edit
+
+but then how do you know the n count.
+
 */
