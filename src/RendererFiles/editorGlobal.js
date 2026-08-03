@@ -3790,8 +3790,13 @@ function EDITOR_editEvent(editKind, event, clipboardContent) {
 
         shouldFinalizeAllCursors = false;
         
-        if (editKind === get_EditKind_Tab() && EDITOR_cursorList.length === 1 && EDITOR_cursorList[0].editKind === get_EditKind_IndentMore()) {
-            // TODO: Rewrite this if statement (it is a hack for the moment while I get indent more of a single cursor to batch)
+        if ((editKind === get_EditKind_Tab() && EDITOR_cursorList.length === 1 && EDITOR_cursorList[0].editKind === get_EditKind_IndentMore()) ||
+            (editKind === get_EditKind_Tab() && EDITOR_cursorList.length === 1 && EDITOR_cursorList[0].editKind === get_EditKind_IndentLess() && event.shiftKey)) {
+
+                // TODO: IndentLess when no selection however shiftTab then it does indentLess even still but I haven't gone out of the way to handle that hack...
+                // ...maybe it'll be covered maybe it won't.
+
+                // TODO: Rewrite this if statement (it is a hack for the moment while I get indent more of a single cursor to batch)
         }
         else {
             EDITOR_finalizeAllCursors();
@@ -3837,7 +3842,7 @@ function EDITOR_editEvent(editKind, event, clipboardContent) {
             shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore();
             break;
         case get_EditKind_IndentLess():
-            shouldFinalizeAllCursors = true;
+            shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess();
             break;
         case get_EditKind_Enter():
             shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_Enter();
@@ -4080,6 +4085,10 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_Tab(event) {
     if (cursor.hasSelection() && !event.shiftKey) {
         return EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore();
     }
+    else if (cursor.hasSelection() && event.shiftKey) {
+        // TODO: write 'if (cursor.hasSelection())' then nest these in the same wrapping if statement.
+        return EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess();
+    }
 
     return true;
 }
@@ -4126,6 +4135,57 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore() {
     // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
     if (get_EDITOR_indent_ORIGINAL_indentBy() === ((startingIndex + 1 - SMALL_lineAndColumnIndices.indexLine) * 4) &&
         get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine() === SMALL_lineAndColumnIndices.indexLine &&
+        get_EDITOR_indent_startingIndex() === startingIndex) {
+
+            return false;
+    }
+    /////
+
+    return true;
+}
+
+/**
+ * @returns {boolean} 'shouldFinalizeAllCursors'
+ * 
+ * TODO: This function never is "naturally" invoked because all tab keypresses start with a 'Tab' edit event and only convert to indentMore downstream
+ * 
+ */
+function EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess() {
+    if (EDITOR_cursorList.length !== 1) {
+        return true;
+    }
+    let cursor = EDITOR_cursorList[0];
+    
+    /////
+    // selection positions
+    let SMALL_pos;
+    let LARGE_pos;
+    if (cursor.selectionAnchor < cursor.selectionEnd) {
+        SMALL_pos = cursor.selectionAnchor;
+        LARGE_pos = cursor.selectionEnd;
+    }
+    else {
+        SMALL_pos = cursor.selectionEnd;
+        LARGE_pos = cursor.selectionAnchor;
+    }
+    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(SMALL_pos);
+    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(LARGE_pos);
+
+    // starting index
+    let startingIndex = LARGE_lineAndColumnIndices.indexLine;
+    let startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+    if (startingLinePos.start === LARGE_pos) {
+        startingIndex -= 1;
+        if (startingIndex >= 0) {
+            startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+        }
+    }
+    if (startingIndex < SMALL_lineAndColumnIndices.indexLine) {
+        return;
+    }
+
+    // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
+    if (get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine() === SMALL_lineAndColumnIndices.indexLine &&
         get_EDITOR_indent_startingIndex() === startingIndex) {
 
             return false;
