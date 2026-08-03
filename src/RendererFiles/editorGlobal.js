@@ -10063,4 +10063,6 @@ Admins probably have some of the descriptions I gave of how I cut myself.
 I can go into extreme detail about it if you want it essentially was one of the worst gore videos you have ever seen
 I was ready to die
 
+I held back at the very last moment and then drove myself while bleeding all over the car
+
 */
