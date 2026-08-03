@@ -1659,6 +1659,11 @@ function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
+
+    if (cursor.editLength > 1) {
+        let breakpoint = 2;
+    }
+
     let ORIGINAL_incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     let incrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     set_EDITOR_indent_ORIGINAL_indentBy(0);
@@ -1677,7 +1682,7 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
         // # Increment the entry in 'EDITOR_lineEndPositionList' for the respective line
         EDITOR_lineEndPositionList.data[lineI] += incrementBy;
 
-        // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert 4 characters on every line.
+        // # Each loop you reduce incrementBy, because you're initial starting the loop knowing you will eventually insert (4n) characters on every line.
         //     # thus, the first iteration of the loop you're increasing that line's end position by the length of text inserted per line by the amount of lines.
         //     # The next iteration is a smaller indexLine so you decrement because you have the insertion of one less line to consider.
         incrementBy -= 4;
@@ -3766,8 +3771,15 @@ function EDITOR_editEvent(editKind, event, clipboardContent) {
         }
     }
     if (shouldFinalizeAllCursors) {
+
         shouldFinalizeAllCursors = false;
-        EDITOR_finalizeAllCursors();
+        
+        if (editKind === get_EditKind_Tab() && EDITOR_cursorList.length === 1 && EDITOR_cursorList[0].editKind === get_EditKind_IndentMore()) {
+            // TODO: Rewrite this if statement (it is a hack for the moment while I get indent more of a single cursor to batch)
+        }
+        else {
+            EDITOR_finalizeAllCursors();
+        }
     }
 
     // If you have delete/backspace you need to ONLY remove the selection if it exists not remove selection then delete/backspace
@@ -3803,10 +3815,10 @@ function EDITOR_editEvent(editKind, event, clipboardContent) {
             shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_BackspaceRtl();
             break;
         case get_EditKind_Tab():
-            shouldFinalizeAllCursors = true;
+            shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_Tab(event);
             break;
         case get_EditKind_IndentMore():
-            shouldFinalizeAllCursors = true;
+            shouldFinalizeAllCursors = EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore();
             break;
         case get_EditKind_IndentLess():
             shouldFinalizeAllCursors = true;
@@ -4039,6 +4051,72 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_BackspaceRtl() {
         }
     }
     return false;
+}
+
+/** @returns {boolean} 'shouldFinalizeAllCursors' */
+function EDITOR_editEvent_checkFor_NOTcanBatch_Tab(event) {
+    if (EDITOR_cursorList.length !== 1) {
+        return true;
+    }
+    
+    let cursor = EDITOR_cursorList[0];
+
+    if (cursor.hasSelection() && !event.shiftKey) {
+        return EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore();
+    }
+
+    return true;
+}
+
+/**
+ * @returns {boolean} 'shouldFinalizeAllCursors'
+ * 
+ * TODO: This function never is "naturally" invoked because all tab keypresses start with a 'Tab' edit event and only convert to indentMore downstream
+ * 
+ */
+function EDITOR_editEvent_checkFor_NOTcanBatch_IndentMore() {
+    if (EDITOR_cursorList.length !== 1) {
+        return true;
+    }
+    let cursor = EDITOR_cursorList[0];
+    
+    /////
+    let SMALL_pos;
+    let LARGE_pos;
+    if (cursor.selectionAnchor < cursor.selectionEnd) {
+        SMALL_pos = cursor.selectionAnchor;
+        LARGE_pos = cursor.selectionEnd;
+    }
+    else {
+        SMALL_pos = cursor.selectionEnd;
+        LARGE_pos = cursor.selectionAnchor;
+    }
+    let SMALL_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(SMALL_pos);
+    let LARGE_lineAndColumnIndices = EDITOR_getLineAndColumnIndices(LARGE_pos);
+
+    // # Determine the starting indexLine (the start is the large position, this confused me for a moment)
+    let startingIndex = LARGE_lineAndColumnIndices.indexLine;
+    let startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+    if (startingLinePos.start === LARGE_pos) {
+        startingIndex -= 1;
+        if (startingIndex >= 0) {
+            startingLinePos = EDITOR_getLineBoundaryPositions(startingIndex);
+        }
+    }
+    if (startingIndex < SMALL_lineAndColumnIndices.indexLine) {
+        return true;
+    }
+
+    // # Determine the total count of text that will be inserted, prior to actually beginning the edit.
+    if (get_EDITOR_indent_ORIGINAL_indentBy() === ((startingIndex + 1 - SMALL_lineAndColumnIndices.indexLine) * 4) &&
+        get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine() === SMALL_lineAndColumnIndices.indexLine &&
+        get_EDITOR_indent_startingIndex() === startingIndex) {
+
+            return false;
+    }
+    /////
+
+    return true;
 }
 
 /** @returns {boolean} 'shouldFinalizeAllCursors' */
@@ -5024,6 +5102,8 @@ function EDITOR_render_do_IndentMore() {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_indentMore(cursor) {
+
+    // TODO: You need to move the logic that moves the tracked syntax to the finalize edit.
 
     // You need to batch these edits so that if they hold down the tab key, you don't modify the underlying bytes of the text until the edit is finalized.
     // This function (and the 'less' version) are somewhat spahetti-code-y.
