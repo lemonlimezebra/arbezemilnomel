@@ -5471,6 +5471,8 @@ function EDITOR_render_do_IndentLess() {
 function EDITOR_indentLess(cursor) {
 
     // everything in indentMore / indentLess likely needs to use the '_raw' variants for each function.
+    // as for indentLess, it likely HAS to be written correctly.
+    // i.e.: you HAVE to move all of the logic to the finalize otherwise it will be impossible (or each event will have to re-determine what was removed by the previous event and that is a terrible solution.)
 
     // selection positions
     let SMALL_pos;
