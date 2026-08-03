@@ -4977,7 +4977,8 @@ function EDITOR_render_do_IndentMore() {
         if (cursor.editKind !== get_EditKind_IndentMore()) {
             continue;
         }
-        if (cursor.editRenderedDisplacement < cursor.editLength || cursor.editKind === get_EditKind_IndentMore()) {
+        if (cursor.editRenderedDisplacement < cursor.editLength) {
+            cursor.editRenderedDisplacement++;
             for (var lineI = startingIndex; lineI >= SMALL_lineAndColumnIndices_indexLine; lineI--) {
                 let linePos = EDITOR_getLineBoundaryPositions(lineI);
 
@@ -5165,6 +5166,7 @@ function EDITOR_indentMore(cursor) {
         }
     }
 
+    cursor.editLength++;
     EDITOR_render_request(get_RenderKind_IndentMore());
 }
 
@@ -5179,7 +5181,9 @@ function EDITOR_render_do_IndentLess() {
         if (cursor.editKind !== get_EditKind_IndentLess()) {
             continue;
         }
-        if (cursor.editRenderedDisplacement < cursor.editLength || cursor.editKind === get_EditKind_IndentLess()) {
+        if (cursor.editRenderedDisplacement < cursor.editLength) {
+            
+            cursor.editRenderedDisplacement++;
 
             /////////////////////// P_1
             let textSelectionDiv;
@@ -5517,6 +5521,7 @@ function EDITOR_indentLess(cursor) {
         cursor.selectionAnchor -= ORIGINAL_decrementBy;
     }
 
+    cursor.editLength++;
     EDITOR_render_request(get_RenderKind_IndentLess());
 }
 
@@ -9919,5 +9924,8 @@ You can use editLength to store the amount times you need to apply the "transfor
 Long term probably don't do this... but...
 
 Then the editDisplacement is the amount of times the UI received the transformation.
+
+'when I feel happy I feel "happier"'
+Don't confuse pleasure for happiness I guess lol
 
 */
