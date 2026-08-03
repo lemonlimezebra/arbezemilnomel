@@ -5347,6 +5347,8 @@ function EDITOR_indentMore(cursor) {
 
 function EDITOR_render_do_IndentLess() {
 
+    // I mean while you're at it you might as well just write both indent more and indent less perfectly.
+
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
 
