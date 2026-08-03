@@ -10013,46 +10013,6 @@ So you'd want to write logic to batch them today if possible.
 
 =============
 
-I'm trying to think whether this was all in my head or not.
-
-Cause I Stopped writing down the dislikes.
-
-I just "think" it went from 1 to 7 I think it did?
-
-It sucks that they're a 1 to 7 cause they somewhat look similar enough
-to where a sufficient amount of doubt is in my head
-
-I don't mind that I deleted things from one perspective.
-But I do feel like I did the wrong thing from another.
-And I'm not sure if those 6 dislikes actually happened or not.
-
-It's metaphorical because you gotta let go of the past.
-And take advantage of what you have in a positive way.
-The history is gone but I still have what I have in this moment and that is a meaningful message
-
-I'm worried that someone who had been following the code for a long time and cared about it won't find this new repo.
-But I don't wanna put anything else on my youtube channel I had it up for a smidge cause I felt bad.
-Hopefully that smidge was long enough for anyone who wanted to find the code to find it
-
-The history is gone but the code isn't.
-
-Those days are gone but I'm not
-
-The band Free Throw I love it.
-"those days are gone".
-
-
-and just generally nostalgia is something that haunts me
-
-lemon lime zebra was a stim for me back in the day
-
-I'd type it in print/cursive over and over
-
-like with a pencil or pen I mean
-
-I would write it I guess lol
-I tried to correct it like you misinterpreted it but I said type from the gecko
-
 ==============
 
 
