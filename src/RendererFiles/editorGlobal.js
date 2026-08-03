@@ -10102,4 +10102,6 @@ there is no show I deleted the previous account myself.
 Then I did it on my own filesystem.
 You cannot comprehend my point of view I've tried many times.
 
+" you can't break those cuffs" I Can't stand seeing this video recommended to me I know exactly why it is
+
 */
