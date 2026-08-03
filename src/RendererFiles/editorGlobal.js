@@ -5470,6 +5470,8 @@ function EDITOR_render_do_IndentLess() {
  */
 function EDITOR_indentLess(cursor) {
 
+    // everything in indentMore / indentLess likely needs to use the '_raw' variants for each function.
+
     // selection positions
     let SMALL_pos;
     let LARGE_pos;
