@@ -1718,6 +1718,12 @@ function EDITOR_finalizeEdit_IndentMore(cursor, indexLine_editOccurredOn) {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
+
+    // Both indentMore and indentLess have logic in the initial event that needs to be moved here.
+    // Nevertheless there is a difference between indentLess and indentMore in that you cannot simply
+    // multiply by n to get the decrement because it deals with the existence of whitespace to be removed so you need to actually sum this as you handle each event
+    // so that when you get to the finalize you have it all sum'd up (although yes this logic probably doesn't even belong in the event but it is there and 1 thing at a time).
+
     let ORIGINAL_decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     let decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
     set_EDITOR_indent_ORIGINAL_indentBy(0);
