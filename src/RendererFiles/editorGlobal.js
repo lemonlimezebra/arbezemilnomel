@@ -9913,5 +9913,9 @@ You just need to detach the idea that this enjoyable feeling will always appear 
 it just doesn't happen and it is okay you will long term find yourself where you want to be.
 
 editLength is n I'm trolling oof; well it isn't but it'd work
+When it comes to insertions or etc... you COULD use editLength to mean the literal editLength of characters modified.
+But with indentMore and indentLess or any other somewhat abstract concept of a defined "transformation" that isn't quite as broad.
+You can use editLength to store the amount times you need to apply the "transformation".
+Long term probably don't do this... but...
 
 */
