@@ -5123,6 +5123,13 @@ function EDITOR_btnNext_onclick() {
 
 function EDITOR_render_do_IndentMore() {
 
+    // When you're done with IndentLess batch editing correctly.
+    // You still need to come back to the render for
+    // - [ ] IndentMore and
+    // - [ ] IndentLess
+    //
+    // and ensure that they render properly. This currently if two edits get done in a single "rAF" the second is cancelled for redundancy yet each one only handles 1 editDisplacement so you missed 1 displacement.
+
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
 
