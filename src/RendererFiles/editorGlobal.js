@@ -9898,4 +9898,7 @@ You just gotta endure any mood and stay consistent with the understanding that t
 moods lead to varying perspectives and these varying perspectives lead to revelations.
 And that long term you will achieve that good mood that you're looking for.
 
+"you take wellbutrin" I see that it is an NDRI so it blocks the reuptake of dopamine you just feel high all the time?
+No I don't. I feel like garbage right now actually lol.
+
 */
