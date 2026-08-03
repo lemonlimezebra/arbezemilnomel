@@ -9909,6 +9909,9 @@ Is that when I feel happy I feel "happier". But I actually baseline don't feel a
 
 And this feeling "happier" when happy. Means that I'm more motivated to achieve something
 because I know I enjoy the feeling that will eventually come.
-You just need to detach the idea that this enjoyable feeling will always appear sometimes you achieve things and it just doesn't happen and it is okay you will long term find yourself where you want to be.
+You just need to detach the idea that this enjoyable feeling will always appear sometimes you achieve things and
+it just doesn't happen and it is okay you will long term find yourself where you want to be.
+
+
 
 */
