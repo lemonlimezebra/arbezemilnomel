@@ -380,6 +380,9 @@ let EDITOR_RemoveSelection_largePosition = 0;
 let EDITOR_RemoveSelection_smallLineAndColumnIndices = null;
 let EDITOR_RemoveSelection_largeLineAndColumnIndices = null;
 
+// Temporary hack for state access TODO: this
+let EDITOR_indentLess_startingLinePos_end = 0;
+
 function EDITOR_init() {
 
     cached_EDITOR_virtualization_horizontal = EDITOR_baseElement.children[0];
@@ -1724,14 +1727,157 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
     // multiply by n to get the decrement because it deals with the existence of whitespace to be removed so you need to actually sum this as you handle each event
     // so that when you get to the finalize you have it all sum'd up (although yes this logic probably doesn't even belong in the event but it is there and 1 thing at a time).
 
-    let ORIGINAL_decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
-    let decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
-    set_EDITOR_indent_ORIGINAL_indentBy(0);
+    //let ORIGINAL_decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
+    //let decrementBy = get_EDITOR_indent_ORIGINAL_indentBy();
+    //set_EDITOR_indent_ORIGINAL_indentBy(0);
 
     let startingIndex = get_EDITOR_indent_startingIndex();
     set_EDITOR_indent_startingIndex(0);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine();
     set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(0);
+
+    // loop over the lines to sum the "amount" of whitespace being removed
+    let DETERMINE_decrementBy = 0;
+    for (var lineI = SMALL_lineAndColumnIndices_indexLine; lineI <= startingIndex; lineI++) {
+        let linePos = EDITOR_getLineBoundaryPositions(lineI);
+        let line = linePos;
+        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(lineI);
+        let upperLimitIndexColumn;
+        if (lastValidIndexColumn > 4) {
+            upperLimitIndexColumn = 4;
+        }
+        else {
+            upperLimitIndexColumn = lastValidIndexColumn;
+        }
+        let seenSpace = false;
+        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+            let c = getCharacter(line.start + i);
+            switch (c) {
+                case ' ':
+                    seenSpace = true;
+                    DETERMINE_decrementBy++;
+                    break;
+                case '\t':
+                    if (!seenSpace) {
+                        DETERMINE_decrementBy += 4;
+                    }
+                    break outer;
+                default:
+                    break outer;
+            }
+        }
+    }
+
+    // Remember the total whitespace removed
+    let ORIGINAL_decrementBy = DETERMINE_decrementBy;
+    //set_EDITOR_indent_ORIGINAL_indentBy(ORIGINAL_decrementBy);
+    let decrementBy = ORIGINAL_decrementBy;
+
+    //// TODO: use better formatting
+    //// TODO: This handles the line that the small-selection-position resides on?
+    //{
+    //    let linePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices_indexLine);
+    //    let line = linePos;
+    //    let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(SMALL_lineAndColumnIndices_indexLine);
+    //    let upperLimitIndexColumn;
+    //    if (lastValidIndexColumn > 4) {
+    //        upperLimitIndexColumn = 4;
+    //    }
+    //    else {
+    //        upperLimitIndexColumn = lastValidIndexColumn;
+    //    }
+    //    let seenSpace = false;
+    //    let count = 0;
+    //    outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+    //        let c = getCharacter(line.start + i);
+    //        switch (c) {
+    //            case ' ':
+    //                seenSpace = true;
+    //                count++;
+    //                break;
+    //            case '\t':
+    //                if (!seenSpace) {
+    //                    count+= 4;
+    //                }
+    //                break outer;
+    //            default:
+    //                break outer;
+    //        }
+    //    }
+//
+    //    let smallLinePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices_indexLine);
+    //    if (SMALL_pos > smallLinePos.start) {
+    //        if (cursor.selectionAnchor < cursor.selectionEnd) {
+    //            cursor.selectionAnchor -= count;
+    //        }
+    //        else {
+    //            cursor.selectionEnd -= count;
+    //        }
+    //    }
+//
+    //    if (cursor.indexLine === SMALL_lineAndColumnIndices_indexLine) {
+    //        cursor.indexColumn -= count;
+    //    }
+    //}
+
+    // TODO: This at a glance seems to not account for when the cursor is small-position-ended and large-position-anchored...
+    // ...this is moving the cursor actually, maybe it is fine? but maybe it is logic that could've been done during a loop but instead you made a new one to separately do this?
+    // Also, this entire function is terribly written. You seemingly hacked something together; the code doesn't feel self explanatory. Furthermore there are both a lack of comments (given the confusing nature of how this is written), and dead comments.
+    if (cursor.indexLine !== SMALL_lineAndColumnIndices_indexLine) {
+        let linePos = EDITOR_getLineBoundaryPositions(cursor.indexLine);
+        let line = linePos;
+        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
+        let upperLimitIndexColumn;
+        if (lastValidIndexColumn > 4) {
+            upperLimitIndexColumn = 4;
+        }
+        else {
+            upperLimitIndexColumn = lastValidIndexColumn;
+        }
+        let seenSpace = false;
+        let count = 0;
+        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
+            let c = getCharacter(line.start + i);
+            switch (c) {
+                case ' ':
+                    seenSpace = true;
+                    count++;
+                    break;
+                case '\t':
+                    if (!seenSpace) {
+                        count+= 4;
+                    }
+                    break outer;
+                default:
+                    break outer;
+            }
+        }
+        //let c = EDITOR_getLineBoundaryPositions(cursor.indexLine);
+        // TODO: git blame the below todo and remind them to delete the dead code
+        // TODO: Delete this dead code / use better formatting
+        /*if (SMALL_pos > smallLinePos.start) {
+            if (cursor.selectionAnchor < cursor.selectionEnd) {
+                cursor.selectionAnchor -= count;
+            }
+            else {
+                cursor.selectionEnd -= count;
+            }
+        }*/
+        //if (cursor.indexLine === LARGE_lineAndColumnIndices.indexLine) {
+        //    cursor.indexColumn -= count;
+        //}
+    }
+
+    let trackedSyntaxReposition_i = EDITOR_trackedSyntaxReposition_find(EDITOR_indentLess_startingLinePos_end + 1);
+    if (trackedSyntaxReposition_i === NaN || trackedSyntaxReposition_i === -1) {
+        trackedSyntaxReposition_i = EDITOR_trackedSyntaxList.count_abstract;
+    }
+    for (var i = trackedSyntaxReposition_i; i < EDITOR_trackedSyntaxList.count_abstract; i++) {
+        EDITOR_trackedSyntaxList.setStart(
+            i,
+            EDITOR_trackedSyntaxList.getStart(i) - ORIGINAL_decrementBy);
+    }
+    trackedSyntaxReposition_i--;
 
     for (var lineI = startingIndex; lineI >= SMALL_lineAndColumnIndices_indexLine; lineI--) {
         let innerRemoveCount = 0;
@@ -1763,8 +1909,22 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
             }
         }
 
+        for (; trackedSyntaxReposition_i >= 0; trackedSyntaxReposition_i--) {
+            let start = EDITOR_trackedSyntaxList.getStart(trackedSyntaxReposition_i);
+            if (linePos.start <= start) {
+                EDITOR_trackedSyntaxList.setStart(trackedSyntaxReposition_i, start - decrementBy);
+            }
+            else {
+                break;
+            }
+        }
+        EDITOR_trackedSyntaxList.getElementAt(trackedSyntaxReposition_i);
+        if (linePos.start > get_EDITOR_pooledTrackedSyntax_start() && linePos.start < get_EDITOR_pooledTrackedSyntax_start() + get_EDITOR_pooledTrackedSyntax_length()) {
+            EDITOR_trackedSyntaxList.setLength(trackedSyntaxReposition_i, get_EDITOR_pooledTrackedSyntax_length() - innerRemoveCount);
+        }
+
         EDITOR_textByteList.removeAt(linePos.start, innerRemoveCount);
-        EDITOR_lineEndPositionList.data[lineI] -= decrementBy;
+	    EDITOR_lineEndPositionList.data[lineI] -= decrementBy;
 
         decrementBy -= innerRemoveCount;
     }
@@ -5523,195 +5683,7 @@ function EDITOR_indentLess(cursor) {
     set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
     set_EDITOR_indent_startingIndex(startingIndex);
 
-    // loop over the lines to sum the "amount" of whitespace being removed
-    let DETERMINE_decrementBy = 0;
-    for (var lineI = SMALL_lineAndColumnIndices.indexLine; lineI <= startingIndex; lineI++) {
-        let linePos = EDITOR_getLineBoundaryPositions(lineI);
-        let line = linePos;
-        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(lineI);
-        let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
-        }
-        else {
-            upperLimitIndexColumn = lastValidIndexColumn;
-        }
-        let seenSpace = false;
-        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
-            let c = getCharacter(line.start + i);
-            switch (c) {
-                case ' ':
-                    seenSpace = true;
-                    DETERMINE_decrementBy++;
-                    break;
-                case '\t':
-                    if (!seenSpace) {
-                        DETERMINE_decrementBy += 4;
-                    }
-                    break outer;
-                default:
-                    break outer;
-            }
-        }
-    }
-
-    // Remember the total whitespace removed
-    let ORIGINAL_decrementBy = DETERMINE_decrementBy;
-    set_EDITOR_indent_ORIGINAL_indentBy(ORIGINAL_decrementBy);
-    let decrementBy = ORIGINAL_decrementBy;
-
-    // TODO: use better formatting
-    // TODO: This handles the line that the small-selection-position resides on?
-    {
-        let linePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices.indexLine);
-        let line = linePos;
-        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(SMALL_lineAndColumnIndices.indexLine);
-        let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
-        }
-        else {
-            upperLimitIndexColumn = lastValidIndexColumn;
-        }
-        let seenSpace = false;
-        let count = 0;
-        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
-            let c = getCharacter(line.start + i);
-            switch (c) {
-                case ' ':
-                    seenSpace = true;
-                    count++;
-                    break;
-                case '\t':
-                    if (!seenSpace) {
-                        count+= 4;
-                    }
-                    break outer;
-                default:
-                    break outer;
-            }
-        }
-
-        let smallLinePos = EDITOR_getLineBoundaryPositions(SMALL_lineAndColumnIndices.indexLine);
-        if (SMALL_pos > smallLinePos.start) {
-            if (cursor.selectionAnchor < cursor.selectionEnd) {
-                cursor.selectionAnchor -= count;
-            }
-            else {
-                cursor.selectionEnd -= count;
-            }
-        }
-
-        if (cursor.indexLine === SMALL_lineAndColumnIndices.indexLine) {
-            cursor.indexColumn -= count;
-        }
-    }
-
-    // TODO: This at a glance seems to not account for when the cursor is small-position-ended and large-position-anchored...
-    // ...this is moving the cursor actually, maybe it is fine? but maybe it is logic that could've been done during a loop but instead you made a new one to separately do this?
-    // Also, this entire function is terribly written. You seemingly hacked something together; the code doesn't feel self explanatory. Furthermore there are both a lack of comments (given the confusing nature of how this is written), and dead comments.
-    if (cursor.indexLine !== SMALL_lineAndColumnIndices.indexLine) {
-        let linePos = EDITOR_getLineBoundaryPositions(cursor.indexLine);
-        let line = linePos;
-        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
-        let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
-        }
-        else {
-            upperLimitIndexColumn = lastValidIndexColumn;
-        }
-        let seenSpace = false;
-        let count = 0;
-        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
-            let c = getCharacter(line.start + i);
-            switch (c) {
-                case ' ':
-                    seenSpace = true;
-                    count++;
-                    break;
-                case '\t':
-                    if (!seenSpace) {
-                        count+= 4;
-                    }
-                    break outer;
-                default:
-                    break outer;
-            }
-        }
-        let c = EDITOR_getLineBoundaryPositions(cursor.indexLine);
-        // TODO: git blame the below todo and remind them to delete the dead code
-        // TODO: Delete this dead code / use better formatting
-        /*if (SMALL_pos > smallLinePos.start) {
-            if (cursor.selectionAnchor < cursor.selectionEnd) {
-                cursor.selectionAnchor -= count;
-            }
-            else {
-                cursor.selectionEnd -= count;
-            }
-        }*/
-        if (cursor.indexLine === LARGE_lineAndColumnIndices.indexLine) {
-            cursor.indexColumn -= count;
-        }
-    }
-
-    let trackedSyntaxReposition_i = EDITOR_trackedSyntaxReposition_find(startingLinePos.end + 1);
-    if (trackedSyntaxReposition_i === NaN || trackedSyntaxReposition_i === -1) {
-        trackedSyntaxReposition_i = EDITOR_trackedSyntaxList.count_abstract;
-    }
-    for (var i = trackedSyntaxReposition_i; i < EDITOR_trackedSyntaxList.count_abstract; i++) {
-        EDITOR_trackedSyntaxList.setStart(
-            i,
-            EDITOR_trackedSyntaxList.getStart(i) - ORIGINAL_decrementBy);
-    }
-    trackedSyntaxReposition_i--;
-
-    for (var lineI = startingIndex; lineI >= SMALL_lineAndColumnIndices.indexLine; lineI--) {
-        let innerRemoveCount = 0;
-        let linePos = EDITOR_getLineBoundaryPositions(lineI);
-        let line = linePos;
-        let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(lineI);
-        let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
-        }
-        else {
-            upperLimitIndexColumn = lastValidIndexColumn;
-        }
-        let seenSpace = false;
-        outer: for (var i = 0; i < upperLimitIndexColumn; i++) {
-            let c = getCharacter(line.start + i);
-            switch (c) {
-                case ' ':
-                    seenSpace = true;
-                    innerRemoveCount++;
-                    break;
-                case '\t':
-                    if (!seenSpace) {
-                        innerRemoveCount += 4;
-                    }
-                    break outer;
-                default:
-                    break outer;
-            }
-        }
-
-        for (; trackedSyntaxReposition_i >= 0; trackedSyntaxReposition_i--) {
-            let start = EDITOR_trackedSyntaxList.getStart(trackedSyntaxReposition_i);
-            if (linePos.start <= start) {
-                EDITOR_trackedSyntaxList.setStart(trackedSyntaxReposition_i, start - decrementBy);
-            }
-            else {
-                break;
-            }
-        }
-        EDITOR_trackedSyntaxList.getElementAt(trackedSyntaxReposition_i);
-        if (linePos.start > get_EDITOR_pooledTrackedSyntax_start() && linePos.start < get_EDITOR_pooledTrackedSyntax_start() + get_EDITOR_pooledTrackedSyntax_length()) {
-            EDITOR_trackedSyntaxList.setLength(trackedSyntaxReposition_i, get_EDITOR_pooledTrackedSyntax_length() - innerRemoveCount);
-        }
-
-        decrementBy -= innerRemoveCount;
-    }
+    EDITOR_indentLess_startingLinePos_end = startingLinePos.end;
 
     // TODO: Some kind of "fake" selection somehow because you really only need to modify the top-left most selection and the bottom-right most selection.
     // Then when you perhaps hit 'ctrl + c' to copy. You'd need to finalize the edit then and there so you copy the text correctly.
