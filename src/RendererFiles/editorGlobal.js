@@ -6489,16 +6489,21 @@ function EDITOR_render_do_TabKey() {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_tabKey(cursor) {
+
     let indexPosition = EDITOR_getPositionIndex(cursor);
-    cursor.editPosition = indexPosition;
-    cursor.editIndexLine = cursor.indexLine;
-    cursor.editIndexColumn = cursor.indexColumn;
-    
+
+    // TODO: Move this to the finalize logic (move the variable indexPosition inside next if when you do this cause only will be needed there)
     EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(indexPosition, 4);
 
-    
+    if (cursor.editLength === 0) {
+        cursor.editPosition = indexPosition;
+        cursor.editIndexLine = cursor.indexLine;
+        cursor.editIndexColumn = cursor.indexColumn;
+    }
+
+    cursor.editLength++;
+
     cursor.indexColumn += 4; // this has to come after the 'walkLineUntilIndexColumn' invocation.
-    
 
     EDITOR_render_request(get_RenderKind_TabKey());
 }
