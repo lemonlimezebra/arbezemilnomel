@@ -9860,4 +9860,7 @@ You don't need to "feel" focused or energized, you can just discipline through i
 And you know you want to discipline through it because long term you'll get a meaningful feeling,
 it just might not be today or tomorrow, but a long time from now and you just gotta stay disciplined.
 
+I feel brain fog.
+I feel extremely uncomfortable I've been eating too much fiber.
+
 */
