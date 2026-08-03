@@ -5348,6 +5348,14 @@ function EDITOR_indentMore(cursor) {
 function EDITOR_render_do_IndentLess() {
 
     // I mean while you're at it you might as well just write both indent more and indent less perfectly.
+    //
+    // the event only needs to loop the virtualization result and substring out 4 whitespace width from each line that intersects the selection.
+    //
+    // The finalize is what edits.
+    //
+    // if your UI is wrong then modifying the UI won't accurately show the user the edit.
+    // But the response to that is: make sure the UI is correct. Otherwise you're showing them an edit to the file
+    // when you could give them a preview of the edited viewport and wait to finalize.
 
     let startingIndex = get_EDITOR_indent_startingIndex(startingIndex);
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
