@@ -1649,6 +1649,7 @@ function EDITOR_finalizeEdit_Enter(cursor, indexLine_editOccurredOn) {
 function EDITOR_finalizeEdit_Tab(cursor, indexLine_editOccurredOn) {
 
     let that_four = 4;
+    that_four *= cursor.editLength;
 
     EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, that_four);
 
@@ -4356,6 +4357,17 @@ function EDITOR_editEvent_checkFor_NOTcanBatch_Tab(event) {
     else if (cursor.hasSelection() && event.shiftKey) {
         // TODO: write 'if (cursor.hasSelection())' then nest these in the same wrapping if statement.
         return EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess();
+    }
+    else if (!cursor.hasSelection()) {
+        if (event.shiftKey) {
+            return EDITOR_editEvent_checkFor_NOTcanBatch_IndentLess();
+        }
+        else {
+            if (cursor.editIndexLine === cursor.indexLine &&
+                cursor.editIndexColumn + (4 * cursor.editLength) === cursor.indexColumn) {
+                    return false;
+            }
+        }
     }
 
     return true;
