@@ -1736,6 +1736,9 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
     let SMALL_lineAndColumnIndices_indexLine = get_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine();
     set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(0);
 
+    // !!!!!! watch out for the big breaks when hitting a tab presuming that_four is 4
+    let that_four = 4;
+
     // loop over the lines to sum the "amount" of whitespace being removed
     let DETERMINE_decrementBy = 0;
     for (var lineI = SMALL_lineAndColumnIndices_indexLine; lineI <= startingIndex; lineI++) {
@@ -1743,8 +1746,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
         let line = linePos;
         let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(lineI);
         let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
+        if (lastValidIndexColumn > that_four) {
+            upperLimitIndexColumn = that_four;
         }
         else {
             upperLimitIndexColumn = lastValidIndexColumn;
@@ -1828,8 +1831,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
         let line = linePos;
         let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
         let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
+        if (lastValidIndexColumn > that_four) {
+            upperLimitIndexColumn = that_four;
         }
         else {
             upperLimitIndexColumn = lastValidIndexColumn;
@@ -1885,8 +1888,8 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
         let line = linePos;
         let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(lineI);
         let upperLimitIndexColumn;
-        if (lastValidIndexColumn > 4) {
-            upperLimitIndexColumn = 4;
+        if (lastValidIndexColumn > that_four) {
+            upperLimitIndexColumn = that_four;
         }
         else {
             upperLimitIndexColumn = lastValidIndexColumn;
@@ -5683,7 +5686,9 @@ function EDITOR_indentLess(cursor) {
     set_EDITOR_indent_SMALL_lineAndColumnIndices_indexLine(SMALL_lineAndColumnIndices.indexLine);
     set_EDITOR_indent_startingIndex(startingIndex);
 
-    EDITOR_indentLess_startingLinePos_end = startingLinePos.end;
+    if (cursor.editLength === 0) {
+        EDITOR_indentLess_startingLinePos_end = startingLinePos.end;
+    }
 
     // TODO: Some kind of "fake" selection somehow because you really only need to modify the top-left most selection and the bottom-right most selection.
     // Then when you perhaps hit 'ctrl + c' to copy. You'd need to finalize the edit then and there so you copy the text correctly.
