@@ -9888,4 +9888,8 @@ If you wanna accelerate things you do more than just a minimal amount of non-zer
 And usually it means you have days where do you more than minimal and days where you do minimal
 and they're all equally as important people just fail to understand this.
 
+Feelings of pleasure help with throughput but they also lead to delusion.
+The days you don't feel good, like today, they feel like a grind. It is somewhat painful.
+But they're just as important as a high throughput somewhat delusional day.
+
 */
