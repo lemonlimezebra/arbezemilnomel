@@ -10094,4 +10094,12 @@ It just isn't the case.
 I don't want help and I want minimal people to be aware of the repo.
 I have no desire to be a programmer.
 
+"The Show must Go On Moulin Rouge".
+
+These recommendations are because people watch them in relation to me I understand how the recommendations work.
+You think I'm falling apart and that the show must go on or whatever
+there is no show I deleted the previous account myself.
+Then I did it on my own filesystem.
+You cannot comprehend my point of view I've tried many times.
+
 */
