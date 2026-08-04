@@ -10214,4 +10214,8 @@ It's funny cause he was in my physics class one year.
 And I just looked over at him constantly.
 Not even being mad I was just in awe.
 
+He'd do this thing where he stood up during labs and then placed one arm down on the table in a sort of rested thinking position
+and the arm that had the palm on the table
+his entire tricep just blew the f up I couldn't stop looking
+
 */
