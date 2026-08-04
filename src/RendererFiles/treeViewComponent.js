@@ -413,11 +413,8 @@ class TreeViewComponent {
         if (beltIndexItem < 0) return;
         let divItem = this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem];
 
-        if (event.target === divItem.children[0]) {
-            // ignore because:
-            // await this.director.tvd_expandCollapseIconWasClicked_async(divItem, index);
-        }
-        else {
+        // if not clicked "chevron"
+        if (event.target !== divItem.children[0]) {
             // TODO: This is an awkward explicit inlining of 'this.indexItemTo_beltIndexItem'...
             // ...the initial declaration of 'let beltIndexLine' is assigned what I refer to as the "virtualIndex"
             // but 'beltIndexLine' is the output of the function, and a 'virtualIndex' variable is only needed temporarily
