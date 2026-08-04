@@ -214,6 +214,21 @@ Google AI
 > 
 > Generally speaking however, I also do have an underlying assumption that the browser can more easily render a UI if it is encompassed within an element which has whole numbered dimensions. (which might be wrong).
 
+< ...
+< Fact Check: Can Browsers Render Whole Numbers More Easily?
+< No, they do not find it easier.
+< Modern browsers use hardware acceleration (GPU rendering) and subpixel anti-aliasing.
+< They are perfectly optimized to handle elements with fractional dimensions like 500.67px.
+< 
+< However, your assumption holds true for visual crispness:
+< The Good: Giving an element a whole-number bounding box ensures its outer borders align perfectly with physical screen pixels, preventing blurry edges.
+< The Bad: Forcing a fractional element to become a whole number by altering its .style.width or .style.height (especially on high-DPI/Retina screens) forces the browser to trigger a full layout recalculation. The performance cost of forcing the whole number is vastly higher than the rendering cost of letting the decimal exist naturally.
+<
+< The Text Layout Problem (Why Your Math Breaks)
+< Your formula (elementHeight / lineHeight) to find the visible line count is standard practice. However, trying to make elementHeight a whole number does not guarantee a clean line count.
+< This is because lineHeight is rarely a whole number, even if you set it to one in CSS.
+< ...
+
 */
 
     if (DIALOG_left_DRAWN !== DIALOG_left) {
