@@ -379,4 +379,7 @@ google search to be the equivalent of you having spent an hour searching the sam
 
 I'm still getting don't speak recommended to me on all my youtube feeds it got me in my head fr
 
+I spent an hour just today even the last hour of my coding was spent "talking" to an AI
+and in the end I don't think I made any changes cause I wasn't able to be certain about the AI's correctness.
+
 */
