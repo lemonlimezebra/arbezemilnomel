@@ -377,4 +377,6 @@ and how you NEVER want the computer to infer.
 AI is you telling the computer to infer, and introduce inaccuracy, and in the process allowing your 1 sentence
 google search to be the equivalent of you having spent an hour searching the same "idea" just worded slightly differently.
 
+I'm still getting don't speak recommended to me on all my youtube feeds it got me in my head fr
+
 */
