@@ -384,9 +384,7 @@ class TreeViewComponent {
         if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
         else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-        if (beltIndexItem < 0) {
-            return;
-        }
+        if (beltIndexItem < 0) return;
         let divItem = this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem];
 
         if (event.target === divItem.children[0]) {
@@ -412,10 +410,7 @@ class TreeViewComponent {
         if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
         else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-        if (beltIndexItem < 0) {
-            return;
-        }
-
+        if (beltIndexItem < 0) return;
         let divItem = this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem];
 
         if (event.target === divItem.children[0]) {
@@ -456,13 +451,8 @@ class TreeViewComponent {
             if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
             else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-            if (beltIndexItem < 0) {
-                return;
-            }
-
-            if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                return this.director.tvd_oncontextmenu_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event, beltIndexItem);
-            }
+            if (beltIndexItem < 0) return;
+            return this.director.tvd_oncontextmenu_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event, beltIndexItem);
         } else {
             if (this.cursorIndex >= this.director.tvd_getTotalCount()) {
                 return;
@@ -479,14 +469,10 @@ class TreeViewComponent {
             if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
             else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-            if (beltIndexItem < 0) {
-                return;
-            }
+            if (beltIndexItem < 0) return;
 
             // TODO: Handle context menu with keyboard when active node is out of view
-            if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                return this.director.tvd_oncontextmenu_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event, beltIndexItem);
-            }
+            return this.director.tvd_oncontextmenu_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event, beltIndexItem);
         }
     }
 
@@ -528,12 +514,8 @@ class TreeViewComponent {
                     if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
                     else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-                    if (beltIndexItem < 0) {
-                        return;
-                    }
-                    if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                        return this.director.tvd_arrowRight_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
-                    }
+                    if (beltIndexItem < 0) return;
+                    return this.director.tvd_arrowRight_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
                 }
                 return;
             case 'ArrowLeft':
@@ -550,12 +532,8 @@ class TreeViewComponent {
                     if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
                     else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-                    if (beltIndexItem < 0) {
-                        return;
-                    }
-                    if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                        return this.director.tvd_arrowLeft_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
-                    }
+                    if (beltIndexItem < 0) return;
+                    return this.director.tvd_arrowLeft_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
                 }
             	return;
             case ' ':
@@ -572,9 +550,7 @@ class TreeViewComponent {
                 if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
                 else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-                if (beltIndexItem < 0) {
-                    return;
-                }
+                if (beltIndexItem < 0) return;
                 if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
                     return this.director.tvd_onkeydown_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event.key);
                 }
@@ -1129,5 +1105,31 @@ It's a really nice solution.
 < ...
 
 I'm trying to find my mind I Feel like garbage I feel sad and I wanna just go back to bed
+
+TODO: I'm removing these redundant 'if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length)' checks...
+...that are done after having checked 'if (beltIndexItem < 0) return;' This is redundant because of the internals of how 'beltIndexItem' is calculated...
+...such that the redundant if statement cases would've meant you received a 'beltIndexItem === -1' which is less than 0 and you would have returned already.
+|
+TODO: That being said, I'm not sure how I feel about what I'm doing in terms of stylistically (or readably wise) putting the...
+...'if (beltIndexItem < 0) return;' line then immediately following that line (no empty line between) 'return foo_otherOtherBranch_result_or_whatever;' i.e.:
+```js
+if (beltIndexItem < 0) return;
+return this.director.tvd_arrowLeft_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
+```
+|
+TODO: Nevertheless this commit is a win overall because removing the redundant check is 100% a correct decision...
+...as for my stylistic (or readability wise) "change", a change is necessitated naturally because I've just removed the...
+...if block, so further detail of this commit just comes down to what would read best.
+|
+TODO: Well okay sure, I guess I am changing:
+```js
+if (beltIndexItem < 0) {
+    return;
+}
+```
+to just 'if (beltIndexItem < 0) return' and that partially is what introduces the readability concern.
+The change to 'if (beltIndexItem < 0) return' is because the if statement predicate is "simple"
+and the statement to branch into if the predicate is true, as well is "simple" thus one lining it unless
+readability deems alternative structuring of the code.
 
 */
