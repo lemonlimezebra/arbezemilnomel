@@ -7108,6 +7108,19 @@ and I don't know...
 <     // Math.ceil includes a line even if it is partially cut off at the bottom
 <     const totalRenderedLines = Math.ceil(rawLineCount); 
 < }
+
+> When it comes to the 'Floor Trap'.
+> 
+> What if I had my current code, but I just didn't read after setting the floored values.
+> 
+> The reason I did the read was because I feared that "some boogieman" might cause my setting of the attribute value to 500px,
+> that this would be ignored for some reason that I'm not aware of and perhaps be taken as 501px due to some obscure piece of information that
+> I don't understand. It is just superstitious reading of the value.
+
+< no response
+
+:( I can probably reword that lol
+
 */
     EDITOR_baseElement.style.contain = 'layout';
 
