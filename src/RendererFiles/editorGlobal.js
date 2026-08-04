@@ -6427,8 +6427,6 @@ function EDITOR_paste(cursor, content) {
     //else if (tabLength > 0) writeTab();
     //else if (linefeedLength > 0) writeLinefeed();
 
-    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(positionIndex, insertionLength);
-
     if (linesInsertedCount > 0) {
         update_verticalVirtualizationBoundary(EDITOR_lineEndPositionList.count + linesInsertedCount);
         // I uncommented this, it isn't doing what I want it to.
@@ -10052,7 +10050,7 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
     - [ ] The cases remaining (that need to be moved to finalize):
         - [x] Enter Key
         - [ ] EDITOR_render_do_DuplicateOrPaste
-        - [ ] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
+        - [x] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
 
 - [ ] The global context lex from the LSP needs to be tracked correctly (the lsp doesn't store tabs as '\t\0\0\0' (and probably neither should the editor so either fix it in the editor or short term bridge this difference in the position indices / etc...?)).
 - [ ] The global context lex if it ends on a given line, and then text appears on the same line after it,
