@@ -10205,5 +10205,6 @@ If I remember correctly the estrogen pill was to prevent the test from aromatizi
 much at that time in my life.
 
 Yes the other guy was ripped, more than I was and this likely fk'd with me a bit
+Not my friend but the "other guy" I saw him around a lot he was ridiculously ripped way more than I was.
 
 */
