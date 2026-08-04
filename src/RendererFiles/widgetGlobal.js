@@ -366,5 +366,14 @@ Most of my code I write myself, then if I'm dry for an idea I mess around giving
 More accurately I constantly have a hunch about something.
 And I can typically get the AI to summarize the general consensus of my hunch.
 
+It's like google searching back in the day, but at a much larger scale, and to a degree
+a google search that interprets what you're saying and introduces innaccuracy in the process
+BUT you know that AI is inaccurate.
+
+When you learn coding for the first time they make a joke about making peanut butter and jelly
+or giving directions somewhere and all the inferred cases that occur in natural language
+and how you NEVER want the computer to infer.
+
+
 
 */
