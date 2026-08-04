@@ -374,6 +374,7 @@ When you learn coding for the first time they make a joke about making peanut bu
 or giving directions somewhere and all the inferred cases that occur in natural language
 and how you NEVER want the computer to infer.
 
-
+AI is you telling the computer to infer, and introduce inaccuracy, and in the process allowing your 1 sentence
+google search to be the equivalent of you having spent an hour searching the same "idea" just worded slightly differently.
 
 */
