@@ -14,8 +14,6 @@ const get_WIDGETrenderKind_Hide = () => 2;
  * @returns {Promise}
  */
 
-// I'm gonna see if I can go for a walk before it gets too sunny outside I burn
-
 /**
  * start it at 1 because you thought about starting it at 0 then using a prefix incrementation to ensure the 0 state is never used as a means of detecting an empty state
  * but if someone changes the code and moves it to postfix incrementation then everything breaks so why even take that risk when you can just start at 1
@@ -133,9 +131,6 @@ function WIDGET_render_do_Show() {
             WIDGET_CreateYesCancel();
             break;
     }
-
-    //WIDGET_element.style.left = WIDGET_left + 'px';
-    //WIDGET_element.style.top = WIDGET_top + 'px';
 
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
@@ -335,17 +330,6 @@ function WIDGET_CreateYesCancel() {
 
 /*
 TODO:
+- [ ] Check this for uncleared state when menu is finished
 - [ ] Check this for uncleared state when widget is finished
-- [ ] Do all these changes but for the menus
-- [ ] Ensure menu is in view
-- [ ] Ensure widget is in view
-- [ ] Check this for uncleared state when widget is finished
-
-Preferably do this by the end of the day.
-(so that you can focus on other things tomorrow)
-(but you've done a non zero amount of progress and so now your actual #1 goal is to not say anything stupid for the rest of the day)
-
-
-=====================
-
 */
