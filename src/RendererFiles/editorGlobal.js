@@ -10189,4 +10189,6 @@ When I was younger I did this for "chest/shoulders/triceps":
 ---
 then 4 sets of triceps
 
+Something like that that's from memory
+
 */
