@@ -229,6 +229,15 @@ Google AI
 < This is because lineHeight is rarely a whole number, even if you set it to one in CSS.
 < ...
 
+> Is 'getBoundingClientRect' and reading the property 'offsetHeight' equivalent overhead.
+> Where I am defining the overhead as "if one would trigger a synchronous layout, the other would as well;
+> so if you need accuracy just use getBoundingClientRect"
+
+< Yes, they are exactly equivalent in terms of layout overhead.
+< ...
+< A Crucial Caveat: Transforms
+< ...
+
 */
 
     if (DIALOG_left_DRAWN !== DIALOG_left) {
