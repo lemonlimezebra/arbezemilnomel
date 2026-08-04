@@ -10072,4 +10072,8 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
         - [ ] EDITOR_render_do_DuplicateOrPaste
         - [ ] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
 
+- [ ] The global context lex from the LSP needs to be tracked correctly.
+- [ ] The global context lex if it ends on a given line, and then text appears on the same line after it,
+    that latter text seems to be given the same syntax highlighting as the preceeding global syntax that ended previously (for some reason, but also this isn't confirmed it just seems like something weird is going on)
+
 */
