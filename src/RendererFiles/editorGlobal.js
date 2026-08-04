@@ -10059,16 +10059,16 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 ===========
 
 Breakfast:
-- [x] 4 crunchy peanut butter cliff bars
-- [x] 1 42g protein fairlife
+- [x] 4 crunchy peanut butter cliff bars   | 1,040 calories | 44g protein
+- [x] 1 42g protein fairlife               | 230? calories  | 42g protein
 
 Lunch:
-- [x] 1 crunchy peanut butter cliff bar
-- [x] 1 vanilla almond "builder" cliff bar
+- [x] 1 crunchy peanut butter cliff bar    | 260 calories   | 11g protein
+- [x] 1 vanilla almond "builder" cliff bar | 270 calories   | 20g protein
 
 Dinner:
-- [ ] 1 lb of 98% fat free ground chicken
-- [ ] with sriracha
+- [ ] 1 lb of 98% fat free ground chicken  | 400 calories   | 100g protein
+- [ ] with sriracha                        | 100? calories  | 0g protein
 
 ===========
 
