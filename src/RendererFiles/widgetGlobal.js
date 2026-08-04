@@ -363,4 +363,8 @@ And I NEVER assume that the AI is correct about anything.
 
 Most of my code I write myself, then if I'm dry for an idea I mess around giving AI some code snippets and see what it says.
 
+More accurately I constantly have a hunch about something.
+And I can typically get the AI to summarize the general consensus of my hunch.
+
+
 */
