@@ -10154,4 +10154,10 @@ It's all very shoulder mobility focused cause I'm sitting at desk all day.
 
 and just getting any amount of non-zero movement
 
+Rotator cuff exercises are the most important thing I feel.
+I did 80 lb dumbells bench press for 8 reps when I was 20
+and I couldn't get that high I was actually stuck at 70 lb dumbells and having shoulder issues
+I started doing rotator cuffs and my strength and mobility shot up
+
+
 */
