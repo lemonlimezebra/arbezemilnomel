@@ -10063,4 +10063,7 @@ But I think the largest of them all was the Zoloft.
 It did NOT make me do it.
 I was instead mentally ill and I was mentally doing gymnastics about things.
 
+I figured if they prescribed me this I should take it.
+But I can't deal with these side effects so just "get rid of it"
+
 */
