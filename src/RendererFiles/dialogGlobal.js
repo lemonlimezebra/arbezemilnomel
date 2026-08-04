@@ -204,6 +204,15 @@ Google AI
 < Could you share why you need to hardcode the floored width/height back onto the element's style instead of letting it size naturally?
 < Knowing if you are trying to align a text grid or prevent canvas blurring will help tailor the perfect setup.
 
+> I actually never had a "need" to do this.
+> 
+> The idea started due to how I calculate the amount of lines to show on the screen.
+> 
+> I take the 'elementHeight' and divide by the 'lineHeight'.
+> 
+> And I assumed it would be best if 'elementHeight' were a whole number.
+> 
+> Generally speaking however, I also do have an underlying assumption that the browser can more easily render a UI if it is encompassed within an element which has whole numbered dimensions. (which might be wrong).
 
 */
 
