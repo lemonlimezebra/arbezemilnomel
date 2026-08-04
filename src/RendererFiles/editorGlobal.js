@@ -7121,6 +7121,27 @@ and I don't know...
 
 :( I can probably reword that lol
 
+wtf is going on
+
+I said
+
+> When it comes to the 'Floor Trap'.
+> 
+> What if I had my current code, but I just didn't read after setting the floored values.
+
+which was 2/3rd of the previous prompt.
+
+And then I got response of
+
+< If you keep your current code but completely remove that second read, you successfully eliminate the second layout calculation. That is a great performance win!
+< 
+< However, your superstitious fear about the "boogieman" changing 500px to 501px is actually technically justified—though not for the reason you think. The real boogieman isn't a browser bug; it is display scaling (like a 125% zoom on a laptop, or a high-DPI Retina screen).
+<
+< ...
+<
+< The Scaling Boogieman is Real
+< ...
+
 */
     EDITOR_baseElement.style.contain = 'layout';
 
