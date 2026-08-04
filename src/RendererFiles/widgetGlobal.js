@@ -384,4 +384,22 @@ and in the end I don't think I made any changes cause I wasn't able to be certai
 
 But I have all kinds of ideas now in my mind that I can explore
 
+
+============
+
+When you play a multiplayer game why do people consistently ask other players in a public chat
+how a game mechanic works
+
+just for people to respond with jokes about how "idk why don't you google it?"
+
+It's cause we always wanted that inaccuracy.
+It's just about controlling it.
+And knowing when the inaccuracy exists vs when it doesn't.
+
+Some might say "they're too lazy to alt tab to a browser and google it"
+but I personally have desired asking a question in a game rather than googling it.
+And for me it always is: google was way too strict with what I said, way too literal.
+Sometimes you don't even fully know what you're asking.
+But you can word it to another human and they'll go "I know what you are asking, this is the answer"
+
 */
