@@ -10092,16 +10092,19 @@ One after another:
 10 reps of rotator cuff exercises
 10 reps of lateral raises
 10 reps of shoulder press
+10 seconds of flexing my arms as intensly as I can / trying to incorporate some forearm flexing simultaneously
 
 Then essentially immediately after do these one after another:
 20 reps of rotator cuff exercises
 20 reps of lateral raises
 20 reps of shoulder press
+20 seconds of flexing my arms as intensly as I can / trying to incorporate some forearm flexing simultaneously
 
 Then essentially immediately after do these one after another:
 10 reps of rotator cuff exercises
 10 reps of lateral raises
 10 reps of shoulder press
+10 seconds of flexing my arms as intensly as I can / trying to incorporate some forearm flexing simultaneously
 
 THEN:
 you go for approximately an hour long walk
