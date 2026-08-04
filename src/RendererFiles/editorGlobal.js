@@ -10129,4 +10129,11 @@ All of the exercises are just body weight with near perfect form and not necessa
 
 ===========
 
+> scaption drop doesn't look like it.
+>
+> Imagine the starting position of a shoulder press (when you make that bend in the elbow)
+> but instead of pressing up you allow your forearm to come down in front of your body
+
+"shoulder 90/90 external-to-internal rotation" maybe
+
 */
