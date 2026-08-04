@@ -1621,7 +1621,8 @@ function EDITOR_finalizeEdit_Enter(cursor, indexLine_editOccurredOn) {
     }
 
     // TODO: A notification needs to sent to the LSP here
-    // TODO: Update the tracked syntax list here... the enter key event actually is invoking 'EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength'...
+
+    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, cursor.editLength);
 
     // throws an exception if 'get_EnterKeyEventKind_None' (...or falsey).
     if (!cursor.enterKeyEventKind || cursor.enterKeyEventKind === get_EnterKeyEventKind_None()) { EDITOR_finalizeEdit_ClearEditState(cursor); throw new Error('if (!enterKeyEventKind...)'); }
@@ -6869,6 +6870,11 @@ function EDITOR_render_do_EnterKey() {
 }
 
 /**
+ * @param {EDITOR_Cursor} cursor 
+ * @param {boolean} ctrlKey 
+ * @param {boolean} shiftKey 
+ * @returns 
+ * 
  * The batching logic is a pattern of (for this function):
  *     if (cursor.editLength === 0) {...}
  * 
@@ -6877,19 +6883,18 @@ function EDITOR_render_do_EnterKey() {
  * - "end of line":
  * - "among a line":
  */
-function EDITOR_state_do_EnterKey(cursor, ctrlKey, shiftKey) {
+function EDITOR_EnterKey(cursor, ctrlKey, shiftKey) {
     if (!cursor.enterKey_newLinePlusIndentation_byteList)
         EDITOR_cacheIndentation(cursor);
 
     if (ctrlKey) cursor.indexColumn = 0;
     else if (shiftKey) cursor.indexColumn = EDITOR_getLastValidIndexColumn(cursor.indexLine);
 
-    let indexPosition = EDITOR_getPositionIndex_raw(cursor);
     if (cursor.editLength === 0) {
 
         cursor.enterKeyEventKind = get_EnterKeyEventKind_None();
 
-        cursor.editPosition = indexPosition;
+        cursor.editPosition = EDITOR_getPositionIndex_raw(cursor);
         cursor.editIndexLine = cursor.indexLine;
         cursor.editIndexColumn = cursor.indexColumn;
     }
@@ -6916,7 +6921,6 @@ function EDITOR_state_do_EnterKey(cursor, ctrlKey, shiftKey) {
         cursor.indexLine++;
     }
 
-    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(indexPosition, insertionCount);
     cursor.indexColumn = insertionCount - 1;
     cursor.editLength += insertionCount;
     cursor.editLineFeedCount++;
@@ -6925,16 +6929,6 @@ function EDITOR_state_do_EnterKey(cursor, ctrlKey, shiftKey) {
     cursor.END_editIndexColumn = cursor.indexColumn;
 
     EDITOR_render_request(get_RenderKind_Enter());
-}
-
-/**
- * @param {EDITOR_Cursor} cursor 
- * @param {boolean} ctrlKey 
- * @param {boolean} shiftKey 
- * @returns 
- */
-function EDITOR_EnterKey(cursor, ctrlKey, shiftKey) {
-    EDITOR_state_do_EnterKey(cursor, ctrlKey, shiftKey);
 }
 
 /**
@@ -10068,7 +10062,7 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 - [ ] EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength all of these should be moved to the finalize
     - [ ] and furthermore, should use the binary search function instead of looping each item
     - [ ] The cases remaining (that need to be moved to finalize):
-        - [ ] Enter Key
+        - [x] Enter Key
         - [ ] EDITOR_render_do_DuplicateOrPaste
         - [ ] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
 
