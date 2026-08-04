@@ -332,4 +332,33 @@ function WIDGET_CreateYesCancel() {
 TODO:
 - [ ] Check this for uncleared state when menu is finished
 - [ ] Check this for uncleared state when widget is finished
+
+Random quote from a video that I'm watching:
+"the second reason I don't use AI and I would advise others not to is because I want to get better at what I do"
+
+He's talking about youtube content creators using AI specifically.
+
+Maybe things are different in that respect.
+
+But when it comes to coding.
+
+If you are 100% against AI I think you are stunting your growth immensely.
+
+You VERY likely have consistent mistakes that you are making due to some assumption that you formed
+(possibly formed YEARS ago).
+
+And due to the fact that it "just works" you never questioned it, and are now
+carrying around this "assumption" based baggage everytime you write code.
+
+And the AI has many examples of how to do something.
+It's gonna probably see what you're doing and something about it will jump out
+as "you're doing that thing that every does wrong they have a name for it and all"
+
+That's all that I use AI for I don't generate code.
+I don't like AI autocomplete.
+
+But it is like having a colleague that you can bounce ideas off of except your colleague is the entirety of all public knowledge (overly simplified description but...)
+
+And I NEVER assume that the AI is correct about anything.
+
 */
