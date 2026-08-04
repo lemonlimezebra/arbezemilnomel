@@ -10196,4 +10196,6 @@ One thing I've never mentioned is that when I was depressed and anxious (I did t
 I eventually got to like 200 lbs and I started taking 500mg test a week with some estrogen compound.
 I'd do it with my friend he was the one who had access to it all and was showing me.
 
+I did that for like a month or two then ended up in a mental hospital and haven't touched it since
+
 */
