@@ -7067,6 +7067,11 @@ function EDITOR_measureBaseElement() {
     EDITOR_baseElement.style.width = lastReadNumber_offsetWidth + 'px';
     EDITOR_baseElement.style.height = lastReadNumber_offsetHeight + 'px';
 
+    EDITOR_baseElement.style.contain = 'layout';
+
+    lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
+    lastReadNumber_offsetHeight = EDITOR_baseElement.offsetHeight;
+
 /*
 > what does css "contain = 'layout'" do
 
@@ -7143,10 +7148,6 @@ And then I got response of
 < ...
 
 */
-    EDITOR_baseElement.style.contain = 'layout';
-
-    lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
-    lastReadNumber_offsetHeight = EDITOR_baseElement.offsetHeight;
 }
 
 /**
@@ -10141,5 +10142,10 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
     that latter text seems to be given the same syntax highlighting as the preceeding global syntax that ended previously (for some reason, but also this isn't confirmed it just seems like something weird is going on)
 
 ===========
+
+I wanted to just do "something else" for the day in terms of progress.
+And I figured I'd open the code and scroll around and if I truly got nothing done and no ideas then it was fine
+because then I've just proven that I'm truly tired rather than having a light day of work under the assumption that "I'm tired".
+So I'm happy with this outcome I think.
 
 */
