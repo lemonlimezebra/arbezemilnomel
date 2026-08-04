@@ -117,6 +117,10 @@ function DIALOG_render_do_DimensionsChanged() {
 > I'd only ever see a mouseEvent to update the css property values after the mouse event has changed by exactly 1 pixel?
 > I'd presume this isn't true actually... because you could move 1 pixel by perhaps combining the x and y axis,
 > or that either the x or y hit the 1 pixel threshold but the other dimension is a decimal amount of space having moved?
+
+< ...
+< What you are observing with the stable decimal endings is expected, but it is caused by browser subpixel rendering and how you calculate the coordinate offsets—not because the mouse is restricted to 1-pixel grid increments
+
 */
 
     if (DIALOG_left_DRAWN !== DIALOG_left) {
