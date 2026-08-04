@@ -10065,4 +10065,6 @@ I was falling apart going from 160 to 200
 Was on like 200mg of zoloft which was the max dose. I...
 probably not gonna say but it is a big part of things
 
+I got prescribed the zoloft because I was falling apart*
+
 */
