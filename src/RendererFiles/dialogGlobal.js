@@ -748,12 +748,3 @@ function DIALOG_deleteWindow() {
     let closeButton = document.getElementById('DIALOG_closeButton');
     closeButton.removeEventListener('click', DIALOG_closeButton_onclick);
 }
-
-/*
-I wanna cover all the hot paths by end of the day I think these are the last ones.
-I don't wanna change much of anything because I'm anxious and tired,
-i.e.: I don't feel overly comfortable with my ability to judge whether I've done something correctly or not and the changes I make the more anxious I'll be that I absent mindedly broke something.
-
-But I wanted to get all the hot paths by end of the day, I think these are the last ones.
-When it comes to the array from usage I mean.
-*/
