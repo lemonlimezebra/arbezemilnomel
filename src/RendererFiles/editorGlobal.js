@@ -7066,6 +7066,41 @@ function EDITOR_measureBaseElement() {
     
     EDITOR_baseElement.style.width = lastReadNumber_offsetWidth + 'px';
     EDITOR_baseElement.style.height = lastReadNumber_offsetHeight + 'px';
+
+/*
+> what does css "contain = 'layout'" do
+
+< ...
+< The CSS declaration contain: layout isolates the internal layout of an element from the rest of the web page, ensuring that changes inside the element do not trigger layout calculations outside of it, and vice versa
+< ...
+
+< ...
+< Independent Layout Trees: The browser treats the element as an isolated layout island. If JavaScript alters content or styles inside this element, the browser only recalculates the layout for this specific subtree rather than reflowing the entire document
+< ...
+< New Stacking Context: A new stacking context is generated. Any z-index properties used on child elements are completely scoped to this element and will not interact with elements outside of it.
+< ...
+
+I think I agree with this all... That's why I added it originally.
+I'm modifying the content and stacking context is good for all the absolute positioning I can ensure to the browser that nothing will happen?
+The AI code drops it so I gotta watch out perhaps not to just paste that over.
+
+< function EDITOR_measureBaseElement() {
+<     // 1. Read once, accurately capturing subpixels
+<     const rect = EDITOR_baseElement.getBoundingClientRect();
+<     
+<     lastReadNumber_offsetWidth = rect.width;
+<     lastReadNumber_offsetHeight = rect.height;
+< 
+<     // 2. Calculate lines safely without modifying the DOM
+<     const rawLineCount = lastReadNumber_offsetHeight / KNOWN_LINE_HEIGHT;
+<     
+<     // Math.floor gives you ONLY fully visible lines
+<     const fullyVisibleLines = Math.floor(rawLineCount); 
+<     
+<     // Math.ceil includes a line even if it is partially cut off at the bottom
+<     const totalRenderedLines = Math.ceil(rawLineCount); 
+< }
+*/
     EDITOR_baseElement.style.contain = 'layout';
 
     lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
