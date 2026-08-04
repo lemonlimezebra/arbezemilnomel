@@ -10051,4 +10051,16 @@ TODO:
 
 ==============
 
+manageable discomfort/stress is very helpful
+If you look at it from the perspective of being a source of motivation.
+If I drop some pseudo science, I think of it as how
+fight or flight helps you focus.
+Sort of a "adrenaline/norepinephrine" boost of energy.
+Versus a pleasureable boost of energy.
+(too much is bad for sure).
+But I feel like I became a much better coder a year or whatever ago it was when I started my part-time job.
+It is 25-30 degrees fahrenheit cause I work in a walk in cooler. And it sucks.
+But now that I seem to be managing my health (no longer getting sick / skin issues from the environment).
+It just is every 3 days I go in I get a slap in the face and I leave with a bit more drive.
+
 */
