@@ -10191,4 +10191,9 @@ then 4 sets of triceps
 
 Something like that that's from memory
 
+One thing I've never mentioned is that when I was depressed and anxious (I did the 80lb dumbells for 8 naturally prior to this)
+
+I eventually got to like 200 lbs and I started taking 500mg test a week with some estrogen compound.
+I'd do it with my friend he was the one who had access to it all and was showing me.
+
 */
