@@ -10204,4 +10204,6 @@ the estrogen pill he actually would cut it in half he'd take half I take the oth
 If I remember correctly the estrogen pill was to prevent the test from aromatizing into estrogen? I'm not sure I wasn't thinking
 much at that time in my life.
 
+Yes the other guy was ripped, more than I was and this likely fk'd with me a bit
+
 */
