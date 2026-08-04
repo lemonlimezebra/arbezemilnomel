@@ -2055,6 +2055,9 @@ function EDITOR_finalizeEdit_IndentLess(cursor, indexLine_editOccurredOn) {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_finalizeEdit_Paste(cursor, indexLine_editOccurredOn) {
+    
+    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, cursor.editLength);
+    
     let content = cursor.EDITOR_paste_clipboardContent;
     cursor.EDITOR_paste_clipboardContent = null;
 
@@ -2102,6 +2105,9 @@ function EDITOR_finalizeEdit_Paste(cursor, indexLine_editOccurredOn) {
  * @param {EDITOR_Cursor} cursor 
  */
 function EDITOR_finalizeEdit_Duplicate(cursor, indexLine_editOccurredOn) {
+
+    EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(cursor.editPosition, cursor.editLength);
+
     let small = cursor.EDITOR_duplicate_small;
     let length = cursor.EDITOR_duplicate_length;
 
@@ -5930,6 +5936,7 @@ function EDITOR_render_do_DuplicateOrPaste() {
                 byteArray = EDITOR_textByteList.bytes.subarray(small, large);
             }
             else if (cursor.editKind === get_EditKind_Paste()) {
+                large = EDITOR_getPositionIndex_raw(cursor);
                 let clipboardContent = cursor.EDITOR_paste_clipboardContent;
                 let clipboardContentLength = clipboardContent.length;
 
@@ -6135,7 +6142,8 @@ function EDITOR_render_do_DuplicateOrPaste() {
                 }
             }
 
-            EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength(positionIndex, insertionLength);
+            cursor.editLength = insertionLength;
+            cursor.editPosition = large;
 
             if (linesInsertedCount > 0) {
                 update_verticalVirtualizationBoundary(EDITOR_lineEndPositionList.count + linesInsertedCount);
@@ -10049,7 +10057,7 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
     - [ ] and furthermore, should use the binary search function instead of looping each item
     - [ ] The cases remaining (that need to be moved to finalize):
         - [x] Enter Key
-        - [ ] EDITOR_render_do_DuplicateOrPaste
+        - [x] EDITOR_render_do_DuplicateOrPaste
         - [x] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
 
 - [ ] The global context lex from the LSP needs to be tracked correctly (the lsp doesn't store tabs as '\t\0\0\0' (and probably neither should the editor so either fix it in the editor or short term bridge this difference in the position indices / etc...?)).
