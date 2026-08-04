@@ -10063,5 +10063,6 @@ I'm having a hard time focusing I'm almost done with what I want'd to do
 One of the things that really fk'd me up were the sxual side effects of Zoloft.
 I was falling apart going from 160 to 200
 Was on like 200mg of zoloft which was the max dose. I...
+probably not gonna say but it is a big part of things
 
 */
