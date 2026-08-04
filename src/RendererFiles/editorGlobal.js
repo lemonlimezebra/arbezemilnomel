@@ -10175,4 +10175,18 @@ and I'm extremely self concious about it and I worry that if the barbell ever hi
 but I worry about accidentally hitting my chest)
 that it would worsen the acne scar.
 
+When I was younger I did this for "chest/shoulders/triceps":
+- 4 sets of incline dumbell press
+- 4 sets of flatbench dumbell press
+- 4 sets of pec fly
+- 4 sets of a filler chest exercise
+---
+- 4 sets of rotator cuff the one I described earlier but with a 5 lb weight in my hand
+- 4 sets of shoulder press with dumbells
+- 4 sets of lateral raises
+- 4 sets of shoulder press with dumbells again
+- 4 sets of lateral raises again
+---
+then 4 sets of triceps
+
 */
