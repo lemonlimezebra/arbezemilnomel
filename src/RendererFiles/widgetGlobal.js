@@ -361,4 +361,6 @@ But it is like having a colleague that you can bounce ideas off of except your c
 
 And I NEVER assume that the AI is correct about anything.
 
+Most of my code I write myself, then if I'm dry for an idea I mess around giving AI some code snippets and see what it says.
+
 */
