@@ -426,9 +426,8 @@ class TreeViewComponent {
             if (beltIndexItem >= this.TREEVIEW_ArrayFrom_itemListElement_children_length || beltIndexItem < 0) beltIndexItem = -1;
             else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
-            if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                return this.director.tvd_ondblclick_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
-            }
+            if (beltIndexItem < 0) return;
+            return this.director.tvd_ondblclick_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex);
         }
     }
 
@@ -551,10 +550,7 @@ class TreeViewComponent {
                 else beltIndexItem = (beltIndexItem + this.beltIndexZero) % this.virtualCount;
 
                 if (beltIndexItem < 0) return;
-                if (beltIndexItem >= 0 && beltIndexItem < this.TREEVIEW_ArrayFrom_itemListElement_children_length) {
-                    return this.director.tvd_onkeydown_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event.key);
-                }
-                return;
+                return this.director.tvd_onkeydown_async(this.TREEVIEW_ArrayFrom_itemListElement_children[beltIndexItem], this.cursorIndex, event.key);
         }
     }
 
@@ -1131,5 +1127,9 @@ to just 'if (beltIndexItem < 0) return' and that partially is what introduces th
 The change to 'if (beltIndexItem < 0) return' is because the if statement predicate is "simple"
 and the statement to branch into if the predicate is true, as well is "simple" thus one lining it unless
 readability deems alternative structuring of the code.
+|
+TODO: I had to commit the previous partial result because this comment existing was causing intrusive distracting thoughts...
+...this commit and the previous one sum to make the entire result
+
 
 */
