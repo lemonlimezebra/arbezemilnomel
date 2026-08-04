@@ -10058,5 +10058,6 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 
 ===========
 
+I'm having a hard time focusing I'm almost done with what I want'd to do
 
 */
