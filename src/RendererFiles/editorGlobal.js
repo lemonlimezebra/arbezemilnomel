@@ -10059,21 +10059,27 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 ===========
 
 Vitamins (before I eat Breakfast):
-- [ ] 1 D3
-- [ ] 1 Choline Bitartrate
-- [ ] 1 Men one a day multivitamin
+- [x] 1 D3
+- [x] 1 Choline Bitartrate
+- [x] 1 Men one a day multivitamin
 
 Breakfast:
 - [x] 4 crunchy peanut butter cliff bars   | 1,040 calories | 44g protein
-- [x] 1 42g protein fairlife               | 230? calories  | 42g protein
+- [x] 1 42g protein fairlife               | 230   calories | 42g protein
+--------------------------------------------------------------------------
+                                           | 1,270 calories | 86g protein
 
 Lunch:
-- [x] 1 crunchy peanut butter cliff bar    | 260 calories   | 11g protein
-- [x] 1 vanilla almond "builder" cliff bar | 270 calories   | 20g protein
+- [x] 1 crunchy peanut butter cliff bar    | 260   calories   | 11g protein
+- [x] 1 vanilla almond "builder" cliff bar | 270   calories   | 20g protein
+---------------------------------------------------------------------------
+                                           | 530   calories   | 31g protein
 
 Dinner:
-- [ ] 1 lb of 98% fat free ground chicken  | 400 calories   | 100g protein
-- [ ] with sriracha                        | 100? calories  | 0g protein
+- [ ] 1 lb of 98% fat free ground chicken  | 400   calories   | 100g protein
+- [ ] with sriracha                        | 100?  calories   | 0g protein
+----------------------------------------------------------------------------
+                                           | 500   calories   | 100g protein
 
 ===========
 
