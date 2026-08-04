@@ -102,6 +102,8 @@ function DIALOG_render_do_DimensionsChanged() {
 
 /*
 
+Google AI
+
 > how often does a resize event fire at the fastest possible speed
 
 < At its absolute fastest speed, a browser window resize event fires every single pixel change (or continuously during the drag loop),
@@ -178,6 +180,30 @@ function DIALOG_render_do_DimensionsChanged() {
 < Your function contains a classic, severe performance anti-pattern known as Layout Thrashing (forced synchronous layout).
 < Because it mixes DOM reading and DOM writing back-to-back, it forces the browser to recalculate the page layout twice every single time the function runs.
 < ...
+< ...
+< Alternatively, if you are looking to get precise fractional measurements without rounding issues, use getBoundingClientRect() instead of offsetWidth:
+< ...
+< function EDITOR_measureBaseElement() {
+<     // 1. Read everything first (No thrashing)
+<     const rect = EDITOR_baseElement.getBoundingClientRect();
+<     
+<     // 2. Do your math locally
+<     const targetWidth = Math.floor(rect.width);
+<     const targetHeight = Math.floor(rect.height);
+<     
+<     // 3. Write everything last
+<     EDITOR_baseElement.style.width = targetWidth + 'px';
+<     EDITOR_baseElement.style.height = targetHeight + 'px';
+<     EDITOR_baseElement.style.contain = 'layout';
+< 
+<     // 4. Update your cached tracking variables without re-reading the DOM
+<     lastReadNumber_offsetWidth = targetWidth;
+<     lastReadNumber_offsetHeight = targetHeight;
+< }
+<
+< Could you share why you need to hardcode the floored width/height back onto the element's style instead of letting it size naturally?
+< Knowing if you are trying to align a text grid or prevent canvas blurring will help tailor the perfect setup.
+
 
 */
 
