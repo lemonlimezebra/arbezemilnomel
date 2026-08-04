@@ -10199,5 +10199,6 @@ I'd do it with my friend he was the one who had access to it all and was showing
 I did that for like a month or two then ended up in a mental hospital and haven't touched it since
 
 I'd go over his house though like once a week and we'd just get shirtless and pin eachother in the shoulder lol it is funny to think about
+the estrogen pill he actually would cut it in half he'd take half I take the other half
 
 */
