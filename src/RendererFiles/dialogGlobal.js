@@ -140,6 +140,18 @@ function DIALOG_render_do_DimensionsChanged() {
 
 < No, a strict equality check (!==) is not safe when comparing decimal numbers in JavaScript.
 < ...
+< 2. Snap to Pixels (Best for UI Performance)
+< Monitors cannot light up a "fractional" physical pixel. A value like 100.33px forces the browser to anti-alias the edge, which often looks blurry.
+< Snapping to the nearest whole pixel yields sharper text and faster performance.
+< ```js
+< const targetLeft = Math.round(DIALOG_left); // or Math.floor
+< 
+< if (DIALOG_left_DRAWN !== targetLeft) {
+<   // Update your CSS properties using targetLeft
+<   DIALOG_left_DRAWN = targetLeft;
+< }
+< ```
+< ...
 
 */
 
