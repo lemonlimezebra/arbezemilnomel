@@ -10168,5 +10168,11 @@ It's cause I would in a state of depression and anxiety binge eat garbage
 
 So I just kept gaining more and more weight
 
+I don't do bench press with a barbell because I have an acne scar at the center of my chest where
+(either side of the pecs meet) I don't know if that is even anatomically a true statement
+
+and I'm extremely self concious about it and I worry that if the barbell ever hits my chest (not that I do it on purpose
+but I worry about accidentally hitting my chest)
+that it would worsen the acne scar.
 
 */
