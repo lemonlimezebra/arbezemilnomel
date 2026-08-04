@@ -10210,4 +10210,8 @@ Back when I was like 160 170
 
 Extreme insecurity back in the day I was as yoda says
 
+It's funny cause he was in my physics class one year.
+And I just looked over at him constantly.
+Not even being mad I was just in awe.
+
 */
