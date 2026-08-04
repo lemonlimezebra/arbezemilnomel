@@ -100,6 +100,25 @@ function DIALOG_render_do_DimensionsChanged() {
     // Do those doubles compare accurately enough?
     // Is using a boolean a better idea?
 
+/*
+
+> how often does a resize event fire at the fastest possible speed
+
+< At its absolute fastest speed, a browser window resize event fires every single pixel change (or continuously during the drag loop),
+< meaning it can trigger hundreds of times per second (often matching or exceeding the main thread's processing capacity,
+< up to 1,000+ times per second if unrestricted
+
+> I have a dialog UI that is moveable and resizable.
+> When it initially renders it has a whole number for the width, height, left, top.
+> When I perform the first drag event it tends to get a decimal ending for the previously named properties.
+> Then as I continue dragging, this decimal ending stays exactly the same.
+> 
+> Can you confirm whether what I'm seeing is expected behavior? That after the initial event,
+> I'd only ever see a mouseEvent to update the css property values after the mouse event has changed by exactly 1 pixel?
+> I'd presume this isn't true actually... because you could move 1 pixel by perhaps combining the x and y axis,
+> or that either the x or y hit the 1 pixel threshold but the other dimension is a decimal amount of space having moved?
+*/
+
     if (DIALOG_left_DRAWN !== DIALOG_left) {
         DIALOG_left_DRAWN = DIALOG_left;
         DIALOG_element.style.left = `${DIALOG_left_DRAWN}px`;
