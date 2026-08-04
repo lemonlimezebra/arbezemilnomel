@@ -10073,4 +10073,6 @@ It was killing me at that point in time
 
 Now I'm on 80mg of prozac which has similar issues but I'm not active, that however was the peak of my activity and the timing of it all. It really had me in a loop
 
+I got with a guy at one point because I just didn't understand what was going on it made me very confused
+
 */
