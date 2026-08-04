@@ -7084,6 +7084,14 @@ I think I agree with this all... That's why I added it originally.
 I'm modifying the content and stacking context is good for all the absolute positioning I can ensure to the browser that nothing will happen?
 The AI code drops it so I gotta watch out perhaps not to just paste that over.
 
+But if I truly added it for these reasons, why did I not add it to the TreeView which is similar.
+And if the answer to that is just "lots of things to do".
+Then, "would you add it now?"
+"are you really sure that this is useful?"
+
+and I don't know...
+
+
 < function EDITOR_measureBaseElement() {
 <     // 1. Read once, accurately capturing subpixels
 <     const rect = EDITOR_baseElement.getBoundingClientRect();
