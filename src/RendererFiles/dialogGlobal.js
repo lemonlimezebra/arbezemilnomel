@@ -120,6 +120,12 @@ function DIALOG_render_do_DimensionsChanged() {
 
 < ...
 < What you are observing with the stable decimal endings is expected, but it is caused by browser subpixel rendering and how you calculate the coordinate offsets—not because the mouse is restricted to 1-pixel grid increments
+< ...
+< The Initial Render: Your element starts at a clean, whole number (e.g., width: 400px).
+< The First Move: When you click and first move, the browser calculates the bounding box using subpixel precision
+<                 (often due to display scaling, like a 125% or 150% Windows zoom, or a Retina display). This introduces a fractional offset (e.g., left: 100.33px)
+< The Delta Loop: In every subsequent mouse event, the browser gives you the mouse coordinates. Crucially, the mouse coordinates (clientX/clientY) are usually reported as integers (whole numbers) by the browser relative to the screen.
+< The Constant Fraction: Because you are subtracting a whole-number mouse coordinate from another whole-number mouse coordinate, your delta (\(\Delta \)) is always a perfect integer. When you add that perfect integer delta to your first subpixel position, the decimal fraction never changes!
 
 */
 
