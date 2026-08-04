@@ -10135,5 +10135,8 @@ All of the exercises are just body weight with near perfect form and not necessa
 > but instead of pressing up you allow your forearm to come down in front of your body
 
 "shoulder 90/90 external-to-internal rotation" maybe
+that sounds like the wrong direction though the force hits the external rotation
+
+"shoulder 90 degree external rotation"
 
 */
