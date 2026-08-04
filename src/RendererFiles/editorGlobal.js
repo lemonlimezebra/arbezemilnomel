@@ -10069,4 +10069,6 @@ I got prescribed the zoloft because I was falling apart*
 
 numbness, erectile dysfunction, inability to ...
 
+It was killing me at that point in time
+
 */
