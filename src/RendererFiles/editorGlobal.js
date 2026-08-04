@@ -10152,4 +10152,6 @@ I don't care about the bodybuilding aspect as much.
 
 It's all very shoulder mobility focused cause I'm sitting at desk all day.
 
+and just getting any amount of non-zero movement
+
 */
