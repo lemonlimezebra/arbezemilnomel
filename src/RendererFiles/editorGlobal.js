@@ -198,8 +198,6 @@ class EDITOR_Cursor {
         this.EDITOR_duplicate_small = 0;
         /** same comment that pertains to this.EDITOR_paste_clipboardContent is somewhat relevant here */
         this.EDITOR_duplicate_length = 0;
-
-        //this.EDITOR_renderKindArray_GLOBAL_VARIABLES_SNAPSHOT = null;
     }
 
     hasSelection() {
@@ -248,8 +246,6 @@ class EDITOR_Cursor {
 
         this.EDITOR_duplicate_small = 0;
         this.EDITOR_duplicate_length = 0;
-
-        //this.EDITOR_renderKindArray_GLOBAL_VARIABLES_SNAPSHOT = null;
     }
 
     /**
@@ -2271,9 +2267,6 @@ function EDITOR_finalizeEdit_DeleteLtr_BackspaceRtl_RemoveTextNoBatching(cursor,
 }
 
 function EDITOR_finalizeEdit_ClearEditState(cursor) {
-
-    //cursor.EDITOR_renderKindArray_GLOBAL_VARIABLES_SNAPSHOT = null;
-
     cursor.editKind = get_EditKind_None();
     cursor.editLength = 0;
     cursor.editPosition = 0;
@@ -7798,11 +7791,6 @@ function EDITOR_state_do_Backspace(cursor, event) {
         }
     }
 
-    //cursor.EDITOR_renderKindArray_GLOBAL_VARIABLES_SNAPSHOT = {
-    //    virtualCount: get_EDITOR_virtualCount(),
-    //    virtualIndexLine: get_EDITOR_virtualIndexLine(),
-    //    beltIndexZero: EDITOR_beltIndexZero,
-    //};
     EDITOR_render_request(get_RenderKind_BackspaceRtl());
 }
 
