@@ -10121,6 +10121,8 @@ Preferably the exercises before the walk would be more than just that i.e.: anot
 < Your exercise is called the scaption drop, asymmetrical scaption, or a single-arm eccentric scaption variation.
 < It is a targeted rehabilitation movement that heavily recruits the supraspinatus muscle (the top tendon of your rotator cuff) and the deltoid muscle.
 
+No not scapation drop it is different hang on 
+
 ===============
 
 All of the exercises are just body weight with near perfect form and not necessarily slow slow but slow is emphasized
