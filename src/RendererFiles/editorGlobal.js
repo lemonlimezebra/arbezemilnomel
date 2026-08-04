@@ -6014,7 +6014,6 @@ function EDITOR_render_do_DuplicateOrPaste() {
                 return;
             }
 
-            // TODO: Set (or large) this to the cursor's current position for the paste?
             let positionIndex = large;
 
             let linesInsertedCount = 0;
