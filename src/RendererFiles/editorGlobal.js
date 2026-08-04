@@ -10164,5 +10164,7 @@ Very large range cause I was 160 when I started my 4 year school.
 Then I was 170, 180, 190 and then dropped out or something
 So I can't remember anything much
 
+It's cause I would in a state of depression and anxiety binge eat garbage
+
 
 */
