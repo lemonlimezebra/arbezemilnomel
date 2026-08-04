@@ -10056,4 +10056,20 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 - [ ] The global context lex if it ends on a given line, and then text appears on the same line after it,
     that latter text seems to be given the same syntax highlighting as the preceeding global syntax that ended previously (for some reason, but also this isn't confirmed it just seems like something weird is going on)
 
+===========
+
+Breakfast:
+- [x] 4 crunchy peanut butter cliff bars
+- [x] 1 42g protein fairlife
+
+Lunch:
+- [x] 1 crunchy peanut butter cliff bar
+- [x] 1 vanilla almond "builder" cliff bar
+
+Dinner:
+- [ ] 1 lb of 98% fat free ground chicken
+- [ ] with sriracha
+
+===========
+
 */
