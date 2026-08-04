@@ -10058,5 +10058,8 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 
 ===========
 
+I know that I'm straight btw I'm just saying those things happened and I don't personally regret them or anything.
+I do have social guilt surrounding it all though.
+but if my dad does ever see this: I am straight
 
 */
