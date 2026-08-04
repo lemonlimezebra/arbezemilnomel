@@ -153,6 +153,32 @@ function DIALOG_render_do_DimensionsChanged() {
 < ```
 < ...
 
+> I have a very related question, it is about a text editor UI that I have.
+> Given the switch from a dialog to a text editor, I want to just make sure you're on track by providing this single prompt to start.
+
+< ...
+
+> My editor initialization and resize logic both invoke the same shared function at some point.
+> 
+> This function is:
+> ```js
+> function EDITOR_measureBaseElement() {
+>     lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
+>     lastReadNumber_offsetHeight = Math.floor(EDITOR_baseElement.offsetHeight);
+>     
+>     EDITOR_baseElement.style.width = lastReadNumber_offsetWidth + 'px';
+>     EDITOR_baseElement.style.height = lastReadNumber_offsetHeight + 'px';
+>     EDITOR_baseElement.style.contain = 'layout';
+> 
+>     lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
+>     lastReadNumber_offsetHeight = EDITOR_baseElement.offsetHeight;
+> }
+> ```
+
+< Your function contains a classic, severe performance anti-pattern known as Layout Thrashing (forced synchronous layout).
+< Because it mixes DOM reading and DOM writing back-to-back, it forces the browser to recalculate the page layout twice every single time the function runs.
+< ...
+
 */
 
     if (DIALOG_left_DRAWN !== DIALOG_left) {
