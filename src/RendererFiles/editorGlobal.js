@@ -10144,4 +10144,7 @@ that sounds like the wrong direction though the force hits the external rotation
 
 Oh I missed an exercise it is one of the things that make me look super silly
 
+So what I do is I stand outside in the backyard doing these
+And the entire time I'm thinking about whether anyone is looking at me like I'm weird lol
+
 */
