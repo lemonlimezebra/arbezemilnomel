@@ -10084,6 +10084,33 @@ Dinner:
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 TOTAL:                                     | 2,300 calories   | 217g protein
 
+Non work day exercise routine:
+
+The minimum routine is:
+
+One after another:
+10 reps of rotator cuff exercises
+10 reps of lateral raises
+10 reps of shoulder press
+
+Then essentially immediately after do these one after another:
+20 reps of rotator cuff exercises
+20 reps of lateral raises
+20 reps of shoulder press
+
+Then essentially immediately after do these one after another:
+10 reps of rotator cuff exercises
+10 reps of lateral raises
+10 reps of shoulder press
+
+THEN:
+you go for approximately an hour long walk
+
+
+===============
+
+Preferably the exercises before the walk would be more than just that i.e.: another 2 sets of the 3 exercises one after another.
+
 ===========
 
 */
