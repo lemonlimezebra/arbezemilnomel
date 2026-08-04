@@ -10208,4 +10208,6 @@ Yes the other guy was ripped, more than I was and this likely fk'd with me a bit
 Not my friend but the "other guy" I saw him around a lot he was ridiculously ripped way more than I was.
 Back when I was like 160 170
 
+Extreme insecurity back in the day I was as yoda says
+
 */
