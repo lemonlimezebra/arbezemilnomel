@@ -10067,4 +10067,6 @@ probably not gonna say but it is a big part of things
 
 I got prescribed the zoloft because I was falling apart*
 
+numbness, erectile dysfunction, inability to ...
+
 */
