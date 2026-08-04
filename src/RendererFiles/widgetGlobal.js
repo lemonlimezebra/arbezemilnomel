@@ -406,4 +406,7 @@ But you can word it to another human and they'll go "I know what you are asking,
 
 my main goal is to get down to 199 lbs because it is hard to lose weight but it is far easier to maintain it
 
+And then given the time gated effect of learning
+all I gotta do is do a non-zero amount of learning each day while enduring the caloric deficit
+
 */
