@@ -382,4 +382,6 @@ I'm still getting don't speak recommended to me on all my youtube feeds it got m
 I spent an hour just today even the last hour of my coding was spent "talking" to an AI
 and in the end I don't think I made any changes cause I wasn't able to be certain about the AI's correctness.
 
+But I have all kinds of ideas now in my mind that I can explore
+
 */
