@@ -10160,5 +10160,9 @@ and I couldn't get that high I was actually stuck at 70 lb dumbells and having s
 I started doing rotator cuffs and my strength and mobility shot up
 I was 160-190 lbs I can't remember
 
+Very large range cause I was 160 when I started my 4 year school.
+Then I was 170, 180, 190 and then dropped out or something
+So I can't remember anything much
+
 
 */
