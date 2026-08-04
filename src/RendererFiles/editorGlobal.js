@@ -10111,6 +10111,16 @@ you go for approximately an hour long walk
 
 Preferably the exercises before the walk would be more than just that i.e.: another 2 sets of the 3 exercises one after another.
 
+> I do a rotator cuff exercise but I don't know the name of it
+
+< ...
+
+> I stand up. My arms are out laterally and make a 45 degree angle up.
+> I then let my arm controlled come down in front of me (only the one side of the 45 degree angle) then I bring that same side back up again.
+
+< Your exercise is called the scaption drop, asymmetrical scaption, or a single-arm eccentric scaption variation.
+< It is a targeted rehabilitation movement that heavily recruits the supraspinatus muscle (the top tendon of your rotator cuff) and the deltoid muscle.
+
 ===========
 
 */
