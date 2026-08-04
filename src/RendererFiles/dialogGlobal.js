@@ -127,6 +127,20 @@ function DIALOG_render_do_DimensionsChanged() {
 < The Delta Loop: In every subsequent mouse event, the browser gives you the mouse coordinates. Crucially, the mouse coordinates (clientX/clientY) are usually reported as integers (whole numbers) by the browser relative to the screen.
 < The Constant Fraction: Because you are subtracting a whole-number mouse coordinate from another whole-number mouse coordinate, your delta (\(\Delta \)) is always a perfect integer. When you add that perfect integer delta to your first subpixel position, the decimal fraction never changes!
 
+> I have a rAF loop that updates the CSS properties of the dialog.
+> When there is a decimal ending involved. Does this math have enough accuracy to be correct? 'if (DIALOG_left_DRAWN !== DIALOG_left) { ...changeTheProperties... }'
+
+< ...
+
+> ...
+
+< ...
+
+> ...
+
+< No, a strict equality check (!==) is not safe when comparing decimal numbers in JavaScript.
+< ...
+
 */
 
     if (DIALOG_left_DRAWN !== DIALOG_left) {
