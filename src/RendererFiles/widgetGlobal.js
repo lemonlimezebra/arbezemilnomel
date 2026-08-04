@@ -402,4 +402,8 @@ And for me it always is: google was way too strict with what I said, way too lit
 Sometimes you don't even fully know what you're asking.
 But you can word it to another human and they'll go "I know what you are asking, this is the answer"
 
+========
+
+my main goal is to get down to 199 lbs because it is hard to lose weight but it is far easier to maintain it
+
 */
