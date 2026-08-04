@@ -10139,4 +10139,6 @@ that sounds like the wrong direction though the force hits the external rotation
 
 "shoulder 90 degree external rotation"
 
+Oh I missed an exercise it is one of the things that make me look super silly
+
 */
