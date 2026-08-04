@@ -10058,21 +10058,4 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 
 ===========
 
-I'm having a hard time focusing I'm almost done with what I want'd to do
-
-One of the things that really fk'd me up were the sxual side effects of Zoloft.
-I was falling apart going from 160 to 200
-Was on like 200mg of zoloft which was the max dose. I...
-probably not gonna say but it is a big part of things
-
-I got prescribed the zoloft because I was falling apart*
-
-numbness, erectile dysfunction, inability to ...
-
-It was killing me at that point in time
-
-Now I'm on 80mg of prozac which has similar issues but I'm not active, that however was the peak of my activity and the timing of it all. It really had me in a loop
-
-I got with a guy at one point because I just didn't understand what was going on it made me very confused
-
 */
