@@ -10058,5 +10058,9 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 
 ===========
 
+There's a variety of reasons for the location that I cut.
+But I think the largest of them all was the Zoloft.
+It did NOT make me do it.
+I was instead mentally ill and I was mentally doing gymnastics about things.
 
 */
