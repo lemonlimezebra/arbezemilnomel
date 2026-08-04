@@ -95,6 +95,11 @@ function DIALOG_render_do_DimensionsChanged() {
     let DIALOG_element = document.getElementById('DIALOG');
     if (!DIALOG_element) return;
 
+    // This logic is a bit suspect.
+    // Are doubles involved?
+    // Do those doubles compare accurately enough?
+    // Is using a boolean a better idea?
+
     if (DIALOG_left_DRAWN !== DIALOG_left) {
         DIALOG_left_DRAWN = DIALOG_left;
         DIALOG_element.style.left = `${DIALOG_left_DRAWN}px`;
