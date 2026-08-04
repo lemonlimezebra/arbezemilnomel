@@ -10063,4 +10063,13 @@ It is 25-30 degrees fahrenheit cause I work in a walk in cooler. And it sucks.
 But now that I seem to be managing my health (no longer getting sick / skin issues from the environment).
 It just is every 3 days I go in I get a slap in the face and I leave with a bit more drive.
 
+==========
+
+- [ ] EDITOR_trackedSyntaxList_inefficientUpdateStartAndLength all of these should be moved to the finalize
+    - [ ] and furthermore, should use the binary search function instead of looping each item
+    - [ ] The cases remaining (that need to be moved to finalize):
+        - [ ] Enter Key
+        - [ ] EDITOR_render_do_DuplicateOrPaste
+        - [ ] EDITOR_paste (yes this oddly seems to be invoking it twice once in the paste then the render_do later on)
+
 */
