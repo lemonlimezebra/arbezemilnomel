@@ -10058,6 +10058,11 @@ It just is every 3 days I go in I get a slap in the face and I leave with a bit 
 
 ===========
 
+Vitamins (before I eat Breakfast):
+- [ ] 1 D3
+- [ ] 1 Choline Bitartrate
+- [ ] 1 Men one a day multivitamin
+
 Breakfast:
 - [x] 4 crunchy peanut butter cliff bars   | 1,040 calories | 44g protein
 - [x] 1 42g protein fairlife               | 230? calories  | 42g protein
