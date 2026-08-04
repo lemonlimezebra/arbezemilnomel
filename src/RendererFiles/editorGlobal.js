@@ -10201,4 +10201,7 @@ I did that for like a month or two then ended up in a mental hospital and haven'
 I'd go over his house though like once a week and we'd just get shirtless and pin eachother in the shoulder lol it is funny to think about
 the estrogen pill he actually would cut it in half he'd take half I take the other half
 
+If I remember correctly the estrogen pill was to prevent the test from aromatizing into estrogen? I'm not sure I wasn't thinking
+much at that time in my life.
+
 */
