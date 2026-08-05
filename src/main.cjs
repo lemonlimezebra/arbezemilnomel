@@ -1108,7 +1108,7 @@ async function editorHoverRequest(event, indexLine, indexColumn) {
 		if (!languageServerHandshakeSuccess || !languageServer || !openedDocumentUri) return;
 
 		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
-		let position = MAIN_message_construct_position(indexLine, indexCharacter);
+		let position = lspTypes.MAIN_message_construct_position(indexLine, indexColumn);
 		let documentSymbolsRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier, position);
 		mostRecentRequest = documentSymbolsRequest;
 		languageServer.stdin.write(MAIN_encodeMessageObject(documentSymbolsRequest));
