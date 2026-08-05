@@ -10265,4 +10265,11 @@ cause too many coincidences came up later in the video after I'd done that stuff
 I wanna stay quiet and get down to 199.99999 (repeating) lbs.
 It is gonna take a long time.
 
+I have to figure out how I wanna do such and such relating to parsing or whatever.
+But I 99.9% am focused on losing weight and at any moment that I feel overly stressed
+and that me reducing the work load would help me avoid "stress eating" then I'm gonna do it 100%.
+(not that you feel stress and suddenly eat but it just increases the likelihood of the behavior and makes it harder to resist etc...)
+
+so like at minimum just an hour a day of coding (unless I feel fine on that given day)
+
 */
