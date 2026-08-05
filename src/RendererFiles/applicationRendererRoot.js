@@ -219,6 +219,7 @@ async function window_myAPI_onMessage(data) {
     }
     else if (data.method === 'textDocument/hover') {
         console.log('textDocument/hover');
+        TOOLTIP_show(data.result);
     }
 }
 
