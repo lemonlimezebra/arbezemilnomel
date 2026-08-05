@@ -83,6 +83,14 @@ export function MAIN_message_construct_DocumentSymbolsRequest(textDocumentIdenti
     };
 }
 
+export function MAIN_message_construct_HoverRequest(textDocumentIdentifier) {
+    return {
+        id: messageId++,
+        method: 'textDocument/hover',
+        params: { textDocument: textDocumentIdentifier },
+    };
+}
+
 export function MAIN_message_construct_CustomFullFileLexRequest(textDocumentIdentifier) {
     return {
         id: messageId++,

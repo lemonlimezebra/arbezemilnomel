@@ -39,6 +39,7 @@ contextBridge.exposeInMainWorld('myAPI', {
   */
   editorReadAllText: absoluteFilePath => ipcRenderer.invoke('editor-read-all-text', absoluteFilePath),
   editorDocumentSymbolsRequest: () => ipcRenderer.invoke('editor-document-symbols-request'),
+  editorHoverRequest: () => ipcRenderer.invoke('editor-hover-request'),
   // I've seen people saying you can access the clipboard the same way as the main process from renderer process
   // but I'm not touching that at the moment.
   setClipboard: text => ipcRenderer.invoke('set-clipboard', text),

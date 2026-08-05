@@ -105,6 +105,7 @@ const createWindow = () => {
 	ipcMain.handle('read-all-text', readAllText);
 	ipcMain.handle('editor-read-all-text', editorReadAllText);
 	ipcMain.handle('editor-document-symbols-request', editorDocumentSymbolsRequest);
+	ipcMain.handle('editor-hover-request', editorHoverRequest);
 	ipcMain.handle('set-clipboard', setClipboard);
 	ipcMain.handle('editor-set-clipboard', editorSetClipboard);
 	ipcMain.handle('read-clipboard', readClipboard);
@@ -337,6 +338,9 @@ function MAIN_initializeLanguageServer() {
 						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
 						break;
 					case 'textDocument/CustomFullFileLexRequest':
+						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
+						break;
+					case 'textDocument/hover':
 						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
 						break;
 				}
@@ -1090,6 +1094,21 @@ async function editorDocumentSymbolsRequest(event) {
 
 		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
 		let documentSymbolsRequest = lspTypes.MAIN_message_construct_DocumentSymbolsRequest(tdIdentifier);
+		mostRecentRequest = documentSymbolsRequest;
+		languageServer.stdin.write(MAIN_encodeMessageObject(documentSymbolsRequest));
+	}
+	catch (err) {
+		console.error("Error during editor-document-symbols-request:", err);
+		return [];
+	}
+}
+
+async function editorHoverRequest(event) {
+	try {
+		if (!languageServerHandshakeSuccess || !languageServer || !openedDocumentUri) return;
+
+		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
+		let documentSymbolsRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier);
 		mostRecentRequest = documentSymbolsRequest;
 		languageServer.stdin.write(MAIN_encodeMessageObject(documentSymbolsRequest));
 	}
