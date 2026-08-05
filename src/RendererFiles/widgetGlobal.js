@@ -506,5 +506,33 @@ Step 1: The UI Layer (Electron Renderer)
 < Instead of tracking pixels, your editor should wrap every single character, token, or line in a text span.
 < You then rely on the browser's native, highly optimized mouseenter and mouseleave events on those DOM elements
 < ...
+< ```js
+< // Electron Renderer Process
+< let hoverTimeout = null;
+< 
+< // Attach a single listener to your text container (Event Delegation)
+< editorContainer.addEventListener('mouseover', (event) => {
+<   const tokenElement = event.target.closest('.editor-token');
+<   if (!tokenElement) return;
+< 
+<   // Clear previous timer because the mouse is still moving
+<   clearTimeout(hoverTimeout);
+< 
+<   // Extract line and column stored in the DOM node's data attributes
+<   const line = parseInt(tokenElement.dataset.line);
+<   const column = parseInt(tokenElement.dataset.column);
+< 
+<   // Wait 300ms. If the mouse leaves or moves, this timer gets cleared.
+<   hoverTimeout = setTimeout(() => {
+<     requestLSPHover(line, column, tokenElement);
+<   }, 300); 
+< });
+< 
+< editorContainer.addEventListener('mouseout', () => {
+<   // Clear timer if mouse leaves the token before 300ms
+<   clearTimeout(hoverTimeout);
+<   hideTooltip();
+< });
+< ```
 
 */
