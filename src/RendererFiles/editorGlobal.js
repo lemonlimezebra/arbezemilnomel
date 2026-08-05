@@ -10272,4 +10272,9 @@ and that me reducing the work load would help me avoid "stress eating" then I'm 
 
 so like at minimum just an hour a day of coding (unless I feel fine on that given day)
 
+I think a good deal of what I was doing was being facetious
+If there's ever a wtf is wrong with this guy, if you put it through that lense it might clear up things.
+Back in the day I mean when I en masse was linking things I think I linked someone playing a videogame
+and said "is this video any good" I literally was only a minute into it and it was like an hour long at least
+
 */
