@@ -206,15 +206,6 @@ async function window_myAPI_onMessage(data) {
         //    }
         //}
 
-        // I stopped to take a break
-        // scrolled my youtube recommendations
-        // saw taylor swift I knew you were trouble
-        // felt a surge of panic go through my body
-        //
-        // I can't find my words
-        //
-        // It upsets me that you think that of me
-
         EDITOR_trackedSyntaxList = trackedSyntaxList;
     }
     else if (data.method === 'textDocument/hover') {
