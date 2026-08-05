@@ -209,7 +209,6 @@ async function window_myAPI_onMessage(data) {
         EDITOR_trackedSyntaxList = trackedSyntaxList;
     }
     else if (data.method === 'textDocument/hover') {
-        console.log('textDocument/hover');
         TOOLTIP_show(data.result);
     }
 }

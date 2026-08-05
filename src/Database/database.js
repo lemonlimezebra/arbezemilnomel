@@ -39,7 +39,7 @@ class AppDatabase {
                 displayName TEXT NOT NULL
             )
             `);
-        console.log('db initialized!');
+        //console.log('db initialized!');
     }
 
     /**

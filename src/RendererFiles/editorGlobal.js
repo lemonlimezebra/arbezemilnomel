@@ -8673,12 +8673,10 @@ function EDITOR_mouseOut() {
 }
 
 function EDITOR_requestLspHover() {
-    console.log('EDITOR_requestLspHover');
     window.myAPI.editorHoverRequest();
 }
 
 function EDITOR_hideTooltip() {
-    console.log('EDITOR_hideTooltip');
     TOOLTIP_hide();
 }
 
