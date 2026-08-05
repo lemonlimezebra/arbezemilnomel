@@ -440,57 +440,71 @@ Then everyday I just get this to be a little bit more accurate than the previous
 
 < ...
 
-> This is a creative and highly iterative approach to building a parser.
-> By starting with broad, generic node types and refining them over time, you can get a working end-to-end LSP pipeline up and running immediately.
->
-> However, you should tweak how you implement this "buffer" and "fallback" strategy so it aligns with how AST-based tooling actually works.
->
-> Why Your Strategy is Great for LSP
-> Your UnregisteredNode idea is a fantastic placeholder.
-> In compiler design, this is similar to an Error Node or a generic Unknown Syntax Node.
-> It ensures that even if your parser encounters a feature it doesn't understand yet (like a class keyword if you've only implemented function), the parser doesn't crash.
-> It wraps the mysterious tokens in an UnregisteredNode and keeps moving. This perfectly preserves the rest of the document's structure for the LSP.
-> 
-> The Problem with PendingNode
-> Using a PendingNode as an active "state" inside the finished AST can cause issues for your LSP hover requests.
-> 1. Timing: A parser typically runs synchronously on a snapshot of the text. It processes tokens, finishes the tree, and then the LSP queries it.
-> 2. Ambiguity: If a user hovers over code while the parser is still in a PendingNode state, the LSP won't be able to provide any useful information because the syntax hasn't been disambiguated yet.
->
-> A Better Way: Lookahead and Fallbacks
-> Instead of saving a PendingNode into your actual tree, use a standard Lookahead pattern during the parsing phase, and use your UnregisteredNode as the fallback asset.
-> 
-> Here is how to structure your parsing logic to achieve your daily iterative goal:
-> ```js
-> // Example of how your parser loop should look
-> function parseStatement(tokenStream) {
->   const startToken = tokenStream.peek();
-> 
->   // 1. Lookahead/Disambiguate BEFORE creating a node
->   if (tokenStream.match("keyword", "function")) {
->     return parseFunctionDeclaration(tokenStream);
->   }
->   
->   if (tokenStream.match("keyword", "const") || tokenStream.match("keyword", "let")) {
->     return parseVariableDeclaration(tokenStream);
->   }
-> 
->   // 2. Your "UnregisteredNode" Fallback
->   // If it matches nothing you know yet, consume tokens until a delimiter (like a semicolon)
->   const unknownTokens = [];
->   while (!tokenStream.isEOF() && !tokenStream.match("punctuator", ";")) {
->     unknownTokens.push(tokenStream.next());
->   }
->   
->   return {
->     type: "UnregisteredNode",
->     tokens: unknownTokens,
->     start: startToken.position, // line, col
->     end: tokenStream.peek().position
->   };
-> }
-> ```
->
-> Implementing the LSP Hover Feature
 > ...
+
+< This is a creative and highly iterative approach to building a parser.
+< By starting with broad, generic node types and refining them over time, you can get a working end-to-end LSP pipeline up and running immediately.
+<
+< However, you should tweak how you implement this "buffer" and "fallback" strategy so it aligns with how AST-based tooling actually works.
+<
+< Why Your Strategy is Great for LSP
+< Your UnregisteredNode idea is a fantastic placeholder.
+< In compiler design, this is similar to an Error Node or a generic Unknown Syntax Node.
+< It ensures that even if your parser encounters a feature it doesn't understand yet (like a class keyword if you've only implemented function), the parser doesn't crash.
+< It wraps the mysterious tokens in an UnregisteredNode and keeps moving. This perfectly preserves the rest of the document's structure for the LSP.
+< 
+< The Problem with PendingNode
+< Using a PendingNode as an active "state" inside the finished AST can cause issues for your LSP hover requests.
+< 1. Timing: A parser typically runs synchronously on a snapshot of the text. It processes tokens, finishes the tree, and then the LSP queries it.
+< 2. Ambiguity: If a user hovers over code while the parser is still in a PendingNode state, the LSP won't be able to provide any useful information because the syntax hasn't been disambiguated yet.
+<
+< A Better Way: Lookahead and Fallbacks
+< Instead of saving a PendingNode into your actual tree, use a standard Lookahead pattern during the parsing phase, and use your UnregisteredNode as the fallback asset.
+< 
+< Here is how to structure your parsing logic to achieve your daily iterative goal:
+< ```js
+< // Example of how your parser loop should look
+< function parseStatement(tokenStream) {
+<   const startToken = tokenStream.peek();
+< 
+<   // 1. Lookahead/Disambiguate BEFORE creating a node
+<   if (tokenStream.match("keyword", "function")) {
+<     return parseFunctionDeclaration(tokenStream);
+<   }
+<   
+<   if (tokenStream.match("keyword", "const") || tokenStream.match("keyword", "let")) {
+<     return parseVariableDeclaration(tokenStream);
+<   }
+< 
+<   // 2. Your "UnregisteredNode" Fallback
+<   // If it matches nothing you know yet, consume tokens until a delimiter (like a semicolon)
+<   const unknownTokens = [];
+<   while (!tokenStream.isEOF() && !tokenStream.match("punctuator", ";")) {
+<     unknownTokens.push(tokenStream.next());
+<   }
+<   
+<   return {
+<     type: "UnregisteredNode",
+<     tokens: unknownTokens,
+<     start: startToken.position, // line, col
+<     end: tokenStream.peek().position
+<   };
+< }
+< ```
+<
+< Implementing the LSP Hover Feature
+< ...
+
+> How do you implement the tooltip event? It sounds extremely expensive to keep an onmousemove event registered to track when the mouse stops moving.
+
+< ...
+< In modern editors, you do not manually track mouse stops using global coordinates.
+< Instead, you combine efficient CSS styling for hover detection with standard LSP client lifecycle events.
+< ...
+<
+Step 1: The UI Layer (Electron Renderer)
+< Instead of tracking pixels, your editor should wrap every single character, token, or line in a text span.
+< You then rely on the browser's native, highly optimized mouseenter and mouseleave events on those DOM elements
+< ...
 
 */
