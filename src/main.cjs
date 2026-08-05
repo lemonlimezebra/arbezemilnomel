@@ -1103,12 +1103,13 @@ async function editorDocumentSymbolsRequest(event) {
 	}
 }
 
-async function editorHoverRequest(event) {
+async function editorHoverRequest(event, indexLine, indexColumn) {
 	try {
 		if (!languageServerHandshakeSuccess || !languageServer || !openedDocumentUri) return;
 
 		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
-		let documentSymbolsRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier);
+		let position = MAIN_message_construct_position(indexLine, indexCharacter);
+		let documentSymbolsRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier, position);
 		mostRecentRequest = documentSymbolsRequest;
 		languageServer.stdin.write(MAIN_encodeMessageObject(documentSymbolsRequest));
 	}

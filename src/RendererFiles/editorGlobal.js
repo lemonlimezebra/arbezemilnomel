@@ -381,6 +381,8 @@ let EDITOR_indentLess_startingLinePos_end = 0;
 
 let EDITOR_hoverTimeout = null;
 
+let EDITOR_mouseOver_event = null;
+
 function EDITOR_init() {
 
     cached_EDITOR_virtualization_horizontal = EDITOR_baseElement.children[0];
@@ -8650,7 +8652,10 @@ function EDITOR_registerHandlers() {
  * 
  * Oh wow I can clearly see why this is better than mouseMove with heavy throttling/debouncing
  */
-function EDITOR_mouseOver() {
+function EDITOR_mouseOver(e) {
+
+    EDITOR_mouseOver_event = e;
+    
     //const tokenElement = event.target.closest('.editor-token');
     //if (!tokenElement) return;
     //
@@ -8669,11 +8674,56 @@ function EDITOR_mouseOut() {
     // Clear timer if mouse leaves the token before 1000ms
     clearTimeout(EDITOR_hoverTimeout);
     EDITOR_hoverTimeout = null;
+    EDITOR_mouseOver_event = null;
     EDITOR_hideTooltip();
 }
 
 function EDITOR_requestLspHover() {
-    window.myAPI.editorHoverRequest();
+    let event = EDITOR_mouseOver_event;
+    EDITOR_mouseOver_event = null;
+
+    ///////////
+    ///////////
+    // # GET INDICES
+    ///////////
+    ///////////
+    if (get_EDITOR_recentBoundingClientRect_isNull_intFalsey()) {
+        let boundingClientRect = EDITOR_baseElement.getBoundingClientRect();
+        set_EDITOR_recentBoundingClientRect_left(boundingClientRect.left);
+        set_EDITOR_recentBoundingClientRect_top(boundingClientRect.top);
+        set_EDITOR_recentBoundingClientRect_isNull_intFalsey(0);
+    }
+
+    let rY = event.clientY - get_EDITOR_recentBoundingClientRect_top() + lastReadNumber_scrollTop;
+    let rX = event.clientX - get_EDITOR_recentBoundingClientRect_left() - get_EDITOR_gutterWidthTotal() + lastReadNumber_scrollLeft;
+    
+    let indexLine = Math.floor(rY / get_EDITOR_lineHeight());
+    let indexColumn = Math.round(rX / EDITOR_characterWidth);
+
+    if (indexLine < 0) {
+        indexLine = 0;
+    }
+
+    if (indexColumn < 0) {
+        indexColumn = 0;
+    }
+
+    if (indexLine >= EDITOR_lineEndPositionList.count) {
+        indexLine = EDITOR_lineEndPositionList.count - 1;
+    }
+
+    let lastValidIndexColumn = EDITOR_getLastValidIndexColumn(indexLine);
+    if (indexColumn > lastValidIndexColumn) {
+        indexColumn = lastValidIndexColumn;
+    }
+    ///////////
+    ///////////
+    // # GET INDICES
+    ///////////
+    ///////////
+
+    // Indices are wrong... they're likely outdated
+    window.myAPI.editorHoverRequest(indexLine, indexColumn);
 }
 
 function EDITOR_hideTooltip() {

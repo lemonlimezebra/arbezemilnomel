@@ -83,11 +83,20 @@ export function MAIN_message_construct_DocumentSymbolsRequest(textDocumentIdenti
     };
 }
 
-export function MAIN_message_construct_HoverRequest(textDocumentIdentifier) {
+export function MAIN_message_construct_HoverRequest(textDocumentIdentifier, position) {
+/*
+interface HoverParams {
+    textDocument: string; // The text document's URI in string form
+    position: { line: uinteger; character: uinteger; };
+}
+*/
     return {
         id: messageId++,
         method: 'textDocument/hover',
-        params: { textDocument: textDocumentIdentifier },
+        params: {
+            textDocument: textDocumentIdentifier,
+            position: position
+        },
     };
 }
 
