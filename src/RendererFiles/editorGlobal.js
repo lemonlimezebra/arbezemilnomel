@@ -10253,4 +10253,7 @@ Every single song has meaning and relation to my life and nothing to do with any
 I realize after the fact that sometimes the interpretation is sometimes there
 and even sometimes you'd think it were "on the nose" but I was actually just completely blind to that aspect.
 
+The first 37 seconds, I realized after that I look like some weirdo for it.
+But it literally is just in lyrics of the song and moments in my life were it played
+
 */
