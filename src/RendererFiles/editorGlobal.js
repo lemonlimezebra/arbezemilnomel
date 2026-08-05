@@ -10256,4 +10256,7 @@ and even sometimes you'd think it were "on the nose" but I was actually just com
 The first 37 seconds, I realized after that I look like some weirdo for it.
 But it literally is just in lyrics of the song and moments in my life were it played
 
+Same thing with ... eyes. Literally not a single thought of ... went through my mind. It was all about anxiety and stress
+and the screaming and panic nothing to do with anything else. Then after I was like... this can be misinterpreted a bit.
+
 */
