@@ -545,4 +545,9 @@ I feel like people are trying to tell me to stop talking.
 I'm pretty sure the one thing got a dislike too
 and I'm just very anxious all the time
 
+There's a reason that I'm so invested in this project for years on end.
+And I wanna talk about that cause it means a lot to me and I feel a lot better when I say these things.
+I'm hoping I sort of am saying them into a void of like 1 or 2 people but I worry that more than that read the things I say.
+I just like knowing that I got it off my chest without actually telling anyone so to speak.
+
 */
