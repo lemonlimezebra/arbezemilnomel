@@ -550,4 +550,9 @@ And I wanna talk about that cause it means a lot to me and I feel a lot better w
 I'm hoping I sort of am saying them into a void of like 1 or 2 people but I worry that more than that read the things I say.
 I just like knowing that I got it off my chest without actually telling anyone so to speak.
 
+The only reason this code I write exists is because of what I talk about.
+And I find it extremely hurtful that people want me to shut up about it.
+I get not going on and on about it.
+But I also wanna talk about it every once in awhile.
+
 */
