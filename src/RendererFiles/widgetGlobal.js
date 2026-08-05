@@ -537,4 +537,9 @@ Step 1: The UI Layer (Electron Renderer)
 
 I guess I'm jumping ahead a bit I should probably get a tooltip to show up efficiently lol
 
+Everytime I go to my youtube 'music' and 'mixes' feed brennan heart don't speak is my first recommendation
+and it is making me  extremely anxious.
+
+I feel like people are trying to tell me to stop talking.
+
 */
