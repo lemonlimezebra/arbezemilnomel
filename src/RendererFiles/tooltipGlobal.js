@@ -34,5 +34,11 @@ function TOOLTIP_show(textContent) {
 }
 
 function TOOLTIP_hide() {
+
+    const tooltip = document.getElementById('TOOLTIP');
+    if (tooltip) {
+        tooltip.remove();
+    }
+
     TOOLTIP_exists = false;
 }

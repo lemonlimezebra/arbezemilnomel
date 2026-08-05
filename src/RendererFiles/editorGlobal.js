@@ -8679,6 +8679,7 @@ function EDITOR_requestLspHover() {
 
 function EDITOR_hideTooltip() {
     console.log('EDITOR_hideTooltip');
+    TOOLTIP_hide();
 }
 
 /*
