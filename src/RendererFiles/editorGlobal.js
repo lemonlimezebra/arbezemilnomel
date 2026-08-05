@@ -10262,4 +10262,7 @@ and the screaming and panic nothing to do with anything else. Then after I was l
 Or the times I was genuinely just watching a video and I linked what I was watching. I stopped doing that
 cause too many coincidences came up later in the video after I'd done that stuff I was like ffs
 
+I wanna stay quiet and get down to 199.99999 (repeating) lbs.
+It is gonna take a long time.
+
 */
