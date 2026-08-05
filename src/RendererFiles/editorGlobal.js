@@ -10245,4 +10245,12 @@ the don't speak song is all over my youtube recommended.
 It's on my home page, my music filter, my mixes filter.
 Should I interpret this as you telling me something or am I just trippin?
 
+I was thinking about doing something related to function keyword defined functions.
+
+then I just saw that I got recommended a certain song.
+
+Every single song has meaning and relation to my life and nothing to do with anything ... related
+I realize after the fact that sometimes the interpretation is sometimes there
+and even sometimes you'd think it were "on the nose" but I was actually just completely blind to that aspect.
+
 */
