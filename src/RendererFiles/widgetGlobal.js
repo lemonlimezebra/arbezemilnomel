@@ -432,4 +432,26 @@ and it asks the LSP what node it thinks exists there.
 
 Then everyday I just get this to be a little bit more accurate than the previous day.
 
+> I'm making a text editor with electron. I am supporting language server protocol.
+> My editor is the client, and I'm also writing my own server to along with it. I have a lot of this written.
+> But mostly I've been focused on the text editor, and the server has just been a simple lexer (more or less).
+> 
+> Today I want to start parsing and I have a plan for it, I wanted to run my plan by you.
+
+< ...
+
+> This is a creative and highly iterative approach to building a parser.
+> By starting with broad, generic node types and refining them over time, you can get a working end-to-end LSP pipeline up and running immediately.
+>
+> However, you should tweak how you implement this "buffer" and "fallback" strategy so it aligns with how AST-based tooling actually works.
+>
+> Why Your Strategy is Great for LSP
+> Your UnregisteredNode idea is a fantastic placeholder.
+> In compiler design, this is similar to an Error Node or a generic Unknown Syntax Node.
+> It ensures that even if your parser encounters a feature it doesn't understand yet (like a class keyword if you've only implemented function), the parser doesn't crash.
+> It wraps the mysterious tokens in an UnregisteredNode and keeps moving. This perfectly preserves the rest of the document's structure for the LSP.
+> 
+> The Problem with PendingNode
+> ...
+
 */
