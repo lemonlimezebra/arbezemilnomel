@@ -379,6 +379,8 @@ let EDITOR_RemoveSelection_largeLineAndColumnIndices = null;
 // Temporary hack for state access TODO: this
 let EDITOR_indentLess_startingLinePos_end = 0;
 
+let EDITOR_hoverTimeout = null;
+
 function EDITOR_init() {
 
     cached_EDITOR_virtualization_horizontal = EDITOR_baseElement.children[0];
@@ -8637,6 +8639,40 @@ function EDITOR_registerHandlers() {
     EDITOR_baseElement.addEventListener('contextmenu', EDITOR_onContextMenu);
     window.addEventListener('resize', EDITOR_onResize_WRAPIT);
     cached_EDITOR_horizontal_scrollbar.addEventListener('scroll', EDITOR_horizontal_scrollbar_onScroll, { passive: true });
+
+    // Attach a single listener to your text container (Event Delegation)
+    EDITOR_baseElement.addEventListener('mouseover', EDITOR_mouseOver);
+    EDITOR_baseElement.addEventListener('mouseout', EDITOR_mouseOut);
+}
+
+function EDITOR_mouseOver() {
+    //const tokenElement = event.target.closest('.editor-token');
+    //if (!tokenElement) return;
+    //
+    // Clear previous timer because the mouse is still moving
+    clearTimeout(EDITOR_hoverTimeout);
+    //
+    // Extract line and column stored in the DOM node's data attributes
+    //const line = parseInt(tokenElement.dataset.line);
+    //const column = parseInt(tokenElement.dataset.column);
+    //
+    // Wait 300ms. If the mouse leaves or moves, this timer gets cleared.
+    EDITOR_hoverTimeout = setTimeout(EDITOR_requestLspHover, 1000);
+}
+
+function EDITOR_mouseOut() {
+    // Clear timer if mouse leaves the token before 1000ms
+    clearTimeout(EDITOR_hoverTimeout);
+    EDITOR_hoverTimeout = null;
+    EDITOR_hideTooltip();
+}
+
+function EDITOR_requestLspHover() {
+    console.log('EDITOR_requestLspHover');
+}
+
+function EDITOR_hideTooltip() {
+    console.log('EDITOR_hideTooltip');
 }
 
 /*
