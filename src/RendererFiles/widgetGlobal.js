@@ -409,4 +409,27 @@ my main goal is to get down to 199 lbs because it is hard to lose weight but it 
 And then given the time gated effect of learning
 all I gotta do is do a non-zero amount of learning each day while enduring the caloric deficit
 
+
+===========
+
+
+I'm gonna start looking at the language server a lot more today.
+
+I'm thinking two node kinds to start when parsing the javascript:
+- PendingNode
+- UnregisteredNode
+
+PendingNode: You start here, you collect tokens into this which acts as a "buffer" of sorts.
+             Once you've disambiguated the syntax you create the exact respective node kind in the AST
+
+
+UnregisteredNode: For whatever reason you believe you've collected the final token of a syntax,
+                  but you have not yet defined that syntax so you just are saying
+                  "there's a complete node here I have no idea what it is though"
+
+Then I hover at a certain line,column in the editor
+and it asks the LSP what node it thinks exists there.
+
+Then everyday I just get this to be a little bit more accurate than the previous day.
+
 */
