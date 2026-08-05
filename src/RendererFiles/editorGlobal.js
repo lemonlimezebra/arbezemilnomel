@@ -10259,4 +10259,7 @@ But it literally is just in lyrics of the song and moments in my life were it pl
 Same thing with ... eyes. Literally not a single thought of ... went through my mind. It was all about anxiety and stress
 and the screaming and panic nothing to do with anything else. Then after I was like... this can be misinterpreted a bit.
 
+Or the times I was genuinely just watching a video and I linked what I was watching. I stopped doing that
+cause too many coincidences came up later in the video after I'd done that stuff I was like ffs
+
 */
