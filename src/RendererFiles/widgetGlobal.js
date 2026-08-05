@@ -542,4 +542,7 @@ and it is making me  extremely anxious.
 
 I feel like people are trying to tell me to stop talking.
 
+I'm pretty sure the one thing got a dislike too
+and I'm just very anxious all the time
+
 */
