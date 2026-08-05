@@ -8724,6 +8724,8 @@ function EDITOR_requestLspHover() {
 
     // Indices are wrong... they're likely outdated
     window.myAPI.editorHoverRequest(indexLine, indexColumn);
+
+    // okay fine that's good enough for now
 }
 
 function EDITOR_hideTooltip() {
