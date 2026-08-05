@@ -535,4 +535,6 @@ Step 1: The UI Layer (Electron Renderer)
 < });
 < ```
 
+I guess I'm jumping ahead a bit I should probably get a tooltip to show up efficiently lol
+
 */
