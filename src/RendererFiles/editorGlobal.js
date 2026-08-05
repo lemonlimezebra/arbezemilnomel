@@ -8645,6 +8645,11 @@ function EDITOR_registerHandlers() {
     EDITOR_baseElement.addEventListener('mouseout', EDITOR_mouseOut);
 }
 
+/**
+ * < Thanks to a browser feature called Event Bubbling, when the mouse enters a tiny token span, the event bubbles up to the parent container
+ * 
+ * Oh wow I can clearly see why this is better than mouseMove with heavy throttling/debouncing
+*/
 function EDITOR_mouseOver() {
     //const tokenElement = event.target.closest('.editor-token');
     //if (!tokenElement) return;
