@@ -452,6 +452,45 @@ Then everyday I just get this to be a little bit more accurate than the previous
 > It wraps the mysterious tokens in an UnregisteredNode and keeps moving. This perfectly preserves the rest of the document's structure for the LSP.
 > 
 > The Problem with PendingNode
+> Using a PendingNode as an active "state" inside the finished AST can cause issues for your LSP hover requests.
+> 1. Timing: A parser typically runs synchronously on a snapshot of the text. It processes tokens, finishes the tree, and then the LSP queries it.
+> 2. Ambiguity: If a user hovers over code while the parser is still in a PendingNode state, the LSP won't be able to provide any useful information because the syntax hasn't been disambiguated yet.
+>
+> A Better Way: Lookahead and Fallbacks
+> Instead of saving a PendingNode into your actual tree, use a standard Lookahead pattern during the parsing phase, and use your UnregisteredNode as the fallback asset.
+> 
+> Here is how to structure your parsing logic to achieve your daily iterative goal:
+> ```js
+> // Example of how your parser loop should look
+> function parseStatement(tokenStream) {
+>   const startToken = tokenStream.peek();
+> 
+>   // 1. Lookahead/Disambiguate BEFORE creating a node
+>   if (tokenStream.match("keyword", "function")) {
+>     return parseFunctionDeclaration(tokenStream);
+>   }
+>   
+>   if (tokenStream.match("keyword", "const") || tokenStream.match("keyword", "let")) {
+>     return parseVariableDeclaration(tokenStream);
+>   }
+> 
+>   // 2. Your "UnregisteredNode" Fallback
+>   // If it matches nothing you know yet, consume tokens until a delimiter (like a semicolon)
+>   const unknownTokens = [];
+>   while (!tokenStream.isEOF() && !tokenStream.match("punctuator", ";")) {
+>     unknownTokens.push(tokenStream.next());
+>   }
+>   
+>   return {
+>     type: "UnregisteredNode",
+>     tokens: unknownTokens,
+>     start: startToken.position, // line, col
+>     end: tokenStream.peek().position
+>   };
+> }
+> ```
+>
+> Implementing the LSP Hover Feature
 > ...
 
 */
