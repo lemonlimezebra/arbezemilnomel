@@ -10297,4 +10297,6 @@ to just be like fk it
 Also, just as real as the DSBM was, the EDM was real too lol I was experiencing some weird emotions
 like extra weird
 
+I went back and forth between the DSBM and the EDM sometimes on the same day
+
 */
