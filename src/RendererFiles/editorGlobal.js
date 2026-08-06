@@ -10322,5 +10322,8 @@ you choose delusion
 
 you have to choose some delusion in order to keep going
 
+and on top of that, you need some degree of healthy doubt about whether you truly understand how the world works.
+This healthy degree of doubt can be seen when I think back to whether I thought I knew how to code
+and then I realized I didn't have a clue and still today this goes on where I realize I have no idea.
 
 */
