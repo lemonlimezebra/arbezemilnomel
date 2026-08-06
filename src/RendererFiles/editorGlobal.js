@@ -10277,4 +10277,6 @@ If there's ever a wtf is wrong with this guy, if you put it through that lense i
 Back in the day I mean when I en masse was linking things I think I linked someone playing a videogame
 and said "is this video any good" I literally was only a minute into it and it was like an hour long at least
 
+all in all I was being an idiot
+
 */
