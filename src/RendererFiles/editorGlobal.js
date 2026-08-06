@@ -10411,5 +10411,7 @@ Then another robot that isn't destroyed comes up to the destroyed one.
 And with its robot finger presses up against the destroyed robot's controlling human that is exposed his forehead
 and then keeps pressing more and more until their head explodes.
 
+I also gotta get rid of the unregistered hypercam 3 type naming convention I had.
+
 
 */
