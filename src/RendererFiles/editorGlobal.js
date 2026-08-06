@@ -10309,4 +10309,8 @@ I still low key think I'm gonna make the greatest IDE in the world.
 But I understand that I need to focus on my health and get things under control
 then I can come back later.
 
+I even still agree somewhat with my younger self about the meaninglessness of life
+and I'd be nodding my head if he sat me down and drew up the graph
+to explain how every belief connects to meaninglessness like he did with my Mom etc...
+
 */
