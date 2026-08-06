@@ -10417,5 +10417,7 @@ I also gotta get rid of the unregistered hypercam 3 type naming convention I had
 
 < Your UnregisteredNode idea is a fantastic placeholder. In compiler design, this is similar to an Error Node or a generic Unknown Syntax Node.
 
+There's a fly in my room and it's distracting me like crazy rn
+
 
 */
