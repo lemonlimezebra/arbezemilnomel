@@ -10284,4 +10284,8 @@ that sound I was deep in a bad place.
 
 i.e.: "I saw it just now in my youtube recommended."
 
+also at that... I listened to that song barely
+the dreariness songs were good the idiot sun came from me trying to explore and find new things but nothing ever stuck for me
+like dreariness did
+
 */
