@@ -10342,4 +10342,7 @@ that actually broke my brain for a moment
 I'm trying not to think too hard right now lol
 I'll write this down to think about it later.
 
+It isn't about religion being a pascal's wager.
+Life itself is the ultimate pascal's wager!!!!
+
 */
