@@ -10240,5 +10240,11 @@ I feel extremely anxious:
 I don't want the repo to get popular, not that it would
 but I just wanna keep it small for the moment at least
 
+cause I'm trying to relax but my mind is racing
+and I wanna just do more more more
+I tried taking a break but I had to come back and add something else which was the count of unmatched open brace hack to temporarily
+get the scopes that I am tracking to be tracked hopefully more consistently.
+and etc...
+
 
 */
