@@ -10330,4 +10330,12 @@ I think I feel sad regularly.
 But I am focused on my weight loss.
 I think once I lose the weight then I'll feel better mentally.
 
+I also need to specify this because my younger self would be pretty annoyed with the wording
+"having doubt" about whether you understand the meaning of life
+sounds like a sort of fallacy
+because you're telling the person you think life is meaningless
+wait a second is this another pascal's wager?
+
+Knowledge is also a pascal's wager.
+
 */
