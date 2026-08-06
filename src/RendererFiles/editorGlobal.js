@@ -10399,5 +10399,9 @@ I was having night terrors all night last night.
 It was REALLY bad.
 I was screaming for minutes straight and when I woke up and realized what I was doing my throat was killing me.
 
+I was seeing myself awake lying in my bed trying to sleep first person-ish
+and then a spirit was using their index finger to press against my temple and continually applying more and more force until my head was gonna burst
+so I remember screaming help over and over as loud as I can and my throat was killing me and then my mom went into my room and was like ????
+
 
 */
