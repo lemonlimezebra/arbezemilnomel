@@ -10294,4 +10294,7 @@ but I legit listen to the one song on loop even recently
 it is some kind of "faceitious ironic" tone that just hits me really hard given how much anxiety I feel
 to just be like fk it
 
+Also, just as real as the DSBM was, the EDM was real too lol I was experiencing some weird emotions
+like extra weird
+
 */
