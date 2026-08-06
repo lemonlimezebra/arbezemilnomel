@@ -10326,4 +10326,8 @@ and on top of that, you need some degree of healthy doubt about whether you trul
 This healthy degree of doubt can be seen when I think back to whether I thought I knew how to code
 and then I realized I didn't have a clue and still today this goes on where I realize I have no idea.
 
+I think I feel sad regularly.
+But I am focused on my weight loss.
+I think once I lose the weight then I'll feel better mentally.
+
 */
