@@ -10349,4 +10349,28 @@ No I don't like how google AI interpreted that when I gave it to them...
 It goes so much deeper than that
 This is actually crazy
 
+> What is pascal's wager
+
+< Pascal's Wager is a pragmatic philosophical argument created by Blaise Pascal stating that a rational person should live as if God exists,
+< because the potential infinite reward of belief outweighs any finite earthly loss
+<
+< The Core Logic
+<
+< If God exists and you believe: You gain infinite happiness (Heaven).
+< If God exists and you do not believe: You face infinite loss (Hell).
+< If God does not exist and you believe: You lose only finite earthly pleasures or time.
+< If God does not exist and you do not believe: You gain minor finite freedoms.
+<
+< Main Criticisms
+< The Many-Gods Objection: It does not specify which God or religion to believe in, as picking the wrong one might still displease the true deity.
+< The Sincerity Problem: People cannot genuinely force themselves to believe something just because it is a smart bet
+
+- If Life is worth living, and you believe: ...
+- If Life is worth living and you do not believe: ...
+- If Life is not worth living and you believe: ...
+- If Life is not worth living and you do not believe: ...
+
+Okay the issue is with myself being pretentious af and calling it a pascals wadger.
+
+
 */
