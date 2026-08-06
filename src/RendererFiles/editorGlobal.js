@@ -10345,4 +10345,8 @@ I'll write this down to think about it later.
 It isn't about religion being a pascal's wager.
 Life itself is the ultimate pascal's wager!!!!
 
+No I don't like how google AI interpreted that when I gave it to them...
+It goes so much deeper than that
+This is actually crazy
+
 */
