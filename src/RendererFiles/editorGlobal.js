@@ -10288,4 +10288,10 @@ also at that... I listened to that song barely
 the dreariness songs were good the idiot sun came from me trying to explore and find new things but nothing ever stuck for me
 like dreariness did
 
+nokia angel. I love that one song.
+I don't think I've heard anything else from him
+but I legit listen to the one song on loop even recently
+it is some kind of "faceitious ironic" tone that just hits me really hard given how much anxiety I feel
+to just be like fk it
+
 */
