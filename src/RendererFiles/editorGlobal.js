@@ -10388,5 +10388,12 @@ So it is some sort of fallacy to say:
 
 "put a pin in it we'll circle back"
 
+===========
+
+I need to:
+- [ ] quickly add the 'function' keyword defined functions.
+- [ ] then parse as much as I can
+- [ ] I might focus on a brace matching approach at first, whether this is accurate for javascript or not I have no idea.
+
 
 */
