@@ -10395,5 +10395,9 @@ I need to:
 - [ ] then parse as much as I can
 - [ ] I might focus on a brace matching approach at first, whether this is accurate for javascript or not I have no idea.
 
+I was having night terrors all night last night.
+It was REALLY bad.
+I was screaming for minutes straight and when I woke up and realized what I was doing my throat was killing me.
+
 
 */
