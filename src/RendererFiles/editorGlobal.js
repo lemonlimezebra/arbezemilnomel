@@ -10246,5 +10246,13 @@ I tried taking a break but I had to come back and add something else which was t
 get the scopes that I am tracking to be tracked hopefully more consistently.
 and etc...
 
+What I really want more than anything is to lose all the weight
+and if I feel pressure to make progress I don't wanna not that I can't
+but any additional stress its like I ahve enough I don't need more
+and I just think a lot
+I wanna do this but just casually an hour at least each day
+relaxed I'm sweating though and my mind is racing I'm worried people are gonna find the repo
+and be excited about the code then have some kind of an expectation of me.
+
 
 */
