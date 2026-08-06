@@ -10338,4 +10338,8 @@ wait a second is this another pascal's wager?
 
 Knowledge is also a pascal's wager.
 
+that actually broke my brain for a moment
+I'm trying not to think too hard right now lol
+I'll write this down to think about it later.
+
 */
