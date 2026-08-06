@@ -10282,4 +10282,6 @@ all in all I was being an idiot
 The DSBM is dead serious I saw "the idiot sun" I never once listened to the lyrics but
 that sound I was deep in a bad place.
 
+i.e.: "I saw it just now in my youtube recommended."
+
 */
