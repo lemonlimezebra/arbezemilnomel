@@ -10299,4 +10299,10 @@ like extra weird
 
 I went back and forth between the DSBM and the EDM sometimes on the same day
 
+I have an issue in the past where I titled it "it's over now the music of the night"
+cause I'm a cringelord and thought I was gonna prove something to everyone
+I thought I was gonna make the greatest IDE in the world
+and I fantasized that I'd off myself afterwards to show something philosophical but it
+is all just delusional nonsense that is the result of accumulated trauma that never was dealt with
+
 */
