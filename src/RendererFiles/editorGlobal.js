@@ -10379,5 +10379,12 @@ you have to invest a great a deal of effort in order to accumulate it.
 All the while you believe it will be worth while in the end.
 But in order to know whether it is worth while you have to endure the suffering of accumulating it.
 
+When it comes to life:
+If you believe life is meaningless,
+you only can know for certain by suffering through existence.
+
+So it is some sort of fallacy to say:
+"I know you think life is meaningless, but how about this: just live out your entire life, then get back to me?"
+
 
 */
