@@ -10405,5 +10405,11 @@ so I remember screaming help over and over as loud as I can and my throat was ki
 
 And this just kept happening over and over all night
 
+It was almost like the scene where the robots are controlled by humans that are inside of the robots.
+And then one of the robots is destroyed and the human inside is exposed.
+Then another robot that isn't destroyed comes up to the destroyed one.
+And with its robot finger presses up against the destroyed robot's controlling human that is exposed his forehead
+and then keeps pressing more and more until their head explodes.
+
 
 */
