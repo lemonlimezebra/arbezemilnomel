@@ -10413,5 +10413,7 @@ and then keeps pressing more and more until their head explodes.
 
 I also gotta get rid of the unregistered hypercam 3 type naming convention I had.
 
+"get rid" as in I never actually started using it but I was gonna say "unregistered node" or something but the other wording is better.
+
 
 */
