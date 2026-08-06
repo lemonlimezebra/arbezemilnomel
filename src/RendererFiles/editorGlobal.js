@@ -10305,4 +10305,8 @@ I thought I was gonna make the greatest IDE in the world
 and I fantasized that I'd off myself afterwards to show something philosophical but it
 is all just delusional nonsense that is the result of accumulated trauma that never was dealt with
 
+I still low key think I'm gonna make the greatest IDE in the world.
+But I understand that I need to focus on my health and get things under control
+then I can come back later.
+
 */
