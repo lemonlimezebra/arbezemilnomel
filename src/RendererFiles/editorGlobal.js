@@ -10313,4 +10313,14 @@ I even still agree somewhat with my younger self about the meaninglessness of li
 and I'd be nodding my head if he sat me down and drew up the graph
 to explain how every belief connects to meaninglessness like he did with my Mom etc...
 
+I still feel like trainspotting has a bad ending that makes no sense.
+etc...
+
+But I feel like you can word it as:
+you don't choose life
+you choose delusion
+
+you have to choose some delusion in order to keep going
+
+
 */
