@@ -10386,5 +10386,7 @@ you only can know for certain by suffering through existence.
 So it is some sort of fallacy to say:
 "I know you think life is meaningless, but how about this: just live out your entire life, then get back to me?"
 
+"put a pin in it we'll circle back"
+
 
 */
