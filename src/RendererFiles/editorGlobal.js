@@ -10372,5 +10372,12 @@ This is actually crazy
 
 Okay the issue is with myself being pretentious af and calling it a pascals wadger.
 
+========
+
+When it comes to knowledge:
+you have to invest a great a deal of effort in order to accumulate it.
+All the while you believe it will be worth while in the end.
+But in order to know whether it is worth while you have to endure the suffering of accumulating it.
+
 
 */
