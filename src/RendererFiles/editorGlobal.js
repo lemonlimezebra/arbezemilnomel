@@ -10395,7 +10395,8 @@ due to many factors such as:
     (i.e.: because you didn't space out your learning)
 - I forgot what I was saying
 
-
+I want to receive something that resembles the correct result
+that's all it is just a little more. I think that'll be sufficient.
 
 
 */
