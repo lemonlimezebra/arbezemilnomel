@@ -10443,6 +10443,10 @@ And I really really don't know how to explain this particular aspect of my child
 But if I think it was so detrimental I should just do it
 and then maybe end that resentment hopefully?
 
+Essentially my brother used kitchen-ware to "make drugs".
+And everything was always tainted and I developed OCD.
+I didn't eat anything that wasn't pre-packaged. I destroyed my health for years doing this.
+
 
 
 */
