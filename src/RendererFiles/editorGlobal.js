@@ -10436,5 +10436,13 @@ I still don't feel well mentally and it has been a few months (I think?) of 1 lb
 
 ...
 
+I have a hint of guilt about eating 200 grams of protein of 98% fat free ground chicken per day.
+
+And I really really don't know how to explain this particular aspect of my childhood.
+
+But if I think it was so detrimental I should just do it
+and then maybe end that resentment hopefully?
+
+
 
 */
