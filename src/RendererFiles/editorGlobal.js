@@ -10477,6 +10477,8 @@ and I RESENT all of it.
 Because I ate like that for a reason.
 And panic and anxiety constantly
 
+He still makes things but it is toned down massively and he has his own containers and puts them in the downstairs fridge/freezer not the upstairs.
+
 
 
 */
