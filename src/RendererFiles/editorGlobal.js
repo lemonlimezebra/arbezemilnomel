@@ -10419,11 +10419,4 @@ I'm done with my calories but I'm gonna change my diet tomorrow
 still be in a caloric deficit just change the foods to a degree cause I feel like I'm gonna die.
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
-My brother receives disability
-and 50mg of adderall prescription along with other things like I think modafinil.
-
-He wastes my entire paycheck by driving around.
-My parents pay the gas but I fill up the car's tank everytime I go to work
-and see the price.
-
 */
