@@ -10490,5 +10490,8 @@ You can't escape your home when it fostered an environment that destroyed you ph
 That physical damage you bring with you no matter how far away from home you move.
 I'm back home and have been for years now it is less bad but just I can't get over it all
 
+And I resent my brother.
+He has everything I've ever wanted.
+
 
 */
