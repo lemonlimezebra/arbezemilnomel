@@ -59,7 +59,9 @@ function AUTOCOMPLETE_render_do_show() {
         AUTOCOMPLETEElement.id = 'AUTOCOMPLETE';
         AUTOCOMPLETEElement.style.left = '0px';
         AUTOCOMPLETEElement.style.top = '0px';
+        AUTOCOMPLETEElement.tabIndex = 0;
         document.body.appendChild(AUTOCOMPLETEElement);
+        AUTOCOMPLETE_events_add(AUTOCOMPLETEElement);
     }
     
     // This was quickest first way of writing things that came to my mind.
@@ -69,6 +71,27 @@ function AUTOCOMPLETE_render_do_show() {
     AUTOCOMPLETE_pending_textContent = null;
 
     AUTOCOMPLETE_exists = true;
+
+    /*
+            
+    If the entire thing isn't like something you have energy for
+    then maybe you can identify a smaller functionality of autocomplete
+    like a less correct one that has lots of functionality that you need
+    for the final one and you have the code written and easily modifiable
+    to the more complete one when you have energy.
+
+    So like if I had ctrl+' ' the only way to bring it up
+    And bringing it up moved focus to the autocomplete
+    then I could easily hide the autocomplete because events would propagate from the menu element
+    I can put listeners on it
+    and essentially anything you do event wise causes it to close
+
+    but this way I can have it so ctrl+' ' I have the lsp give me like the top level scope
+    what the names of the nodes are like just gimme something I mean.
+    
+    */
+
+    AUTOCOMPLETEElement.focus();
 }
 
 function AUTOCOMPLETE_show(textContent) {
@@ -79,6 +102,7 @@ function AUTOCOMPLETE_show(textContent) {
 function AUTOCOMPLETE_render_do_hide() {
     const AUTOCOMPLETE = document.getElementById('AUTOCOMPLETE');
     if (AUTOCOMPLETE) {
+        AUTOCOMPLETE_events_remove(AUTOCOMPLETE);
         AUTOCOMPLETE.remove();
     }
 
@@ -88,4 +112,19 @@ function AUTOCOMPLETE_render_do_hide() {
 function AUTOCOMPLETE_hide() {
     AUTOCOMPLETE_pending_textContent = null;
     AUTOCOMPLETE_render_request(2);
+}
+
+function AUTOCOMPLETE_events_add(AUTOCOMPLETEElement) {
+    AUTOCOMPLETEElement.addEventListener('keydown', AUTOCOMPLETE_events_onkeydown);
+}
+
+function AUTOCOMPLETE_events_remove(AUTOCOMPLETEElement) {
+    AUTOCOMPLETEElement.removeEventListener('keydown', AUTOCOMPLETE_events_onkeydown);
+}
+
+function AUTOCOMPLETE_events_onkeydown() {
+    AUTOCOMPLETE_hide();
+    if (EDITOR_baseElement) {
+        EDITOR_baseElement.focus();
+    }
 }

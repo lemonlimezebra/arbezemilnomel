@@ -211,6 +211,9 @@ async function window_myAPI_onMessage(data) {
     else if (data.method === 'textDocument/hover') {
         TOOLTIP_show(data.result);
     }
+    else if (data.method === 'textDocument/completion') {
+        AUTOCOMPLETE_show(data.result);
+    }
 }
 
 function EDITOR_listComponent_getItemsCountFunc() {

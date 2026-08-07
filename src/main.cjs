@@ -106,6 +106,7 @@ const createWindow = () => {
 	ipcMain.handle('editor-read-all-text', editorReadAllText);
 	ipcMain.handle('editor-document-symbols-request', editorDocumentSymbolsRequest);
 	ipcMain.handle('editor-hover-request', editorHoverRequest);
+	ipcMain.handle('editor-completion-request', editorCompletionRequest);
 	ipcMain.handle('set-clipboard', setClipboard);
 	ipcMain.handle('editor-set-clipboard', editorSetClipboard);
 	ipcMain.handle('read-clipboard', readClipboard);
@@ -341,6 +342,9 @@ function MAIN_initializeLanguageServer() {
 						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
 						break;
 					case 'textDocument/hover':
+						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
+						break;
+					case 'textDocument/completion':
 						mainWindowCapture.webContents.send('from-main', { method:mostRecentRequest.method, result:messageObject.result });
 						break;
 				}
@@ -1109,9 +1113,25 @@ async function editorHoverRequest(event, indexLine, indexColumn) {
 
 		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
 		let position = lspTypes.MAIN_message_construct_position(indexLine, indexColumn);
-		let documentSymbolsRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier, position);
-		mostRecentRequest = documentSymbolsRequest;
-		languageServer.stdin.write(MAIN_encodeMessageObject(documentSymbolsRequest));
+		let hoverRequest = lspTypes.MAIN_message_construct_HoverRequest(tdIdentifier, position);
+		mostRecentRequest = hoverRequest;
+		languageServer.stdin.write(MAIN_encodeMessageObject(hoverRequest));
+	}
+	catch (err) {
+		console.error("Error during editor-document-symbols-request:", err);
+		return [];
+	}
+}
+
+async function editorCompletionRequest(event) {
+	try {
+		if (!languageServerHandshakeSuccess || !languageServer || !openedDocumentUri) return;
+
+		let tdIdentifier = lspTypes.MAIN_message_construct_textDocumentIdentifier(openedDocumentUri);
+		//let position = lspTypes.MAIN_message_construct_position(indexLine, indexColumn);
+		let completionRequest = lspTypes.MAIN_message_construct_CompletionRequest(tdIdentifier/*, position*/);
+		mostRecentRequest = completionRequest;
+		languageServer.stdin.write(MAIN_encodeMessageObject(completionRequest));
 	}
 	catch (err) {
 		console.error("Error during editor-document-symbols-request:", err);

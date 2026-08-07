@@ -4956,7 +4956,14 @@ async function EDITOR_onKeyDown_keyLengthEqualsOne_ctrlKey(event) {
             //alert('redo');
             break;
         case ' ':
-            AUTOCOMPLETE_show('aaa');
+
+            //AUTOCOMPLETE_show('aaa');
+
+            event.preventDefault();
+            event.stopPropagation();
+
+            window.myAPI.editorCompletionRequest();
+
             //
             // I'm gonna keep coding a bit
             // 

@@ -100,6 +100,14 @@ interface HoverParams {
     };
 }
 
+export function MAIN_message_construct_CompletionRequest(textDocumentIdentifier, position) {
+    return {
+        id: messageId++,
+        method: 'textDocument/completion',
+        params: { textDocument: textDocumentIdentifier },
+    };
+}
+
 export function MAIN_message_construct_CustomFullFileLexRequest(textDocumentIdentifier) {
     return {
         id: messageId++,
