@@ -10479,6 +10479,10 @@ And panic and anxiety constantly
 
 He still makes things but it is toned down massively and he has his own containers and puts them in the downstairs fridge/freezer not the upstairs.
 
+He got caught once for having cans of gasoline under his bed.
+He'd pour the gasoline on his socks so he could wear them and absorb it all day through his skin
+and everything you touched was in the house the doorknobs and everything had this muck all over it everything black soot
+
 
 
 */
