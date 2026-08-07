@@ -10415,4 +10415,8 @@ which is actually kinda funny.
 Cause the menu gets focus then you arrowdown causes it to hide and focus editor
 then the event propagates to the top and default occurs lol
 
+I'm done with my calories but I'm gonna change my diet tomorrow
+still be in a caloric deficit just change the foods to a degree cause I feel like I'm gonna die.
+(not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
+
 */
