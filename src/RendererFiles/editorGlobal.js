@@ -10446,4 +10446,8 @@ yes, but I have it all planned out
 I'm gonna refactor everything in the end
 I'm working in 3d just keep that in mind when reading the code.
 
+I just keep going on empty cause I see the vision and I'm just
+placing the pieces close enough together for one final sweep at the end
+like you look at the painting wtf is he drawing then kabam it's a sunset or something
+
 */
