@@ -10424,4 +10424,13 @@ it is mentally exhausting to do that stuff.
 So now I'm mumbling / sound like I'm rambling.
 
 
+=============
+
+20 minutes closer to the correct answer.
+It isn't fully correct but will I need a TextDocumentCompletionItem?
+
+Idk probably?
+So I probably just made 20 minutes of progress.
+Now I don't have to type as much when I next look at this with more energy.
+
 */
