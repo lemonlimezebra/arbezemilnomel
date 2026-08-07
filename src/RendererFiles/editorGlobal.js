@@ -10468,6 +10468,15 @@ The issue is that it is all from the one source.
 And it is meat related and I feel like trash for eating that much meat
 rather than offsetting it with soy or something.
 
+I had horrific acne during my life.
+
+I still have acne today.
+
+But I think it was cause of all the whey protein
+and I RESENT all of it.
+Because I ate like that for a reason.
+And panic and anxiety constantly
+
 
 
 */
