@@ -10419,4 +10419,6 @@ I'm done with my calories but I'm gonna change my diet tomorrow
 still be in a caloric deficit just change the foods to a degree cause I feel like I'm gonna die.
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
+I take strattera but I'm obsessed with amphetamine like drugs. 50 mg is insane or is it 55mg he has "narcolepsy". That's why it is so high
+
 */
