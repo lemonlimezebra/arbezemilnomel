@@ -10458,6 +10458,10 @@ and I think my acne is so severe because of this.
 But I didn't have any other option due to circumstances and I don't know how much was in my head
 but it was all just I do feel like it was unfair.
 
+So once I started eating the lb of chicken per day it was this fantastic thing for me and I haven't missed a day.
+But I just still have this I screwed up my growth during important formative years and things.
+And I just anxiety and anxiety.
+
 
 
 */
