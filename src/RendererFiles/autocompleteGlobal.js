@@ -38,9 +38,16 @@ function AUTOCOMPLETE_renderDo() {
 
 function AUTOCOMPLETE_render_do_show() {
     let AUTOCOMPLETEElement;
+    let AUTOCOMPLETE_itemList;
 
     if (AUTOCOMPLETE_exists) {
         AUTOCOMPLETEElement = document.getElementById('AUTOCOMPLETE');
+
+        AUTOCOMPLETE_itemList = document.getElementById('AUTOCOMPLETE_itemList');
+        if (!AUTOCOMPLETE_itemList) {
+            throw new Error();
+        }
+
         // This is why I worry about doing a bool check in the other UIs
         // I worry about the state getting corrupted somehow.
         //
@@ -55,9 +62,23 @@ function AUTOCOMPLETE_render_do_show() {
     else {
         AUTOCOMPLETEElement = document.createElement('div');
         AUTOCOMPLETEElement.id = 'AUTOCOMPLETE';
+        AUTOCOMPLETEElement.className = 'unselectable';
         AUTOCOMPLETEElement.style.left = '0px';
         AUTOCOMPLETEElement.style.top = '0px';
         AUTOCOMPLETEElement.tabIndex = 0;
+
+        let AUTOCOMPLETE_virtualization = document.createElement('div');
+        AUTOCOMPLETE_virtualization.id = 'AUTOCOMPLETE_virtualization';
+        AUTOCOMPLETEElement.appendChild(AUTOCOMPLETE_virtualization);
+
+        let AUTOCOMPLETE_cursor = document.createElement('div');
+        AUTOCOMPLETE_cursor.id = 'AUTOCOMPLETE_cursor';
+        AUTOCOMPLETEElement.appendChild(AUTOCOMPLETE_cursor);
+
+        AUTOCOMPLETE_itemList = document.createElement('div');
+        AUTOCOMPLETE_itemList.id = 'AUTOCOMPLETE_itemList';
+        AUTOCOMPLETEElement.appendChild(AUTOCOMPLETE_itemList);
+
         document.body.appendChild(AUTOCOMPLETEElement);
         AUTOCOMPLETE_events_add(AUTOCOMPLETEElement);
     }
@@ -93,11 +114,17 @@ function AUTOCOMPLETE_render_do_show() {
     // low on food, low on energy, low on caffeine (I lowered my dosage a few days ago)
     // I don't care I'll write the whole thing right here right now
 
+    let appHeightCssAttributeValue = `${APP_lineHeight}px`;
+
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
         let div = document.createElement('div');
+        //div.className = 'AUTOCOMPLETE_ITEM';
+        div.style.height = appHeightCssAttributeValue;
+        div.style.whiteSpace = 'nowrap';
+        div.style.position = 'absolute';
         div.textContent = `applesauce ${item.label}`;
-        AUTOCOMPLETEElement.append(div);
+        AUTOCOMPLETE_itemList.append(div);
     }
 
     

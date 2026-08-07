@@ -91,20 +91,6 @@ body {
   padding-bottom: 1px;
 }
 
-#AUTOCOMPLETE {
-  position: fixed;
-  min-width: 25px;
-  min-height: 25px;
-  background-color: var(--secondary-background-color);
-  color: var(--secondary-foreground-color);
-  border: 1px solid var(--primary-border-color);
-  padding-left: 4px;
-  padding-right: 4px;
-  /* the padding-top needs to be accounted for in the js code anywhere calculation of which option was clicked is done, as well any other scenarios that might follow the pattern */
-  padding-top: 4px;
-  padding-bottom: 1px;
-}
-
 .LIST_moveChildNodes {
   position: relative;
   overflow: scroll;
@@ -133,6 +119,51 @@ body {
 .LIST_moveChildNodes_itemList {
   display: contents;
 }
+
+#AUTOCOMPLETE {
+  position: fixed;
+  min-width: 25px;
+  min-height: 25px;
+  background-color: var(--secondary-background-color);
+  color: var(--secondary-foreground-color);
+  border: 1px solid var(--primary-border-color);
+  padding-left: 4px;
+  padding-right: 4px;
+  /* the padding-top needs to be accounted for in the js code anywhere calculation of which option was clicked is done, as well any other scenarios that might follow the pattern */
+  padding-top: 4px;
+  padding-bottom: 1px;
+}
+
+  #AUTOCOMPLETE:focus #AUTOCOMPLETE_cursor {
+    background-color: var(--primary-active-with-focus-background-color);
+  }
+
+#AUTOCOMPLETE_virtualization {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1px;
+}
+
+#AUTOCOMPLETE_cursor {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: var(--primary-active-no-focus-background-color);
+  position: absolute;
+  width: 100%;
+}
+
+#AUTOCOMPLETE_itemList {
+  display: contents;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/*#AUTOCOMPLETE_ITEM {
+  
+}*/
 
 .TREEVIEW {
   position: relative;
