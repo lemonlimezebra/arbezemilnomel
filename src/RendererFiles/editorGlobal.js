@@ -10385,4 +10385,12 @@ when you do large changes you reset the longest line.
 I gotta relax I'm getting really pissed off
 if I wanna do more then fine but I'm actually exhausted and so I gotta watch it
 
+10/10 answer
+
+< Why this usually works for you (and why it fails here)
+< 
+< You likely use this pattern successfully inside relatively positioned parents (position: relative). In those cases, the parent already has an explicit width (like width: 100% or a fixed pixel value) inherited from the normal page flow, so the absolute children can sit inside it without collapsing the parent.
+<
+< Because your parent is position: fixed, it has no layout constraints from the document flow and its children are absolute. You have a layout where neither the parent nor the children are defining a concrete width
+
 */
