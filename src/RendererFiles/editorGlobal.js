@@ -10400,4 +10400,10 @@ rather than use up a limited reserve of stress resilience in the future.
 cause you're limited on stress reserves so you wanna make sure you use up all that you can each day when possible.
 so you gotta make sure  you hit that fatigue point.
 
+I feel horrible from this calory deficit.
+I typed calory by accident cause I'm super brain fogged and I think it's actually kind funny
+"I'm feelin calory" today.
+
+But my entire face I feel it like it is tight
+
 */
