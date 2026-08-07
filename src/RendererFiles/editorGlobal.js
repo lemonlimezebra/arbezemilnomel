@@ -10255,4 +10255,17 @@ relaxed I'm sweating though and my mind is racing I'm worried people are gonna f
 and be excited about the code then have some kind of an expectation of me.
 
 
+
+======
+
+
+
+
+
+Maybe I should do something coding wise.
+I went from being super consistent to this morning thinking I was gonna completely stop coding until my birthday and either
+- become fluent in Spanish
+- teach myself math by starting with the lowest level math taught in high school and just reading every book from there
+
+
 */
