@@ -10406,4 +10406,7 @@ I typed calory by accident cause I'm super brain fogged and I think it's actuall
 
 But my entire face I feel it like it is tight
 
+calorie btw
+Caloric deficit
+
 */
