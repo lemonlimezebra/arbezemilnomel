@@ -10462,6 +10462,12 @@ So once I started eating the lb of chicken per day it was this fantastic thing f
 But I just still have this I screwed up my growth during important formative years and things.
 And I just anxiety and anxiety.
 
+200g of protein isn't too much btw. It is essentially the perfect intake for me on the dot.
+
+The issue is that it is all from the one source.
+And it is meat related and I feel like trash for eating that much meat
+rather than offsetting it with soy or something.
+
 
 
 */
