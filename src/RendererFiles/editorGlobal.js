@@ -10495,5 +10495,8 @@ He has everything I've ever wanted.
 
 After I workedd myass off at community college then transfered to a 4 year school and he did jack shit
 
+then I transferred on accutane and had to use an umbrella during the sun day time so I didn't burn to death
+and everyone looked at me like i was a fucking freak
+
 
 */
