@@ -4979,6 +4979,15 @@ async function EDITOR_onKeyDown_keyLengthEqualsOne_ctrlKey(event) {
             like a less correct one that has lots of functionality that you need
             for the final one and you have the code written and easily modifiable
             to the more complete one when you have energy.
+
+            So like if I had ctrl+' ' the only way to bring it up
+            And bringing it up moved focus to the autocomplete
+            then I could easily hide the autocomplete because events would propagate from the menu element
+            I can put listeners on it
+            and essentially anything you do event wise causes it to close
+
+            but this way I can have it so ctrl+' ' I have the lsp give me like the top level scope
+            what the names of the nodes are like just gimme something I mean.
             
             */
 
