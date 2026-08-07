@@ -10433,4 +10433,8 @@ Idk probably?
 So I probably just made 20 minutes of progress.
 Now I don't have to type as much when I next look at this with more energy.
 
+The request is wrong etc...
+It's fine
+It just takes time
+
 */
