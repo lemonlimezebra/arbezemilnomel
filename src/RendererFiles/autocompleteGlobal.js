@@ -79,8 +79,19 @@ function AUTOCOMPLETE_render_do_show() {
     //
     // just shut up, straight face, write the code, forget the fly
 
-    for (let i = 0; i < AUTOCOMPLETE_pending_items.length; i++) {
-        let item = AUTOCOMPLETE_pending_items[i];
+    // is it wrong to write an autocomplete from scratch rather
+    // than have some middle man and either compose or inherit it
+    //
+    // 
+    // I don't know
+    //
+    // It isn't that you just brute force everything
+    //
+    // but in this scenario I know that I can brute force it for maximum progress in the shortest period of time.
+    // I always know exactly what I'm doing and I do it all with purpose and calculations
+
+    for (let i = 0; i < items.length; i++) {
+        let item = items[i];
         let div = document.createElement('div');
         div.textContent = `applesauce ${item.label}`;
         AUTOCOMPLETEElement.append(div);
