@@ -10419,4 +10419,22 @@ I'm done with my calories but I'm gonna change my diet tomorrow
 still be in a caloric deficit just change the foods to a degree cause I feel like I'm gonna die.
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
+I had to google this word just to really be sure.
+I still am not overly sure but I think this is the word.
+
+Resentment: a deep feeling of anger or bitterness. You feel this way because you think someone treated you in a way that is not fair. It stays inside you for a long time.
+
+I have such a deep resentment for certain aspects my home life while I was growing up.
+
+And my 28th birthday is on september 16nth.
+
+I think what I need to do is actually start going from eating 1lb of 98% fat free ground chicken
+to 
+eating 2 lbs everyday at least until my birthday.
+
+I still don't feel well mentally and it has been a few months (I think?) of 1 lb per day.
+
+...
+
+
 */
