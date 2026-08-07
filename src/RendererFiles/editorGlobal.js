@@ -10440,4 +10440,10 @@ It just takes time
 oh wait my C# commit is way bigger than I expected
 did I forget to commit that earlier lol?
 
+"is all of the c# properties lowercase"
+
+yes, but I have it all planned out
+I'm gonna refactor everything in the end
+I'm working in 3d just keep that in mind when reading the code.
+
 */
