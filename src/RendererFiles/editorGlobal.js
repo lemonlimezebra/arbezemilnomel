@@ -10393,4 +10393,8 @@ if I wanna do more then fine but I'm actually exhausted and so I gotta watch it
 <
 < Because your parent is position: fixed, it has no layout constraints from the document flow and its children are absolute. You have a layout where neither the parent nor the children are defining a concrete width
 
+I think I'm happy with that actually that's a non-zero stress encounter
+so I was able to use some stress resilience that I had available today for it
+rather than use up a limited reserve of stress resilience int he furthtue
+
 */
