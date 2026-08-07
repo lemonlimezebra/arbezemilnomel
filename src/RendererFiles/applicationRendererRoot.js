@@ -212,7 +212,15 @@ async function window_myAPI_onMessage(data) {
         TOOLTIP_show(data.result);
     }
     else if (data.method === 'textDocument/completion') {
-        AUTOCOMPLETE_show(data.result);
+        if (data.result.items && data.result.items.length > 0) {
+            let item = data.result.items[0];
+            if (item.label) {
+                AUTOCOMPLETE_show(item.label);
+            }
+            else {
+                AUTOCOMPLETE_show('null autocomplete');
+            }
+        }
     }
 }
 
