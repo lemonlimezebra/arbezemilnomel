@@ -10483,6 +10483,9 @@ He got caught once for having cans of gasoline under his bed.
 He'd pour the gasoline on his socks so he could wear them and absorb it all day through his skin
 and everything you touched was in the house the doorknobs and everything had this muck all over it everything black soot
 
+I can't even remember if it gasoline I only know because I overheard the screaming and the fighting and I made out bits of information that way
+he did weird shit all the time.
+
 
 
 */
