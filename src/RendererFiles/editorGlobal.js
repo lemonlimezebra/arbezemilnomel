@@ -10447,6 +10447,17 @@ Essentially my brother used kitchen-ware to "make drugs".
 And everything was always tainted and I developed OCD.
 I didn't eat anything that wasn't pre-packaged. I destroyed my health for years doing this.
 
+I think that's my largest resentment.
+
+Anything mental in terms of fighting that I heard or etc...
+
+I just feel like there is something so permanent about having damaged my health like that during those younger years of development.
+
+and I tried to "hide" protein powder in my room and use plastic 1 use cups and water bottles
+and I think my acne is so severe because of this.
+But I didn't have any other option due to circumstances and I don't know how much was in my head
+but it was all just I do feel like it was unfair.
+
 
 
 */
