@@ -10486,6 +10486,9 @@ and everything you touched was in the house the doorknobs and everything had thi
 I can't even remember if it gasoline I only know because I overheard the screaming and the fighting and I made out bits of information that way
 he did weird shit all the time.
 
+You can't escape your home when it fostered an environment that destroyed you physically.
+That physical damage you bring with you no matter how far away from home you move.
+I'm back home and have been for years now it is less bad but just I can't get over it all
 
 
 */
