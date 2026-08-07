@@ -10417,5 +10417,7 @@ I'm just rambling.
 Maybe I'm talking to myself.
 I feel sad, tired, etc... but I wanna believe that it all will work out if I stay consistent with things.
 
+And I'm not inebriated****** gotta make sure I mention that
+
 
 */
