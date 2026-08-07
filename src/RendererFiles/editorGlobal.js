@@ -10493,5 +10493,7 @@ I'm back home and have been for years now it is less bad but just I can't get ov
 And I resent my brother.
 He has everything I've ever wanted.
 
+After I workedd myass off at community college then transfered to a 4 year school and he did jack shit
+
 
 */
