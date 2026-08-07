@@ -4971,6 +4971,17 @@ async function EDITOR_onKeyDown_keyLengthEqualsOne_ctrlKey(event) {
             // I feel anxious I feel tired
             //
             // 
+
+            /*
+            
+            If the entire thing isn't like something you have energy for
+            then maybe you can identify a smaller functionality of autocomplete
+            like a less correct one that has lots of functionality that you need
+            for the final one and you have the code written and easily modifiable
+            to the more complete one when you have energy.
+            
+            */
+
             break;
     }
 }
