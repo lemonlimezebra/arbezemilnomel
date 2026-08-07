@@ -10409,4 +10409,10 @@ But my entire face I feel it like it is tight
 calorie btw
 Caloric deficit
 
+when you arrowdown it scrolls it cause you didn't preventDefault
+which is actually kinda funny.
+
+Cause the menu gets focus then you arrowdown causes it to hide and focus editor
+then the event propagates to the top and default occurs lol
+
 */
