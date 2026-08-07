@@ -1,6 +1,6 @@
 let AUTOCOMPLETE_exists = false;
 
-let AUTOCOMPLETE_pending_textContent = null;
+let AUTOCOMPLETE_pending_items = null;
 
 /**
  * 0 => None
@@ -37,8 +37,6 @@ function AUTOCOMPLETE_renderDo() {
 };
 
 function AUTOCOMPLETE_render_do_show() {
-    AUTOCOMPLETE_render_request(1);
-
     let AUTOCOMPLETEElement;
 
     if (AUTOCOMPLETE_exists) {
@@ -64,11 +62,22 @@ function AUTOCOMPLETE_render_do_show() {
         AUTOCOMPLETE_events_add(AUTOCOMPLETEElement);
     }
     
-    // This was quickest first way of writing things that came to my mind.
-    // I don't like it cause you're appending the child, then setting textContent
-    // but it is sufficient for the first version.
-    AUTOCOMPLETEElement.textContent = AUTOCOMPLETE_pending_textContent;
-    AUTOCOMPLETE_pending_textContent = null;
+    //// This was quickest first way of writing things that came to my mind.
+    //// I don't like it cause you're appending the child, then setting textContent
+    //// but it is sufficient for the first version.
+    ////AUTOCOMPLETEElement.textContent = ;
+    
+    let items = AUTOCOMPLETE_pending_items;
+    AUTOCOMPLETE_pending_items = null;
+
+    for (let i = 0; i < AUTOCOMPLETE_pending_items; i++) {
+        let item = AUTOCOMPLETE_pending_items[i];
+        let div = document.createElement('div');
+        div.textContent = `applesauce ${item.label}`;
+        AUTOCOMPLETEElement.append(div);
+    }
+
+    
 
     AUTOCOMPLETE_exists = true;
 
@@ -94,8 +103,8 @@ function AUTOCOMPLETE_render_do_show() {
     AUTOCOMPLETEElement.focus();
 }
 
-function AUTOCOMPLETE_show(textContent) {
-    AUTOCOMPLETE_pending_textContent = textContent;
+function AUTOCOMPLETE_show(items) {
+    AUTOCOMPLETE_pending_items = items;
     AUTOCOMPLETE_render_request(1);
 }
 
@@ -110,7 +119,7 @@ function AUTOCOMPLETE_render_do_hide() {
 }
 
 function AUTOCOMPLETE_hide() {
-    AUTOCOMPLETE_pending_textContent = null;
+    AUTOCOMPLETE_pending_items = null;
     AUTOCOMPLETE_render_request(2);
 }
 
