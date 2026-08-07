@@ -10411,5 +10411,11 @@ And if you get away with it once that's possibly the worst case
 cause it might lead you to think you cramming was a good decision.
 When you just got lucky that time.
 
+"Why would I ever take 'advice' from you. It sounds like you're rambling are you inebriated?
+Idk it's not advice either.
+I'm just rambling.
+Maybe I'm talking to myself.
+I feel sad, tired, etc... but I wanna believe that it all will work out if I stay consistent with things.
+
 
 */
