@@ -10398,5 +10398,18 @@ due to many factors such as:
 I want to receive something that resembles the correct result
 that's all it is just a little more. I think that'll be sufficient.
 
+omg the thing I was looking for what do you call it
+the 
+
+it's just like going to the gym.
+
+You can't not train a scheduled day muscle group,
+just to train twice as much the next scheduled day for that muscle group
+
+You might think you can but your decision making is severely impaired when you try such things.
+And if you get away with it once that's possibly the worst case
+cause it might lead you to think you cramming was a good decision.
+When you just got lucky that time.
+
 
 */
