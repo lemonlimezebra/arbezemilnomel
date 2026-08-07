@@ -70,7 +70,16 @@ function AUTOCOMPLETE_render_do_show() {
     let items = AUTOCOMPLETE_pending_items;
     AUTOCOMPLETE_pending_items = null;
 
-    for (let i = 0; i < AUTOCOMPLETE_pending_items; i++) {
+    // There is a fly in my room last few days that has been driving me insane
+    //
+    // look at how silly this mistake is
+    //
+    // Cause I'm watching fly around
+    //
+    //
+    // just shut up, straight face, write the code, forget the fly
+
+    for (let i = 0; i < AUTOCOMPLETE_pending_items.length; i++) {
         let item = AUTOCOMPLETE_pending_items[i];
         let div = document.createElement('div');
         div.textContent = `applesauce ${item.label}`;
