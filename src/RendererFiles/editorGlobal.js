@@ -10419,5 +10419,9 @@ I feel sad, tired, etc... but I wanna believe that it all will work out if I sta
 
 And I'm not inebriated****** gotta make sure I mention that
 
+I was already tired and then I watched a whole movie in Spanish and if you don't understand a language
+it is mentally exhausting to do that stuff.
+So now I'm mumbling / sound like I'm rambling.
+
 
 */
