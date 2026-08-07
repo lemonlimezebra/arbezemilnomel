@@ -89,6 +89,9 @@ function AUTOCOMPLETE_render_do_show() {
     //
     // but in this scenario I know that I can brute force it for maximum progress in the shortest period of time.
     // I always know exactly what I'm doing and I do it all with purpose and calculations
+    //
+    // low on food, low on energy, low on caffeine (I lowered my dosage a few days ago)
+    // I don't care I'll write the whole thing right here right now
 
     for (let i = 0; i < items.length; i++) {
         let item = items[i];
