@@ -10419,4 +10419,5 @@ I'm done with my calories but I'm gonna change my diet tomorrow
 still be in a caloric deficit just change the foods to a degree cause I feel like I'm gonna die.
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
+
 */
