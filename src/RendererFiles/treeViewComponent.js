@@ -686,6 +686,14 @@ class TreeViewComponent {
         this.lastReadNumber_offsetWidth = this.rootElement.offsetWidth;
         this.lastReadNumber_offsetHeight = this.rootElement.offsetHeight;
     }
+
+    /*
+    TODO: The TreeView after you resize it, you can continually scroll down and it keeps replacing more and more '~' lines
+          even if you've scrolled through everything already.
+          This is probably some kind of rounding error?
+          It porbably happens regardless of whether you resized
+          and more-so that you just happen to have hit the perfect height for it to happen?
+    */
 }
 
 const get_TreeViewNodeKind_None = () => 0;
