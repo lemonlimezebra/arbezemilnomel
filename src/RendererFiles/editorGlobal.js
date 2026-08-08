@@ -10421,27 +10421,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-I made the 1 lb of 98% fat free chicken for breakfast it is sitting on my desk I have to say
-this quickly before my desk melts from the heat because I am shaking with frustration and I'm pretty angry.
-
-I don't know whether this is true or not.
-But from my perspective.
-I think, that you think I'm the villain.
-Because I linked that martyr's movie explanation.
-And I ALSO resent that.
-I'm somewhat wrong for this.
-But all I can think is "are you too thick to comprehend anything beyond the initial gore?"
-
-If you guys want adult diapers let me know.
-
-My brother wears them all the time.
-
-Sometimes he walks around without pants or a shirt
-just the fucking diaper.
-
-I'm pissed off I'm gonna eat my 1 lb of 98% fat free chicken and I'm not gonna feel guilty about it.
-
-my brother is 30 btw
 
 
 */
