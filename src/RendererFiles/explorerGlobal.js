@@ -353,6 +353,9 @@ This comment is from 'tvd_drawItem_BATCH', it was in my way
             let itemListElement_children = this.component.TREEVIEW_ArrayFrom_itemListElement_children;
             let itemListElement_childrenLength = this.component.TREEVIEW_ArrayFrom_itemListElement_children_length;
 
+            let currentWIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING;
+            let NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = currentWIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING;
+
             for (let i = 0; i < this.pullData_result_count; i++) {
                 let packedInteger = this.pullData_result[i];
                 const key = packedInteger & this.KEY_MASK;
@@ -364,6 +367,26 @@ This comment is from 'tvd_drawItem_BATCH', it was in my way
                 let entry = this.arrayEntries[i];
                 textNode.nodeValue = entry.basename;
                 textNode.title = entry.absolutePath;
+
+                // TODO: Reduce drawn width under some circumstance too
+                if (entry.basename.length > NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING) {
+                    NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = entry.basename.length;
+                }
+            }
+
+            if (NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING > currentWIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING) {
+                this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING;
+                let widthAttributeValueNumber = Math.ceil((this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue);
+                // This is actually more complicated you have to track whether you go above the minimum requirement lest you add 1 character over and over in width just to keep redrawing widths.
+                //if (widthAttributeValueNumber < this.lastReadNumber_offsetWidth) {
+                //    widthAttributeValueNumber = this.lastReadNumber_offsetWidth;
+                //}
+                //this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING
+                let widthAttributeValueString = widthAttributeValueNumber + 'px';
+                this.component.cursorElement.style.width = widthAttributeValueString;
+                for (let i = 0; i < itemListElement_childrenLength; i++) {
+                    itemListElement_children[i].style.width = widthAttributeValueString;
+                }
             }
 
             this.pullData_result = null;
