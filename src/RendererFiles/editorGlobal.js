@@ -10426,26 +10426,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 - [ ] Determine when to reduce the length of the longest line of text.
 - [ ] Autocompletion
 
-The reason I wanna private the repos are because I mentioned things that aren't just about myself.
-I'm wondering if my parents are gonna kill me if they ever find out.
-
-They have no idea about this repo anyways.
-As I said they think I sit here playing videogames all day and nothing else.
-
-My dad has 30+ years of experience.
-
-The main attention he gave me about this coding I'm doing, was when I got an email about
-blazor community livestream and he was the first comment on the livestream.
-
-I appreciate that...
-
-But I also kinda have this constant "I feel like shit " feeling
-am I wrong for that?
-should he have morte interest in what I'm doing beyond just that one livestream?
-
-its the only fucking part of this that he cared about
-
-taylor swift - I knew you were trouble 
-we know the drill... I'm on edge and I gotta make a joke out of it so I can stay calm okay good
-
 */
