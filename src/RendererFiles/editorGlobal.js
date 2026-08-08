@@ -10421,24 +10421,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-What hurts is that they think I do nothing
 
-They have no idea how much I try to do the right thing and how much I am going through
-
-They said something like "your brother gets more attention because he talks to us"
-
-and I tried to explain I'm so tired and stressed out from trying to do the right thing it is far more difficult for me to find it in me to talk
-
-and they say "well your brother has mental issues"
-
-As if I am not sitting here losing my mind everyday.
-
-I feel I've been punished all my life for trying to do the right thing.
-
-while watching everyone who works the system get by easy
-
-all the while everyone turns around to me and says "well you don't have mental issues you do xyz"
-
-and I can't fucking do  this shit
 
 */
