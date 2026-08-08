@@ -10421,36 +10421,7 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-My dad said something that I thought was snarky.
-And the massive iceberg just showed for a moment.
-I'm removing every comment in this repo.
-I feel bad for freaking out at him
-I really meant it when I said I felt angry earlier it wasn't good I can't speak
-cause I fk'd my voice.
 
-I'm not a good person myself I should handle these emotions better.
 
-all I'm thinking is how I want everything to be over
-Not that I am at risk for anything
-but just in terms of a long term thought process
-I can't imagine anything good
-
-I just think of the russian poet or something
-or the bmth song written in blood.
-Specific lyrics though
-
-Something like though living is no newer I'm listening to the song
-
-there's nothing new in dying now, though living is no newer
-
-This is my dad:
-https://www.linkedin.com/in/iguana?trk=people-guest_people_search-card
-
-My mom is kathleen freeman
-
-If you want to contact them and tell them about this repo or anything please feel free
-
-You might not believe me but you can talk to my parents.
-And then maybe things would work out I don't know what to tell you
 
 */
