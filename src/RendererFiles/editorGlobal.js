@@ -10439,4 +10439,6 @@ and the feelings of distance and like we had everything financially but as a fam
 
 and so I grew to despise money as I have this connection that I've made in my mind between that and the bad family dynamic that I grew up with.
 
+I do wonder if I tried to get a job as a developer whether I could manage to find one.
+
 */
