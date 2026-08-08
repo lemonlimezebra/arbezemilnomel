@@ -334,7 +334,11 @@ class TreeViewComponent {
             // padding of 2ch (the style attribute receives the width as a pixel by using 'EXPLORER_firstSpanWidthValue' as a baseline (not quite ch))
             // TODO: this is all very inaccurate and prone to eventual rounding issues due to not monospace font.
             // 
-            let widthAttributeValueString = ((this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue) + 'px';
+            let widthAttributeValueNumber = Math.ceil((this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue);
+            if (widthAttributeValueNumber < this.lastReadNumber_offsetWidth) {
+                widthAttributeValueNumber = this.lastReadNumber_offsetWidth;
+            }
+            let widthAttributeValueString = widthAttributeValueNumber + 'px';
             this.cursorElement.style.width = widthAttributeValueString;
 
             // this is zero'd, could use change for clarity of algorithm and match patterns but focus elsewhere first
