@@ -10479,4 +10479,7 @@ and it would all have been better for you to just have gone on disability and do
 cause you're really "on edge" you gotta relax why are you so "on edge"
 
 That isn't the direct words but that's all I hear
+
+my brother isn't on edge...
+cause he does thing he has nothing to do he has no stressors
 */
