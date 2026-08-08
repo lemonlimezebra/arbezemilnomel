@@ -10470,4 +10470,7 @@ beating a dead horse but oh my goodness the conversation has such a bad taste in
 Taylor Swift I knew you were trouble again.
 I have to mention it I'm really on edge and if I don't try to make it a joke of like "lol oh look I got it again haha" then I'm gonna be trippin
 
+we're all aware of my mental health history right? I mean it is just funny to me I ffeel like I'm going crazy
+that I'm the only one who sees how ridiculous this all is.
+"you're brother has mental health issues" lol
 */
