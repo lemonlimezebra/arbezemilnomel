@@ -10454,4 +10454,7 @@ well is everything okay? Maybe I'm delusional.
 The majority of the pressure that I feel is societal.
 I feel like if I just didn't feel all this pressure for no reason then nothing would be an issue.
 
+"taylor swift - I knew you were trouble" "they think I've been nothing but trouble all this time"
+I see it again right now.
+
 */
