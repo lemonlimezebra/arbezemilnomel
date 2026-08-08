@@ -10503,4 +10503,7 @@ Are you faking wearing a diaper lol?
 
 you wear it to come off as more disabled?
 
+Okay I really shouldn't say that because it helps our family as a whole afford to support him
+so I shouldn't call that into question but he pissed me off is what I'm saying here.
+
 */
