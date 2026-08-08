@@ -656,6 +656,9 @@ class TreeViewComponent {
      * And I am very open to the idea that I'm wrong.
      * But I don't understand the AI's point of view and I'm not going to blindly copy what it says.
      * I am instead just aware that this might be wrong and I'm looking for some indications to learn from and observe.
+     * 
+     * I read the property back just incase some weird interaction (perhaps DPI?) causes the number I set to not actually be the end result number that is used
+     * for the attribute value.
      */
     measureBaseElement() {
         lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
