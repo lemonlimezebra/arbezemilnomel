@@ -10423,4 +10423,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 I'm very distant and (not anti-social) but I'll say anti-social cause I don't know what word I'm looking for
 
+This is innate, and will never change. It has been this way all my life.
+
 */
