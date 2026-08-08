@@ -10441,5 +10441,7 @@ just the fucking diaper.
 
 I'm pissed off I'm gonna eat my 1 lb of 98% fat free chicken and I'm not gonna feel guilty about it.
 
+my brother is 30 btw
+
 
 */
