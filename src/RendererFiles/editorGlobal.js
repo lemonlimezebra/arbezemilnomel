@@ -10426,6 +10426,8 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 - [ ] Determine when to reduce the length of the longest line of text.
 - [ ] Autocompletion
 
-I know he's busy it's okay I just it's idk
+I'm actually the same way with my dog.
+I feel like I'm my father sometimes.
+I feel like I'm not giving my dog enough attention cause I'm coding
 
 */
