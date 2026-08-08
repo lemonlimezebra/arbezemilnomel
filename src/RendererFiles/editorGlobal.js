@@ -10420,4 +10420,12 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
 =======
+
+My dad said something that I thought was snarky.
+And the massive iceberg just showed for a moment.
+I'm removing every comment in this repo.
+I feel bad for freaking out at him
+I really meant it when I said I felt angry earlier it wasn't good I can't speak
+cause I fk'd my voice.
+
 */
