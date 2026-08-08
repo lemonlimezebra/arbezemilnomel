@@ -10490,4 +10490,7 @@ something like that
 I haven't screamed in years
 I did this morning because I got pushed past the breaking point a bit
 
+a don't sit on my ass doing nothing like you do.
+You have no idea what kind of stress I'm dealing with dude shut the fuck up
+
 */
