@@ -10433,4 +10433,8 @@ So you'd have to give it at least a month to see where things go...
 every month my psychiatrist tells me to eat a different lb quantity of chicken
 and says I can't off myself because I gotta wait a month and see if the new lb quantity hits different
 "
+
+I see the 'Porter Robinson & Madeon - Shelter' video in recommended suddenly
+I agree 100%
+at times I break down in tears watching it
 */
