@@ -10439,4 +10439,6 @@ while watching everyone who works the system get by easy
 
 all the while everyone turns around to me and says "well you don't have mental issues you do xyz"
 
+and I can't fucking do  this shit
+
 */
