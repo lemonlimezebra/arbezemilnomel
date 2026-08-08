@@ -10437,4 +10437,7 @@ and says I can't off myself because I gotta wait a month and see if the new lb q
 I see the 'Porter Robinson & Madeon - Shelter' video in recommended suddenly
 I agree 100%
 at times I break down in tears watching it
+
+if anyone was wondering whether I see everything there's your proof I know what you're doing right now
+you might wanna check behind you...
 */
