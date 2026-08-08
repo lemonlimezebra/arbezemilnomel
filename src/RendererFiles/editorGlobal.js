@@ -10435,4 +10435,8 @@ Not that I am at risk for anything
 but just in terms of a long term thought process
 I can't imagine anything good
 
+I just think of the russian poet or something
+or the bmth song written in blood.
+Specific lyrics though
+
 */
