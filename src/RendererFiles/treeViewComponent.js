@@ -627,11 +627,32 @@ class TreeViewComponent {
         return indexItem;
     }
 
-/*
-If I do this for the tree view. Then I'd be done for the night
-and then tomorrow I can do batching for both indentMore and indentLess
+    /**
+     * This logic according to what I understand Google AI to be saying, is very bad (I gave it the version that the Editor has).
+     * 
+     * I don't fully agree with the AI on this for a few reasons.
+     * And I'm not entirely adverse to removing this logic.
+     * But a main reason for why I don't agree with the AI is that I don't fully understand things.
+     * And the only way for me to fully understand things is to mess around with this a bit more and see what happens.
+     * So I can hopefully glean some insight and better understand what the AI is saying.
+     * 
+     * I want to list out my points for doing this, I have a limited amount of energy each day
+     * and I have a lot to do involving measuring the longest line of text and setting all divs to that width
+     * so I might find it in me to list my point of view today.
+     * Maybe if I don't find it in me today I will tomorrow etc...
+     */
+    measureBaseElement() {
+        lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
+        lastReadNumber_offsetHeight = Math.floor(EDITOR_baseElement.offsetHeight);
+        
+        EDITOR_baseElement.style.width = lastReadNumber_offsetWidth + 'px';
+        EDITOR_baseElement.style.height = lastReadNumber_offsetHeight + 'px';
 
-*/
+        EDITOR_baseElement.style.contain = 'layout';
+
+        lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
+        lastReadNumber_offsetHeight = EDITOR_baseElement.offsetHeight;
+    }
 }
 
 const get_TreeViewNodeKind_None = () => 0;
