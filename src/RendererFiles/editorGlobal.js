@@ -10426,12 +10426,5 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 - [ ] Determine when to reduce the length of the longest line of text.
 - [ ] Autocompletion
 
-you know he was at the hospital visiting when I was admitted
-and when I explained how they is no reason to live.
-
-I feel like he hasn't been excited for me the way I would've wanted him to be.
-For just a hobby that I loved.
-
-It was only when microsoft emailed me
 
 */
