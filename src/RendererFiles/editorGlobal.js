@@ -10437,4 +10437,6 @@ My dad is an extremely senior dev we had everything we needed + extras that we w
 
 Minus the stable household
 
+fucking would trade everything for a stable household over all that shit
+
 */
