@@ -10424,4 +10424,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 I feel so angry right now.
 I'm gonna eat 2 lbs of chicken today I'm gonna do it I'm so sick of everything.
 
+I'm gonna drive to the store and buy some more chicken right now.
+
 */
