@@ -10425,4 +10425,8 @@ I'm very distant and (not anti-social) but I'll say anti-social cause I don't kn
 
 This is innate, and will never change. It has been this way all my life.
 
+My dad says I explode cause I don't talk.
+But I can't talk I have no desires to.
+I have literally lack the desires I'd presume 99% of your desires I just don't feel.
+
 */
