@@ -10431,4 +10431,6 @@ I kinda was trippin with the last commit but if anyone wondered where my obsessi
 
 you raised through that and it's like ooo big inground pool lololol fuck the pool are you kidding me
 
+I don't want anything I just wanna feel normal
+
 */
