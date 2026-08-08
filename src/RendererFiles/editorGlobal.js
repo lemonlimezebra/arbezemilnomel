@@ -10433,4 +10433,6 @@ you raised through that and it's like ooo big inground pool lololol fuck the poo
 
 I don't want anything I just wanna feel normal
 
+My dad is an extremely senior dev we had everything we needed + extras that we wanted
+
 */
