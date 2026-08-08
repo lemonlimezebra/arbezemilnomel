@@ -10440,4 +10440,10 @@ that means they're looking at the things I used to link but deliberatly finding 
 
 my heart has been pounding all day
 
+Should I private this repo?
+The SpanishLearning one too it just makes me cringe.
+I'm pretty much having a panic attack
+Although this is maybe some good reading content.
+like if I found this repo back in the day I'd probably be hyped and read the entire thing lol
+
 */
