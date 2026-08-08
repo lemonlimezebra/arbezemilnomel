@@ -10449,4 +10449,7 @@ Taylor swift - I knew you were were touble "I knew you were nothing but trouble 
 
 Brennan Heart - don't speak "self explanatory?"
 
+La Clinica episode 2 in particular... they think I'm trans due to the nature of where I cut and what my motives weree
+but I take a once a day mens multivitamin I definitely identify as a male.
+
 */
