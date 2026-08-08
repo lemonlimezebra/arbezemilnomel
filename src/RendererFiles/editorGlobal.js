@@ -10439,4 +10439,6 @@ I just think of the russian poet or something
 or the bmth song written in blood.
 Specific lyrics though
 
+Something like though living is no newer I'm listening to the song
+
 */
