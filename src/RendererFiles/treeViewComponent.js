@@ -73,6 +73,8 @@ class TreeViewComponent {
         this.SET_ITEMS_director = null;
         this.SET_ITEMS_itemHeightNumber = 0;
         this.SET_ITEMS_itemHeightStyleAttributeValueString = '';
+
+        this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = 2;
     }
 
     TREEVIEW_render_request(renderKind) {
@@ -329,15 +331,21 @@ class TreeViewComponent {
         if (this.itemListElement.children.length !== this.virtualCount) {
             this.itemListElement.innerHTML = '';
 
+            // padding of 2ch (the style attribute receives the width as a pixel by using 'EXPLORER_firstSpanWidthValue' as a baseline (not quite ch))
+            // TODO: this is all very inaccurate and prone to eventual rounding issues due to not monospace font.
+            // 
+            let widthAttributeValueString = ((this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue) + 'px';
+            this.cursorElement.style.width = widthAttributeValueString;
+
             // this is zero'd, could use change for clarity of algorithm and match patterns but focus elsewhere first
             for (let i = 0; i < this.virtualCount; i++) {
                 
                 let divItem = document.createElement('div');
+                divItem.style.width = widthAttributeValueString;
                 divItem.style.height = this.itemHeightStyleAttributeValueString;
                 divItem.style.whiteSpace = 'nowrap';
                 divItem.style.position = 'absolute';
                 this.itemListElement.appendChild(divItem);
-    
                 let iconSpan = document.createElement('span');
                 iconSpan.style.width = EXPLORER_firstSpanWidth;
                 iconSpan.style.display = 'inline-block';
