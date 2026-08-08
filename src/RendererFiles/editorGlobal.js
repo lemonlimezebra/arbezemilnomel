@@ -10451,4 +10451,7 @@ I just donn't know what to do right now is all my heads racing and my heart is p
 I think what I really want is for my parents to understand that everything is okay.
 well is everything okay? Maybe I'm delusional.
 
+The majority of the pressure that I feel is societal.
+I feel like if I just didn't feel all this pressure for no reason then nothing would be an issue.
+
 */
