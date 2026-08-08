@@ -10428,4 +10428,9 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 well living is newer because you're gonna eat 2 lbs of chicken today.
 So you'd have to give it at least a month to see where things go...
+
+"
+every month my psychiatrist tells me to eat a different lb quantity of chicken
+and says I can't off myself because I gotta wait a month and see if the new lb quantity hits different
+"
 */
