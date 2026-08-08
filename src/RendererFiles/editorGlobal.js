@@ -10458,4 +10458,8 @@ Where's episode 1?
 episode 2: gender identity is the initial topic
 episode 3: it says schizophrenia in spanish in the thumbnail.
 
+
+so they're watching episode 2 and 3 more
+and then youtube pushes those episodes to me in my feed
+
 */
