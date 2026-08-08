@@ -10423,4 +10423,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 What hurts is that they think I do nothing
 
+They have no idea how much I try to do the right thing and how much I am going through
+
 */
