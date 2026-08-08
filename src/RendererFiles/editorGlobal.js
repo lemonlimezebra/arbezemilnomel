@@ -10437,4 +10437,6 @@ I feel I've been punished all my life for trying to do the right thing.
 
 while watching everyone who works the system get by easy
 
+all the while everyone turns around to me and says "well you don't have mental issues you do xyz"
+
 */
