@@ -10438,4 +10438,6 @@ they think I'm childish
 I just got recommended a different video of dreariness in the depths of sadness hapiness remains
 that means they're looking at the things I used to link but deliberatly finding other videos so that I can't track them looking at it.
 
+my heart has been pounding all day
+
 */
