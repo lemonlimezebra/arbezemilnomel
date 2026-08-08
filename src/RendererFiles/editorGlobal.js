@@ -10429,4 +10429,7 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 The reason I wanna private the repos are because I mentioned things that aren't just about myself.
 I'm wondering if my parents are gonna kill me if they ever find out.
 
+They have no idea about this repo anyways.
+As I said they think I sit here playing videogames all day and nothing else.
+
 */
