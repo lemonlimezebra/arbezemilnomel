@@ -10433,4 +10433,10 @@ I totally feel that.
 I actually somewhat feel better now
 I was laughing
 
+I have a massive issue with the idea of being a developer for a living.
+Because of growing up with my father as one.
+and the feelings of distance and like we had everything financially but as a family things were extremely tumultuous.
+
+
+
 */
