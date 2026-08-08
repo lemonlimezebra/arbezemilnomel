@@ -10430,4 +10430,7 @@ I saw a youtube recommended to me yesterday
 "everytime I speak I regret it"
 I totally feel that.
 
+I actually somewhat feel better now
+I was laughing
+
 */
