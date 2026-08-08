@@ -10473,4 +10473,8 @@ I have to mention it I'm really on edge and if I don't try to make it a joke of 
 we're all aware of my mental health history right? I mean it is just funny to me I ffeel like I'm going crazy
 that I'm the only one who sees how ridiculous this all is.
 "you're brother has mental health issues" lol
+
+All that effort you gave despite mental illness, yeah we don't take any of that seriously
+and it would all have been better for you to just have gone on disability and done nothing with your life
+cause you're really "on edge" you gotta relax why are you so "on edge"
 */
