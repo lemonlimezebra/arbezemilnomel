@@ -10421,36 +10421,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-I feel so angry right now.
-I'm gonna eat 2 lbs of chicken today I'm gonna do it I'm so sick of everything.
-
-I'm gonna drive to the store and buy some more chicken right now.
-
-TODO: When you expand a node if the longest text exists equally it won't redraw with more padding and be wrong
-
-Breakfast:
-1 lb of 98% fat free chicken with sriracha
-
-Lunch:
-8x strawberry nutrigrain bars
-
-Dinner:
-1 lb of 98% fat free chicken with sriracha
-
-Do not eat anything else until you hit 199.9 lbs.
-
-2 lbs of 98% fat free chicken is $14
-The nutrigrain bar pack is $3
-
-total is $17
-
-Even better:
-you eat 4x bars with breakfast
-and 4x bars with dinner
-
-only eat breakfast and dinner
-
-thus you reduce the time your teeth are exposed to the acidity of the sriracha / the sweetness and carbohydrates of the bars.
-
-
 */
