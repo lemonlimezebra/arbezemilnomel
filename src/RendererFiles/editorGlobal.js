@@ -10428,4 +10428,6 @@ I feel bad for freaking out at him
 I really meant it when I said I felt angry earlier it wasn't good I can't speak
 cause I fk'd my voice.
 
+I'm not a good person myself I should handle these emotions better.
+
 */
