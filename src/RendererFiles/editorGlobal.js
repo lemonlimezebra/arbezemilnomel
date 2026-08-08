@@ -10444,4 +10444,6 @@ you might wanna check behind you...
 "good will hunting I will end you" is another one
 - 1 cause it is good will hunting, I never saw the movie but I think the premise is cringe
 - 2 "I will End You" I literally feel threatened.
+
+Taylor swift - I knew you were were touble "I knew you were nothing but trouble from the get go I wish we never made contact with you initially I hate you"
 */
