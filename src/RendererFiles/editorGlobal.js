@@ -10447,4 +10447,7 @@ Just so you understand what thoughts go through my mind.
 There is no financial issue.
 It is a matter of my parents having 0 understanding of me.
 
+And I really do mean that, not even in just some cringe way "nobody understands me"
+like I literally don't want your life nothing to do with it and nothing will fix that lack of desire
+
 */
