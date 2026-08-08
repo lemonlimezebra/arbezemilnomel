@@ -10452,4 +10452,8 @@ like I literally don't want your life nothing to do with it and nothing will fix
 
 I want to be a hermit. I want 0 contact with anyone.
 
+And with that being said, that isn't a lifestyle that gels with the way we're supposed to live.
+
+And that is why living is pointless for me
+
 */
