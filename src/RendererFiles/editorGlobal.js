@@ -10446,4 +10446,7 @@ you might wanna check behind you...
 - 2 "I will End You" I literally feel threatened.
 
 Taylor swift - I knew you were were touble "I knew you were nothing but trouble from the get go I wish we never made contact with you initially I hate you"
+
+Brennan Heart - don't speak "self explanatory?"
+
 */
