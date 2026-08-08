@@ -10452,4 +10452,10 @@ Brennan Heart - don't speak "self explanatory?"
 La Clinica episode 2 in particular... they think I'm trans due to the nature of where I cut and what my motives weree
 but I take a once a day mens multivitamin I definitely identify as a male.
 
+cause you gotta wonder, why episode 2? why episode 3?
+Where's episode 1?
+
+episode 2: gender identity is the initial topic
+episode 3: it says schizophrenia in spanish in the thumbnail.
+
 */
