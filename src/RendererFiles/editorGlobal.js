@@ -10477,4 +10477,6 @@ that I'm the only one who sees how ridiculous this all is.
 All that effort you gave despite mental illness, yeah we don't take any of that seriously
 and it would all have been better for you to just have gone on disability and done nothing with your life
 cause you're really "on edge" you gotta relax why are you so "on edge"
+
+That isn't the direct words but that's all I hear
 */
