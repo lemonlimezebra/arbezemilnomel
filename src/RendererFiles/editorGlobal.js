@@ -10440,4 +10440,8 @@ my family has no idea about this code
 
 I can't tell if I'm just delusional
 
+I saw "poor fool he makes me laugh"
+recommended in my youtube feed just now. It upsets me greatly
+Just so you understand what thoughts go through my mind.
+
 */
