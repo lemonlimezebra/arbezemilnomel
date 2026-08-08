@@ -10464,4 +10464,6 @@ and then youtube pushes those episodes to me in my feed
 
 "I'm not trans I take a men's multivitamin andy"
 
+Is trans an offensive word I have no idea if it is or not I'm just joking around ya know
+
 */
