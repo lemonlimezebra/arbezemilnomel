@@ -10444,4 +10444,7 @@ I saw "poor fool he makes me laugh"
 recommended in my youtube feed just now. It upsets me greatly
 Just so you understand what thoughts go through my mind.
 
+There is no financial issue.
+It is a matter of my parents having 0 understanding of me.
+
 */
