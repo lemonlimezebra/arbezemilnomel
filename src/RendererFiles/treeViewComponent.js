@@ -174,6 +174,14 @@ class TreeViewComponent {
         }
         this.TREEVIEW_draw_create_request_parentElement.insertBefore(this.rootElement, this.TREEVIEW_draw_create_request_insertBeforeThisChild);
         this.draw_addEvents();
+
+
+        this.rootElement.style.width = '';
+        this.rootElement.style.height = '';
+        this.rootElement.style.contain = '';
+
+        this.measureBaseElement();
+
         this.TREEVIEW_render_do_Scroll(timestamp);
     }
 
@@ -552,6 +560,12 @@ class TreeViewComponent {
     }
 
     TREEVIEW_render_do_Resize(timestamp) {
+        this.rootElement.style.width = '';
+        this.rootElement.style.height = '';
+        this.rootElement.style.contain = '';
+
+        this.measureBaseElement();
+
         this.boundingClientRect = null;
         this.ensure_boundingClientRect();
         this.TREEVIEW_render_do_FullReset(timestamp);
@@ -661,16 +675,16 @@ class TreeViewComponent {
      * for the attribute value.
      */
     measureBaseElement() {
-        lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
-        lastReadNumber_offsetHeight = Math.floor(EDITOR_baseElement.offsetHeight);
+        this.lastReadNumber_offsetWidth = Math.floor(this.rootElement.offsetWidth);
+        this.lastReadNumber_offsetHeight = Math.floor(this.rootElement.offsetHeight);
         
-        EDITOR_baseElement.style.width = lastReadNumber_offsetWidth + 'px';
-        EDITOR_baseElement.style.height = lastReadNumber_offsetHeight + 'px';
+        this.rootElement.style.width = this.lastReadNumber_offsetWidth + 'px';
+        this.rootElement.style.height = this.lastReadNumber_offsetHeight + 'px';
 
-        EDITOR_baseElement.style.contain = 'layout';
+        this.rootElement.style.contain = 'layout';
 
-        lastReadNumber_offsetWidth = EDITOR_baseElement.offsetWidth;
-        lastReadNumber_offsetHeight = EDITOR_baseElement.offsetHeight;
+        this.lastReadNumber_offsetWidth = this.rootElement.offsetWidth;
+        this.lastReadNumber_offsetHeight = this.rootElement.offsetHeight;
     }
 }
 
