@@ -210,6 +210,11 @@ class EXPLORER_TreeViewDirector {
                     break;
             }
 
+            // TODO: predict this when expanding/collapsing?????
+            if (depth > this.component.LARGEST_DEPTH_SEEN_NOT_THE_CSS_JUST_THE_DEPTH) {
+                this.component.LARGEST_DEPTH_SEEN_NOT_THE_CSS_JUST_THE_DEPTH = depth;
+            }
+
             divItem.style.transform = `translate(${EXPLORER_offsetPerDepth * depth}px, ${verticalStyleNumber}px)`;
             verticalStyleNumber += this.component.itemHeightNumber;
 
@@ -374,9 +379,12 @@ This comment is from 'tvd_drawItem_BATCH', it was in my way
                 }
             }
 
+            
+
             if (NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING > currentWIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING) {
                 this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = NEXT_WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING;
-                let widthAttributeValueNumber = Math.ceil((this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue);
+                let widthAttributeValueNumber = Math.ceil(((this.component.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING + 2/*padding*/) * EXPLORER_firstSpanWidthValue) + EXPLORER_offsetPerDepth * depth);
+
                 // This is actually more complicated you have to track whether you go above the minimum requirement lest you add 1 character over and over in width just to keep redrawing widths.
                 //if (widthAttributeValueNumber < this.lastReadNumber_offsetWidth) {
                 //    widthAttributeValueNumber = this.lastReadNumber_offsetWidth;

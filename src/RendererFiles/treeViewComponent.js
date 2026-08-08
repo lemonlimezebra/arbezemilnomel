@@ -75,6 +75,8 @@ class TreeViewComponent {
         this.SET_ITEMS_itemHeightStyleAttributeValueString = '';
 
         this.WIDTH_NODE_DRAWN_NUMBER_IN_CH_UNITS_NO_PADDING = 2;
+
+        this.LARGEST_DEPTH_SEEN = 0;
     }
 
     TREEVIEW_render_request(renderKind) {
