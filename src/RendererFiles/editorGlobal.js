@@ -10433,4 +10433,8 @@ and they say "well your brother has mental issues"
 
 As if I am not sitting here losing my mind everyday.
 
+I feel I've been punished all my life for trying to do the right thing.
+
+while watching everyone who works the system get by easy
+
 */
