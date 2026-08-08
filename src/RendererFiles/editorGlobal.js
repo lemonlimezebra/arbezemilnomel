@@ -10427,4 +10427,6 @@ you know what we had though.
 
 We had (sorry have) a big ass inground pool though and a nice house a nice garden amiright lolololololol HAAHAHAHAHAHA
 
+I kinda was trippin with the last commit but if anyone wondered where my obsession with the lyrics were...
+
 */
