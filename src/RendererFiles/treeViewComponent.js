@@ -652,6 +652,10 @@ class TreeViewComponent {
      *   because otherwise the children could cause a change in width and impact the surrounding UI which you just said explicitly won't happen.
      * - The final statements that read the offsetWidth and height after having set them is a guaranteed synchronous layout,
      *   but this only happens oninit or when resizing, vs the constant changes happening while I scroll explicitly stating that nothing else will be impacted each event.
+     * 
+     * And I am very open to the idea that I'm wrong.
+     * But I don't understand the AI's point of view and I'm not going to blindly copy what it says.
+     * I am instead just aware that this might be wrong and I'm looking for some indications to learn from and observe.
      */
     measureBaseElement() {
         lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
