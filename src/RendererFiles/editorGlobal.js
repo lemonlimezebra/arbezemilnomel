@@ -10429,4 +10429,6 @@ My dad says I explode cause I don't talk.
 But I can't talk I have no desires to.
 I have literally lack the desires I'd presume 99% of your desires I just don't feel.
 
+I have no friends and I haven't spoken to anyone in nearly a year
+
 */
