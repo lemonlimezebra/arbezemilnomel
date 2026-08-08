@@ -640,6 +640,16 @@ class TreeViewComponent {
      * and I have a lot to do involving measuring the longest line of text and setting all divs to that width
      * so I might find it in me to list my point of view today.
      * Maybe if I don't find it in me today I will tomorrow etc...
+     * 
+     * My point of view:
+     * - I think I agree that making the width and height a whole number is pointless.
+     * - And that getBoundingClientRect is more accurate so I should be using that, since I'd incur layout cost regardless if it was needed when accessing any offset... properties.
+     * - But, I have absolute positioned elements and A LOT of them.
+     * - By marking the base element as "contain = 'layout'" I believe I am explicitly telling the browser to ignore all of my "z axis layers" or layers made by using position absolute.
+     *   i.e.: that they will NEVER impact the UI that exists outside of the base element.
+     *   and that this is beneficial.
+     * - As well by making the size explicitly defined I am permitting the use of "contain = 'layout'" without that you wouldn't have a width or height of the base element I believe.
+     *   because otherwise the children could cause a change in width and impact the surrounding UI which you just said explicitly won't happen.
      */
     measureBaseElement() {
         lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
