@@ -10430,4 +10430,9 @@ cause I fk'd my voice.
 
 I'm not a good person myself I should handle these emotions better.
 
+all I'm thinking is how I want everything to be over
+Not that I am at risk for anything
+but just in terms of a long term thought process
+I can't imagine anything good
+
 */
