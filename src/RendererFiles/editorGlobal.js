@@ -10493,4 +10493,10 @@ I did this morning because I got pushed past the breaking point a bit
 a don't sit on my ass doing nothing like you do.
 You have no idea what kind of stress I'm dealing with dude shut the fuck up
 
+also I said he was wearing a diaper
+and then my brother says
+"He said I was faking wearing a diaper"
+
+Like freudian slip much?
+
 */
