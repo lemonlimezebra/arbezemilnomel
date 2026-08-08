@@ -10482,4 +10482,12 @@ That isn't the direct words but that's all I hear
 
 my brother isn't on edge...
 cause he does thing he has nothing to do he has no stressors
+
+you know what my brother actually did say something like that
+"have you ever thought that nobody wants to be around you because you scream all the time"
+something like that
+
+I haven't screamed in years
+I did this morning because I got pushed past the breaking point a bit
+
 */
