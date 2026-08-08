@@ -10444,4 +10444,13 @@ The nutrigrain bar pack is $3
 
 total is $17
 
+Even better:
+you eat 4x bars with breakfast
+and 4x bars with dinner
+
+only eat breakfast and dinner
+
+thus you reduce the time your teeth are exposed to the acidity of the sriracha / the sweetness and carbohydrates of the bars.
+
+
 */
