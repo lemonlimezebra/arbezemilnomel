@@ -10426,8 +10426,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 - [ ] Determine when to reduce the length of the longest line of text.
 - [ ] Autocompletion
 
-He allowed me to live in the house rent free though for all this time whether he was paying attention to the code or not.
-I appreciate that and all the other aspects of support he provides.
-I just don't know my head is spinning
-
 */
