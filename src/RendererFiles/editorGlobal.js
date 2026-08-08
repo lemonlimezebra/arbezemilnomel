@@ -10431,4 +10431,7 @@ I have literally lack the desires I'd presume 99% of your desires I just don't f
 
 I have no friends and I haven't spoken to anyone in nearly a year
 
+And the only thing that bothers me is that my FAMILY sometimes speaks to me
+NOT that I want to speak to other people
+
 */
