@@ -10425,4 +10425,8 @@ What hurts is that they think I do nothing
 
 They have no idea how much I try to do the right thing and how much I am going through
 
+They said something like "your brother gets more attention because he talks to us"
+
+and I tried to explain I'm so tired and stressed out from trying to do the right thing it is far more difficult for me to find it in me to talk
+
 */
