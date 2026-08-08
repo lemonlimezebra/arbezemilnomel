@@ -10421,16 +10421,5 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-I'm glad I ate that for breakfast I feel a lot calmer now.
-
-Like I know that it has been eaten for the day and I checked it off a list
-rather than having to think about "oh I gotta by the end of the day find time to fit this in"
-Iprobably will stick to 1 lb but just move it to breakfast I think it'll help anxiety wise.
-
-I also am glad that I straight up said about my resents for you.
-
-Because these feelings always came out in little bursts of me saying really weird things
-and it just only fueled your confusion about me and probably worsened everything.
-
 
 */
