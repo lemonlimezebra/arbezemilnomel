@@ -10443,5 +10443,6 @@ But I also kinda have this constant "I feel like shit " feeling
 am I wrong for that?
 should he have morte interest in what I'm doing beyond just that one livestream?
 
+its the only fucking part of this that he cared about
 
 */
