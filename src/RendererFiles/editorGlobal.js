@@ -10437,6 +10437,6 @@ I have a massive issue with the idea of being a developer for a living.
 Because of growing up with my father as one.
 and the feelings of distance and like we had everything financially but as a family things were extremely tumultuous.
 
-
+and so I grew to despise money as I have this connection that I've made in my mind between that and the bad family dynamic that I grew up with.
 
 */
