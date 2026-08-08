@@ -10420,5 +10420,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 (not really but I feel like I'm dead energy wise and mood wise and sadness and just ugh)
 
 =======
-
 */
