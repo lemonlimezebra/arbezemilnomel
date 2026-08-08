@@ -10445,4 +10445,7 @@ should he have morte interest in what I'm doing beyond just that one livestream?
 
 its the only fucking part of this that he cared about
 
+taylor swift - I knew you were trouble 
+we know the drill... I'm on edge and I gotta make a joke out of it so I can stay calm okay good
+
 */
