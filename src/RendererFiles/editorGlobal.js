@@ -10440,4 +10440,8 @@ at times I break down in tears watching it
 
 if anyone was wondering whether I see everything there's your proof I know what you're doing right now
 you might wanna check behind you...
+
+"good will hunting I will end you" is another one
+- 1 cause it is good will hunting, I never saw the movie but I think the premise is cringe
+- 2 "I will End You" I literally feel threatened.
 */
