@@ -650,6 +650,8 @@ class TreeViewComponent {
      *   and that this is beneficial.
      * - As well by making the size explicitly defined I am permitting the use of "contain = 'layout'" without that you wouldn't have a width or height of the base element I believe.
      *   because otherwise the children could cause a change in width and impact the surrounding UI which you just said explicitly won't happen.
+     * - The final statements that read the offsetWidth and height after having set them is a guaranteed synchronous layout,
+     *   but this only happens oninit or when resizing, vs the constant changes happening while I scroll explicitly stating that nothing else will be impacted each event.
      */
     measureBaseElement() {
         lastReadNumber_offsetWidth = Math.floor(EDITOR_baseElement.offsetWidth);
