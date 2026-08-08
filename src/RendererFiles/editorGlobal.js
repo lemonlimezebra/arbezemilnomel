@@ -10501,4 +10501,6 @@ Like freudian slip much?
 
 Are you faking wearing a diaper lol?
 
+you wear it to come off as more disabled?
+
 */
