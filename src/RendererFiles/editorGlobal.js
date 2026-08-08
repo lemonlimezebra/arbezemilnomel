@@ -10421,39 +10421,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-I'm very distant and (not anti-social) but I'll say anti-social cause I don't know what word I'm looking for
-
-This is innate, and will never change. It has been this way all my life.
-
-My dad says I explode cause I don't talk.
-But I can't talk I have no desires to.
-I have literally lack the desires I'd presume 99% of your desires I just don't feel.
-
-I have no friends and I haven't spoken to anyone in nearly a year
-
-And the only thing that bothers me is that my FAMILY sometimes speaks to me
-NOT that I want to speak to other people
-
-I am extremely mentally unwell it is innate to the core
-and I don't know what to do
-my family has no idea about this code
-
-I can't tell if I'm just delusional
-
-I saw "poor fool he makes me laugh"
-recommended in my youtube feed just now. It upsets me greatly
-Just so you understand what thoughts go through my mind.
-
-There is no financial issue.
-It is a matter of my parents having 0 understanding of me.
-
-And I really do mean that, not even in just some cringe way "nobody understands me"
-like I literally don't want your life nothing to do with it and nothing will fix that lack of desire
-
-I want to be a hermit. I want 0 contact with anyone.
-
-And with that being said, that isn't a lifestyle that gels with the way we're supposed to live.
-
-And that is why living is pointless for me
-
 */
