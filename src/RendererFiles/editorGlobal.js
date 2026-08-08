@@ -10434,4 +10434,10 @@ I have no friends and I haven't spoken to anyone in nearly a year
 And the only thing that bothers me is that my FAMILY sometimes speaks to me
 NOT that I want to speak to other people
 
+I am extremely mentally unwell it is innate to the core
+and I don't know what to do
+my family has no idea about this code
+
+I can't tell if I'm just delusional
+
 */
