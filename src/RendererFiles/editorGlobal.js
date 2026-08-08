@@ -10432,4 +10432,16 @@ I'm wondering if my parents are gonna kill me if they ever find out.
 They have no idea about this repo anyways.
 As I said they think I sit here playing videogames all day and nothing else.
 
+My dad has 30+ years of experience.
+
+The main attention he gave me about this coding I'm doing, was when I got an email about
+blazor community livestream and he was the first comment on the livestream.
+
+I appreciate that...
+
+But I also kinda have this constant "I feel like shit " feeling
+am I wrong for that?
+should he have morte interest in what I'm doing beyond just that one livestream?
+
+
 */
