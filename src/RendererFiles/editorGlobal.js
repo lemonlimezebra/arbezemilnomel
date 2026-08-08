@@ -10450,4 +10450,7 @@ My mom is kathleen freeman
 
 If you want to contact them and tell them about this repo or anything please feel free
 
+You might not believe me but you can talk to my parents.
+And then maybe things would work out I don't know what to tell you
+
 */
