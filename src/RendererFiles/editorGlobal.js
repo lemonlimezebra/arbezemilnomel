@@ -10457,4 +10457,14 @@ I feel like if I just didn't feel all this pressure for no reason then nothing w
 "taylor swift - I knew you were trouble" "they think I've been nothing but trouble all this time"
 I see it again right now.
 
+Your brother has mental illness and is on disability.
+
+You've tried all your life rather than give up and sit on a disability paycheck
+
+"you're brother talks to us"
+
+????
+
+
+
 */
