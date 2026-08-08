@@ -10435,4 +10435,6 @@ I don't want anything I just wanna feel normal
 
 My dad is an extremely senior dev we had everything we needed + extras that we wanted
 
+Minus the stable household
+
 */
