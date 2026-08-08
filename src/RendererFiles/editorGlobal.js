@@ -10448,4 +10448,7 @@ like if I found this repo back in the day I'd probably be hyped and read the ent
 
 I just donn't know what to do right now is all my heads racing and my heart is pounding
 
+I think what I really want is for my parents to understand that everything is okay.
+well is everything okay? Maybe I'm delusional.
+
 */
