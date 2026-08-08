@@ -10441,4 +10441,6 @@ Specific lyrics though
 
 Something like though living is no newer I'm listening to the song
 
+there's nothing new in dying now, though living is no newer
+
 */
