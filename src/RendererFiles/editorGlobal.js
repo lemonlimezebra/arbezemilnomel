@@ -10429,4 +10429,8 @@ They said something like "your brother gets more attention because he talks to u
 
 and I tried to explain I'm so tired and stressed out from trying to do the right thing it is far more difficult for me to find it in me to talk
 
+and they say "well your brother has mental issues"
+
+As if I am not sitting here losing my mind everyday.
+
 */
