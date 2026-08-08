@@ -10424,5 +10424,6 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 - [ ] When you expand, you wouldn't need to loop over every node because they'd all be 1 depth higher.
 - [ ] When you expand, if the longest line of text is equal to the previous you won't redraw the widths accounting for the higher depth because line length is the trigger.
 - [ ] Determine when to reduce the length of the longest line of text.
+- [ ] Autocompletion
 
 */
