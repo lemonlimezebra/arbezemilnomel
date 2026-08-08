@@ -10421,22 +10421,4 @@ still be in a caloric deficit just change the foods to a degree cause I feel lik
 
 =======
 
-radiohead no surprises
-
-you know what we had though.
-
-We had (sorry have) a big ass inground pool though and a nice house a nice garden amiright lolololololol HAAHAHAHAHAHA
-
-I kinda was trippin with the last commit but if anyone wondered where my obsession with the lyrics were...
-
-you raised through that and it's like ooo big inground pool lololol fuck the pool are you kidding me
-
-I don't want anything I just wanna feel normal
-
-My dad is an extremely senior dev we had everything we needed + extras that we wanted
-
-Minus the stable household
-
-fucking would trade everything for a stable household over all that shit
-
 */
