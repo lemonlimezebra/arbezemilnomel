@@ -10429,4 +10429,6 @@ We had (sorry have) a big ass inground pool though and a nice house a nice garde
 
 I kinda was trippin with the last commit but if anyone wondered where my obsession with the lyrics were...
 
+you raised through that and it's like ooo big inground pool lololol fuck the pool are you kidding me
+
 */
